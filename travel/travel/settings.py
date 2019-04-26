@@ -143,3 +143,5 @@ STATICFILES_DIRS =[
 ]
 
 from .celery_settings import *
+
+from .logging_settings import *

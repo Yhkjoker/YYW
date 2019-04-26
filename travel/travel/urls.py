@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
     url(r'^captcha/', include('captcha.urls')),
-    url(r'^celery/',orderview.celery,name='celery')
+    url(r'^celery/',orderview.celery,name='celery'),
+    url(r'^log/',orderview.log_test,name='log'),
 ]
