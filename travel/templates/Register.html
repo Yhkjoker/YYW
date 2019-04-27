@@ -37,15 +37,10 @@
     	<h2>注&nbsp;&nbsp;册</h2>
     	<div class="Land-Input">
 	    	<div class="TxtInput">
-                <form action="/register/" method="post">
+                <form action="{% url 'register' %}" method="post">
                     {% csrf_token %}
                     <div class="TxtInput-Div active">
                         <input class="txt" type="text" placeholder="邮箱" name="email" autofocus="autofocus"/>
-                        <div class="clearFix">
-                            {#<input class="txt f-l" type="text" placeholder="验证码"/>#}
-                            {{ register_form.captcha }}
-                            {#<input class="button f-r" type="button" value="获取动态密码"/>#}
-                        </div>
                         <div class="Register-1">
                             <input class="txt" type="text" placeholder="密码" name="password"/>
 {#                            <span hidden="hidde">格式错误，请输入字母数字组合</span>#}
@@ -55,6 +50,16 @@
 {#                            <span hidden="hidde">两次密码不一致，请重新输入</span>#}
 {#                        </div>#}
 	    		    </div>
+                    <div class="clearFix">
+                            {#<input class="txt f-l" type="text" placeholder="验证码"/>#}
+                            {{ register_form.captcha }}
+                            {#<input class="button f-r" type="button" value="获取动态密码"/>#}
+                    </div>
+                    <li style="margin-top:8px;margin-bottom:15px;color:#ee0000">
+                        {% for key,error in register_form.errors.items %}
+                            {{ error }}
+                        {% endfor %}
+                    </li>
 	    		    <input class="button" type="submit" value="注&nbsp;&nbsp;册"/>
                 </form>
 	    	</div>
@@ -74,9 +79,9 @@
     	<div class="f-l">
     		<ul class="clearFix">
     			<li class="f-l"><a class="tr-02" href="Join_Us.html">加入我们</a></li>
-                                        <li class="f-l"><a class="tr-02" href="Contact_Us.html">联系我们</a></li>
-                                        <li class="f-l"><a class="tr-02" href="Common_Problem.html">常见问题</a></li>
-                                        <li class="f-l"><a class="tr-02" href="Disclaimer.html">免责说明</a></li>
+                <li class="f-l"><a class="tr-02" href="Contact_Us.html">联系我们</a></li>
+                <li class="f-l"><a class="tr-02" href="Common_Problem.html">常见问题</a></li>
+                <li class="f-l"><a class="tr-02" href="Disclaimer.html">免责说明</a></li>
     		</ul>	
     		<p>悠悠蜗是一家专门针对大学生户外出游的公司,<span>致力于提供优秀的出游体验。</span></p>
     		<p>地址：上海市杨浦区国定东路200号1号楼1113室     <span>联系电话：021-56082169</span></p>
