@@ -37,17 +37,12 @@
     	<h2>注&nbsp;&nbsp;册</h2>
     	<div class="Land-Input">
 	    	<div class="TxtInput">
-                <form action="/register/" method="post">
+                <form action="{% url 'register' %}" method="post">
                     {% csrf_token %}
                     <div class="TxtInput-Div active">
                         <input class="txt" type="text" placeholder="邮箱" name="email" autofocus="autofocus"/>
-                        <div class="clearFix">
-                            {#<input class="txt f-l" type="text" placeholder="验证码"/>#}
-                            {{ register_form.captcha }}
-                            {#<input class="button f-r" type="button" value="获取动态密码"/>#}
-                        </div>
                         <div class="Register-1">
-                            <input class="txt" type="text" placeholder="密码" name="password"/>
+                            <input class="txt" type="password" placeholder="密码" name="password"/>
 {#                            <span hidden="hidde">格式错误，请输入字母数字组合</span>#}
                         </div>
 {#                        <div class="Register-1">#}
@@ -55,6 +50,11 @@
 {#                            <span hidden="hidde">两次密码不一致，请重新输入</span>#}
 {#                        </div>#}
 	    		    </div>
+                    <div class="clearFix">
+                            {#<input class="txt f-l" type="text" placeholder="验证码"/>#}
+                            {{ register_form.captcha }}
+                            {#<input class="button f-r" type="button" value="获取动态密码"/>#}
+                    </div>
 	    		    <input class="button" type="submit" value="注&nbsp;&nbsp;册"/>
                 </form>
 	    	</div>
