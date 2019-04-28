@@ -40,26 +40,19 @@
                 <form action="{% url 'register' %}" method="post">
                     {% csrf_token %}
                     <div class="TxtInput-Div active">
-                        <input class="txt" type="text" placeholder="邮箱" name="email" autofocus="autofocus"/>
+                        <input class="txt" type="text" value="{% if register_form.errors %}{{ register_form.email.value }} {% endif %}" placeholder="邮箱" name="email" autofocus="autofocus"/>
                         <div class="Register-1">
-                            <input class="txt" type="password" placeholder="密码" name="password"/>
-{#                            <span hidden="hidde">格式错误，请输入字母数字组合</span>#}
+                            <input class="txt" type="password" value="{% if register_form.errors %}{{ register_form.password.value }} {% endif %}" placeholder="密码" name="password"/>
                         </div>
-{#                        <div class="Register-1">#}
-{#                            <input class="txt" type="text" placeholder="请确认密码"/>#}
-{#                            <span hidden="hidde">两次密码不一致，请重新输入</span>#}
-{#                        </div>#}
 	    		    </div>
                     <div class="clearFix">
-                            {#<input class="txt f-l" type="text" placeholder="验证码"/>#}
-                            {{ register_form.captcha }}
-                            {#<input class="button f-r" type="button" value="获取动态密码"/>#}
+                        {{ register_form.captcha }}
                     </div>
-                    <li style="margin-top:8px;margin-bottom:15px;color:#ee0000">
+                    <span class="txt f-l">
                         {% for key,error in register_form.errors.items %}
                             {{ error }}
-                        {% endfor %}
-                    </li>
+                        {% endfor %}{{ msg }}
+                    </span>
 	    		    <input class="button" type="submit" value="注&nbsp;&nbsp;册"/>
                 </form>
 	    	</div>

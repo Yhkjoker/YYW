@@ -195,18 +195,15 @@ $(".captcha").hover(function(){
   })
 });
 
+//错误信息以及验证码与输入框的样式
+$(document).ready(function(){
+  $(".captcha").addClass("button f-r");
+  $("#id_captcha_1").addClass("txt f-l");
+  $("#id_captcha_1").removeAttr('style');
+  $("#Land .Land-Div .Land-Input span").css({"border":"0px","color":"#ee0000"})
+})
 
-//刷新验证码
-$(".captcha").hover(function(){
-  $(this).css('cursor','pointer');
-  $(this).click(function(){
-      $.get("/captcha/refresh/?"+Math.random(), function(result){
-        $('.captcha').attr("src",result.image_url);
-        $('#id_captcha_0').attr("value",result.key);
-    });
-    return false;
-  })
-});
+
 
 
 

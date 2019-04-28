@@ -44,12 +44,12 @@
                 <form action="{% url 'login' %}" method="post">
                    <!-- 默认登录 -->
                     <div class="TxtInput-Div active">
-                        <span class="position">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</span>
                         <input class="txt" type="text" placeholder="用户名或密码" name="username" autofocus="autofocus"/>
                         <input class="txt" type="password" name="password" placeholder="密码"/>
                         <div class="txtp clearFix">
-                        <a href="Register.html" class="f-l">还没有账号？立即注册</a>
-                        <a href="Back.html" class="f-r">忘记密码</a>
+                            <span class="txt f-l">{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</span>
+                            <a href="{% url 'register' %}" class="f-l">还没有账号？立即注册</a>
+                            <a href="{% url 'forget' %}" class="f-r">忘记密码</a>
                         </div>
                     </div>
                     <!-- /默认登录 -->
@@ -60,6 +60,7 @@
                             <input class="txt f-l" type="password" placeholder="动态密码"/>
                             <input class="button f-r" type="button" value="获取动态密码"/>
                         </div>
+                        <span class="txt f-l" {% if login_form.errors %}style="display: none"{% endif %}>{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</span>
                     </div>
                     <!-- /手机动态登录 -->
                     <input class="button" type="submit" value="登&nbsp;&nbsp;录"/>

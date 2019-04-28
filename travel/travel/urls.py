@@ -19,8 +19,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 import xadmin
 
-from users.views import LoginView, RegisterView, ActiveUser
-from users.views import LoginView, RegisterView
+from users.views import LoginView, RegisterView, ActiveUserView, ForgetView, RetrievePwdView, ResetpwdView
 from orders import views as orderview
 
 urlpatterns = [
@@ -29,7 +28,10 @@ urlpatterns = [
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
     url(r'^captcha/', include('captcha.urls')),
-    url(r'^active/(?P<active_code>.*)/$', ActiveUser.as_view(), name="useractive"),
+    url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name="useractive"),
+    url(r'^forget$', ForgetView.as_view(), name="forget"),
+    url(r'^retrievepwd/(?P<active_code>.*)/$', RetrievePwdView.as_view(), name="retrievepwd"),
+    url(r'^reset_pwd$', ResetpwdView.as_view(), name="resetpwd"),
     url(r'^celery/',orderview.celery,name='celery'),
     url(r'^log/',orderview.log_test,name='log'),
 ]

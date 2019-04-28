@@ -1,0 +1,86 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--移动设备优先-->
+<title>悠悠蜗密码找回</title>
+<meta name="keywords" content="关键字" />
+<meta name="description" content="描述" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--通知IE采用最新的模式-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="fromat-detecition" content="telephone=no" />
+<!-- 屏蔽浏览器自动识别数字为电话号码 -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<!--  Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+<!--  样式表 -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--  媒体查询样式表 -->
+<link href="{% static 'css/swiper.min.css' %}" rel="stylesheet">
+<!--滑动插件-->
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+<!--动画插件-->
+<script src="{% static 'js/jquery.min.js' %}"></script><!-- jQuery文件 -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script><!--  Bootstrap 核心 JavaScript 文件 -->
+</head>
+
+<body class="LangRegister">
+
+<!-- 登陆 -->
+<div id="Land">
+    <img src="{% static 'images/Land.jpg' %}" alt="">
+    <a href="index.html" class="Logo"><img src="{% static 'images/Logo1.png' %}" alt=""></a>
+    <div class="Land-Div">
+           <button class="Return Bg1" onClick="javascript:history.back(-1);"></button>
+    	<h2>找回密码</h2>
+        <form action="{% url 'forget' %}" method="post">
+        {% csrf_token %}
+            <div class="Land-Input">
+                <div class="TxtInput">
+                    <div class="TxtInput-Div active">
+                        <input class="txt" type="text" name="email" placeholder="邮箱" autofocus="autofocus"/>
+                        <div class="clearFix">
+                            {{ forget_form.captcha }}
+                        </div>
+                    </div>
+                    <span class="txt f-l">{% for key,error in forget_form.errors.items %}{{ error }}{% endfor %}</span>
+                    <input class="button" type="submit" value="发送认证"/>
+                </div>
+            </div>
+        </form>
+    </div>	
+</div>
+<!-- /登陆 -->
+<footer id="footer">
+    <div class="w-1180 clearFix">
+             <div class="f-r">
+    		<a href="index.html">
+    			<img src="{% static 'images/Logo2.png' %}" alt="">
+    			<span>专注大学生旅游</span>
+    		</a>	
+    		<img src="{% static 'images/code.jpg' %}" alt="">	
+    	</div>	
+    	<div class="f-l">
+    		<ul class="clearFix">
+    			  <li class="f-l"><a class="tr-02" href="Join_Us.html">加入我们</a></li>
+                                        <li class="f-l"><a class="tr-02" href="Contact_Us.html">联系我们</a></li>
+                                        <li class="f-l"><a class="tr-02" href="Common_Problem.html">常见问题</a></li>
+                                        <li class="f-l"><a class="tr-02" href="Disclaimer.html">免责说明</a></li>
+    		</ul>	
+    		<p>悠悠蜗是一家专门针对大学生户外出游的公司,<span>致力于提供优秀的出游体验。</span></p>
+    		<p>地址：上海市杨浦区国定东路200号1号楼1113室     <span>联系电话：021-56082169</span></p>
+    		<p>Copyright ©2017-2019 悠悠蜗版权所有 <span>沪ICP备17003305号</span></p>
+    	</div>
+    </div>	
+</footer>
+<!-- /footer --> 
+<script src="{% static 'js/style.js' %}"></script><!-- jQuery whole Put in the bottom --> 
+<script src="{% static 'js/swiper.jquery.min.js' %}"></script><!-- Slide Put in the bottom --> 
+<script>
+
+</script>
+</body>
+</html>
