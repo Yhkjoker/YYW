@@ -1,45 +1,21 @@
 # _*_ encoding:utf-8 _*_
 
 import xadmin
-from .models import Route,RouteType,RouteIntro,RoutePlan,TravelTeam,FeeDescription,Announcement
+from .models import *
 
 
-class RouteTypeAdmin(object):
-    list_display = ['route_type']
+class TravelThemeAdmin(object):
+    list_display = ['big_type','title','days','route','power','price','describe','introduce','mouth','img','station','click_num']
 
 
-class RouteAdmin(object):
-    list_display = ['time', 'start_date', 'end_date', 'min_price', 'max_price', 'route', 'power', 'click', 'title']
-    search_fields = ['title', 'time', 'start_date', 'end_date', 'max_price', 'min_price', 'click']
-    list_filter = ['click', 'title']
+class ThemeInfoAdmin(object):
+    list_display = ['theme','baidu_baike','attraction_port','img','schedule','attraction']
 
 
-class TravelTeamAdmin(object):
-    list_display = ['start_date', 'end_date', 'route', 'team', 'status']
-    search_fields = ['start_date', 'end_date', 'route', 'team', 'status']
-    list_filter = ['start_date', 'end_date', 'status']
+class ToursAdmin(object):
+    list_display = ['theme','date','team_num','status','price','max_num','now_num']
 
 
-class RouteIntroAdmin(object):
-    list_display = ['id', 'text']
-
-
-class RoutePlanAdmin(object):
-    list_display = ['id', 'text']
-
-
-class AnnouncementAdmin(object):
-    list_display = ['id', 'text']
-
-
-class FeeDescriptionAdmin(object):
-    list_display = ['id', 'text']
-
-
-xadmin.site.register(RouteType, RouteTypeAdmin)
-xadmin.site.register(Route, RouteAdmin)
-xadmin.site.register(TravelTeam, TravelTeamAdmin)
-xadmin.site.register(RoutePlan, RoutePlanAdmin)
-xadmin.site.register(RouteIntro, RouteIntroAdmin)
-xadmin.site.register(Announcement, AnnouncementAdmin)
-xadmin.site.register(FeeDescription, FeeDescriptionAdmin)
+xadmin.site.register(TravelTheme, TravelThemeAdmin)
+xadmin.site.register(ThemeInfo, ThemeInfoAdmin)
+xadmin.site.register(Tours, ToursAdmin)

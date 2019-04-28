@@ -29,7 +29,7 @@ SECRET_KEY = '5=wx026(ebiu6n7y&5=l14=er@#rj4d0ph5ic(mgq(vur3)-&0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'xadmin',
     'crispy_forms',
     'captcha',
+    'djcelery',
 ]
 AUTH_USER_MODEL = "users.UserProfile"
 
@@ -93,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'travel',
         'USER': 'root',
-        'PASSWORD': '4251..',
+        'PASSWORD': 'wth123456',
         'HOST': '127.0.0.1',
     }
 }
@@ -147,3 +148,7 @@ EMAIL_HOST_USER = 'yuhaikun0325@sina.com'
 EMAIL_HOST_PASSWORD = 'Y8464382654u'
 EMAIL_USE_TLS = False
 EMAIL_FROM = 'yuhaikun0325@sina.com'
+
+from .celery_settings import *
+
+from .logging_settings import *

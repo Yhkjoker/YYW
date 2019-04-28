@@ -196,4 +196,17 @@ $(".captcha").hover(function(){
 });
 
 
+//刷新验证码
+$(".captcha").hover(function(){
+  $(this).css('cursor','pointer');
+  $(this).click(function(){
+      $.get("/captcha/refresh/?"+Math.random(), function(result){
+        $('.captcha').attr("src",result.image_url);
+        $('#id_captcha_0').attr("value",result.key);
+    });
+    return false;
+  })
+});
+
+
 

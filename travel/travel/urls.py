@@ -20,6 +20,8 @@ from django.views.generic import TemplateView
 import xadmin
 
 from users.views import LoginView, RegisterView, ActiveUser
+from users.views import LoginView, RegisterView
+from orders import views as orderview
 
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
@@ -27,5 +29,7 @@ urlpatterns = [
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
     url(r'^captcha/', include('captcha.urls')),
-    url(r'^active/(?P<active_code>.*)/$', ActiveUser.as_view(), name="useractive")
+    url(r'^active/(?P<active_code>.*)/$', ActiveUser.as_view(), name="useractive"),
+    url(r'^celery/',orderview.celery,name='celery'),
+    url(r'^log/',orderview.log_test,name='log'),
 ]

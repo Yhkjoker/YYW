@@ -1,13 +1,13 @@
 # _*_ encoding:utf-8 _*_
 
 from django.db import models
-from route.models import Route
+from route.models import *
 
 # Create your models here.
 
 
 class OrderDetail(models.Model):
-    route = models.ForeignKey(Route, on_delete=models.CASCADE, null=True, blank=True, verbose_name='线路')
+    route = models.ForeignKey(ThemeInfo, on_delete=models.CASCADE, null=True, blank=True, verbose_name='线路')
     contact = models.CharField(max_length=8, verbose_name=u'紧急联系人')
     contact_way = models.CharField(max_length=11, verbose_name=u'联系方式')
     s_friend = models.CharField(max_length=2, choices=(('0', '有'), ('1', '无')), default='0', verbose_name=u'是否有睡友')
