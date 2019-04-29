@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <P>验证码已发送，请去邮箱点击跳转修改密码</P>
+    <P>{{ msg }}<a href="http://127.0.0.1:8000/login">{{ click }}</a></P>
     <input type="hidden" name="{{ email }}">
 </body>
 </html>

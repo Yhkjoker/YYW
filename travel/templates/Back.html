@@ -46,7 +46,7 @@
                             {{ forget_form.captcha }}
                         </div>
                     </div>
-                    <span class="txt f-l">{% for key,error in forget_form.errors.items %}{{ error }}{% endfor %}</span>
+                    <span class="txt f-l" {% if not forget_form.errors %}style="display: none"{% endif %}>{% for key,error in forget_form.errors.items %}{{ error }}{% endfor %}</span>
                     <input class="button" type="submit" value="发送认证"/>
                 </div>
             </div>

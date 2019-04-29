@@ -48,7 +48,7 @@
                     <div class="clearFix">
                         {{ register_form.captcha }}
                     </div>
-                    <span class="txt f-l">
+                    <span class="txt f-l" {% if not register_form.errors %}style="display: none"{% endif %}>
                         {% for key,error in register_form.errors.items %}
                             {{ error }}
                         {% endfor %}{{ msg }}

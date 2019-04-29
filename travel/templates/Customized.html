@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block custom_js %}
+    <script type="text/javascript">
+            if (top.location != self.location)top.location=self.location;
+            var src_url="";
+            var src_www="";
+    </script>
+{% endblock %}
+{% block title %}<title>团体定制/悠悠蜗</title>{% endblock %}
+{% block banner %}<div class="banner Ttdz"><img src="{% static 'images/banner5.jpg' %}" alt=""></div>{% endblock %}
+{% block other %}
+    <div class="content-Wra w-1180">
+    	<div class="content">
+    		<h2>定制线路</h2>
+    		<ul>
+    			<li class="clearFix">
+    				<div class="f-l text-left">
+    					<span><i>*</i>出发地：</span>
+    					<input class="Input-txt1 focus-input1" type="text"/>
+    				</div>
+    				<div class="f-r text-right">
+    					<span><i>*</i>目的地：</span>
+    					<input class="Input-txt1 focus-input1" type="text"/>
+    				</div>
+    			</li>
+    			<hr>
+    			<li class="clearFix">
+    				<div class="f-l text-left">
+    					<span><i>*</i>行程天数：</span>
+    					<input class="Input-txt1 focus-input1" type="number"/>
+    				</div>
+    				<div class="f-r text-right">
+    					<span>出游性质：</span>
+    					<input class="Input-txt1 focus-input1" type="text"/>
+    				</div>
+    			</li>
+                                      <!-- PC端显示 -->
+    			<li class="clearFix pcshow">
+    				<div class="f-l text-left positionr">
+    					<span><i>*</i>出游时间：</span>
+    					<input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="2017-05-10" id="fromDate" name="fromDate" readonly="" />
+                                                                <div id="fromDate-date" style="position: absolute; z-index: 999; width: 456px; left: 0px; top: 30px;"></div>
+    				</div>
+    				<div class="f-r text-right positionr">
+    					<span class="text-center">到：</span>
+    					<input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="2017-05-11" id="toDate" name="toDate" readonly="" />
+                                                                <div id="toDate-date" style="position: absolute; z-index: 999; width: 456px; left: 0px; top: 30px;"></div>
+    				</div>
+    			</li>
+                                       <!-- 移动端显示 -->
+                                        <li class="clearFix appshow">
+                                            <div class="f-l text-left positionr">
+                                                <span><i>*</i>出游时间：</span>
+                                                <input class="Input-txt1 focus-input1 ico1" type="date" autocomplete="off" value=""/>
+                                            </div>
+                                            <div class="f-r text-right positionr">
+                                                <span class="text-center">到：</span>
+                                                <input class="Input-txt1 focus-input1 ico1" type="date" autocomplete="off" value=""/>
+                                            </div>
+                                        </li>
+    			<hr>
+    			<li class="clearFix">
+    				<div class="f-l text-left">
+    					<span><i>*</i>出游预算：</span>
+    					<input class="Input-txt1 focus-input1" type="number"/>
+    				</div>
+    				<div class="f-r text-right">
+    					<span><i>*</i>出游人数：</span>
+    					<input class="Input-txt1 focus-input1" type="number"/>
+    				</div>
+    			</li>
+    			<li>
+    				<span class="textareaspan">需求备注：</span>
+    				<textarea class="textarea focus-input1" placeholder=""></textarea>
+    			</li>
+    		</ul>
+    		<h2>联系信息</h2>
+    		<ul class="name1">
+    			<li class="clearFix">
+    				<div class="f-l text-left">
+    					<span><i>*</i>姓名：</span>
+    					<input class="Input-txt1 focus-input1" type="text"/>
+    				</div>
+    				<div class="f-r text-right">
+    					<span><i>*</i>手机：</span>
+    					<input class="Input-txt1 focus-input1" type="tel"/>
+    				</div>
+    			</li>
+    		</ul>
+                          <button type="button" class="btn">提&nbsp;交</button>
+    	</div>
+    </div>
+{% endblock %}

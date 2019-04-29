@@ -1,0 +1,23 @@
+{% extends 'details.html' %}
+{% load staticfiles %}
+{% block title %}<title>联系我们/悠悠蜗</title>{% endblock %}
+{% block crumbs %}
+    <div id="Title"><div class="w-1180">悠悠蜗-联系我们</div></div>
+    <!-- /Title -->
+{% endblock %}
+{% block content %}
+    <div id="Contene" class="bg-fafafa UsWra">
+        <div class="Us w-1180">
+            <h2>联系悠悠蜗</h2>
+            <p>我们期待每一个和您交流的机会，无论是投诉还是祝福，意见或建议，知道悠悠蜗最近做了什么，还是想加入我们的团队，这里就是开始。无论您在世界的任何一个角落对我们提出意见或建议，我们保证您都将得到我们的回复。</p>
+            <p>我们热忱欢迎每个人来电，我们也珍惜每一个和您交流的机会，无论是祝福，还是意见或者建议，或者是其他想要了解的问题，我们都会耐心解决。</p>
+            <ul class="TXt">
+                <li><strong>悠悠蜗电话：</strong><span>021-80000000</span></li>
+                <li><strong>悠悠蜗EmaiL：</strong><span>admin@yooyoowo.com</span></li>
+                <li><strong>悠悠蜗地址：</strong><span>上海市杨浦区国定东路200号1号楼1113室 </span></li>
+            </ul>
+            <div class="Map"><img src="{% static 'images/map2.jpg' %}" alt="地图"></div>
+        </div>
+    </div>
+    <!-- /Contene --> 
+{% endblock %}

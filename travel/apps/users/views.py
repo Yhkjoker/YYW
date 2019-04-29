@@ -75,7 +75,8 @@ class ForgetView(View):
         if forget_form.is_valid():
             email = request.POST.get('email', '')
             send_register_email(email, send_type='forget')
-            return render(request, "response.html", {'email':email})
+            msg = "验证码已发送至{0}，请去邮箱点击跳转修改密码".format(email)
+            return render(request, "response.html", {'email': email, 'msg': msg})
 
         else:
             return render(request, "Back.html", {'forget_form': forget_form})
@@ -83,9 +84,12 @@ class ForgetView(View):
 
 class RetrievePwdView(View):
     def get(self, request, active_code):
-        user_code = EmailVerifyRecord.objects.get(code=active_code,send_type='forget')
-        email = user_code.email
-        return render(request, 'Reset_pwd.html', {'email': email})
+        try:
+            user_code = EmailVerifyRecord.objects.get(code=active_code, send_type='forget')
+            email = user_code.email
+            return render(request, 'Reset_pwd.html', {'email': email})
+        except Exception as e:
+            return render(request, "response.html", {'msg': '验证码已失效', 'click': '点击去登录界面'})
 
 
 class ResetpwdView(View):
@@ -98,6 +102,8 @@ class ResetpwdView(View):
             if password1 != password2:
                 return render(request, "Reset_pwd.html", {'msg': '密码不一致'})
             user = UserProfile.objects.get(email=email)
+            user_code = EmailVerifyRecord.objects.get(email=email, send_type='forget')
+            user_code.delete()
             user.password = make_password(password1)
             user.save()
             return render(request, "Land.html", {})

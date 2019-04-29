@@ -1,390 +1,239 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--移动设备优先-->
-<title>悠悠蜗</title>
-<link href="/static/images/yyw.jpg" rel="icon" type="image/x-icon">
-<meta name="keywords" content="关键字" />
-<meta name="description" content="描述" />
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<!--通知IE采用最新的模式-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="fromat-detecition" content="telephone=no" />
-<!-- 屏蔽浏览器自动识别数字为电话号码 -->
-<link rel="stylesheet" href="/static/css/bootstrap.min.css">
-<!--  Bootstrap 核心 CSS 文件 -->
-<link rel="stylesheet" href="/static/css/css.css">
-<!--  样式表 -->
-<link rel="stylesheet" href="/static/css/style.css">
-<!--  媒体查询样式表 -->
-<link href="/static/css/swiper.min.css" rel="stylesheet">
-<!--滑动插件-->
-<link href="/static/css/animate.css" rel="stylesheet">
-<!--动画插件-->
-<script src="/static/js/jquery.min.js"></script><!-- jQuery文件 -->
-<script src="/static/js/bootstrap.min.js"></script><!--  Bootstrap 核心 JavaScript 文件 -->
-</head>
 
-<body>
-<header id="header"> 
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}<title>首页/悠悠蜗</title>{% endblock %}
+{% block banner %}
     <!-- Swiper -->
     <div class="swiper-container header-swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"> <img src="/static/images/banner1.jpg"> </div>
-            <div class="swiper-slide"> <img src="/static/images/banner2.jpg"> </div>
+            <div class="swiper-slide"> <img src="{% static 'images/banner1.jpg' %}"> </div>
+            <div class="swiper-slide"> <img src="{% static 'images/banner2.jpg' %}"> </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
         <div class="swiper-button-next">
-        	<img class="img1 tr-02" src="/static/images/banner_right.png" alt="">
-        	<img class="img2 tr-02" src="/static/images/banner_right_1.png" alt="">
+        	<img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_right_1.png' %}" alt="">
         </div>
         <div class="swiper-button-prev">
-        	<img class="img1 tr-02" src="/static/images/banner_left.png" alt="">
-        	<img class="img2 tr-02" src="/static/images/banner_left_1.png" alt="">
+        	<img class="img1 tr-02" src="{% static 'images/banner_left.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
         </div>
     </div>
-    <div class="Nav-Wra">
-        <nav class="navbar navbar-default w-1180">
-            <div class="container-fluid m-0 p-0">
-                <div class="navbar-header"><!-- 下拉导航栏按钮 -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> 
-                        <span class="sr-only">Toggle navigation</span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                        <span class="icon-bar"></span> 
-                    </button>
-                    <a class="navbar-brand m-0 p-0" href="index.html"><img src="/static/images/Logo.png" alt=""><span>专注大学生旅游</span></a><!-- LOGO --> 
+{% endblock %}
+{% block content %}
+    <div id="Contene" class="w-1180">
+        <div class="Home-A">
+            <!-- Swiper -->
+            <div class="swiper-container Home-A-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#">
+                             <div class="Hot">
+                                <span>热门推荐</span>
+                             </div>
+                             <img src="{% static 'images/h-banner1.jpg' %}">
+                             <div class="Txt">
+                                 <div class="Top clearFix">
+                                <h2 class="f-l">【年度佳选】山珍海味呷好茶，大海沙滩的五星假期</h2>
+                                <div class="f-r">
+                                    <sup>￥</sup>
+                                    <span>1399</span>
+                                    <strong>起</strong>
+                                </div>
+                                 </div>
+                                 <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
+                             </div>
+                         </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#">
+                             <div class="Hot">
+                                <span>热门推荐</span>
+                             </div>
+                             <img src="{% static 'images/h-banner2.jpg' %}">
+                             <div class="Txt">
+                                 <div class="Top clearFix">
+                                <h2 class="f-l">【年度佳选】22222222222222222222222</h2>
+                                <div class="f-r">
+                                    <sup>￥</sup>
+                                    <span>1399</span>
+                                    <strong>起</strong>
+                                </div>
+                                 </div>
+                                 <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
+                             </div>
+                         </a>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse p-0 m-0" id="bs-example-navbar-collapse-1"><!-- 导航栏 -->
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-                        <li><a href="Short_List.html">同城精粹</a></li>
-                        <li><a href="#">短途旅行</a></li>
-                        <li><a href="Short_List_B.html">长途旅行</a></li>
-                        <li><a href="Customized.html">团体定制</a></li>
-                    </ul>
+                <!-- Add Pagination -->
+                         <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
+                    <img class="img2 tr-02" src="{% static 'images/banner_right_1.png' %}" alt="">
                 </div>
-                <!-- /.navbar-collapse --> 
+                <div class="swiper-button-prev">
+                    <img class="img1 tr-02" src="{% static 'images/banner_left.png' %}" alt="">
+                    <img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
+                </div>
             </div>
-            <!-- /.container-fluid --> 
-            <div class="Top2-Nav">
-                <ul class="clearFix">
-                    <li class="f-l">
-                          <form class="form tr-02">
-                            <input class="text" type="text" />
-                            <button class="submit Bg1 tr-02" type="button" name="" value=""></button>
-                          </form>
-                    </li>
-                    <li class="f-l Bg1"><a href="#"></a></li>
-                    {% if request.user.is_authenticated %}
-                        <li class="f-l L-R"><a href="Register.html">个人中心</a></li>
-                        <li class="f-l L-R"><a href="Register.html">退出</a></li>
-                    {% else %}
-                        <li class="f-l L-R"><a href="{% url 'login' %}">登录</a></li>
-                        <li class="f-l L-R"><a href="{% url 'register' %}">注册</a></li>
-                    {% endif %}
-                </ul>
+        </div>
+        <div class="Home-B clearFix">
+            <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>同城精粹</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo0.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
+                        <div class="price f-r">
+                            <sup>￥</sup>
+                            <span>880</span>
+                            <strong>起</strong>
+                        </div>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">游山玩水</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多同城精粹</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
+             <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>纯玩路线</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo1.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
+                        <div class="price f-r">
+                            <sup>￥</sup>
+                            <span>998</span>
+                            <strong>起</strong>
+                        </div>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">修行之旅</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多纯玩路线</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>短途旅行</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo2.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
+                        <div class="price f-r">
+                            <sup>￥</sup>
+                            <span>360</span>
+                            <strong>起</strong>
+                        </div>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">放松休闲娱乐</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多短途旅行</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>长途旅行</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo3.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
+                        <div class="price f-r">
+                            <sup>￥</sup>
+                            <span>998</span>
+                            <strong>起</strong>
+                        </div>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">户外运动探险</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多长途旅行</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>工业旅行</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo4.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">敬请期待</p>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">工业旅行</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多工业旅行</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Nei-Div">
+                     <div class="Hot">
+                         <span>主题旅行</span>
+                     </div>
+                <a href="#" class="Photo">
+                    <img src="{% static 'images/photo5.jpg' %}" alt="">
+                    <!-- <div class="border-1 tr-03"></div>
+                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
+                </a>
+                <div class="Txt">
+                    <div class="clearFix top">
+                        <p class="f-l">敬请期待</p>
+                    </div>
+                    <div class="clearFix bottom">
+                        <h3 class="f-l">主题旅行</h3>
+                        <a class="f-r" href="#">
+                                     <i class="tr-02">→</i>
+                            <span class="tr-02">更多主题旅行</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</header>
-<!-- /header --> 
-<div id="Contene" class="w-1180">
-	<div class="Home-A">
-	    <!-- Swiper -->
-	    <div class="swiper-container Home-A-swiper">
-	        <div class="swiper-wrapper">
-	            <div class="swiper-slide"> 
-		            <a href="#">
-		                 <div class="Hot">
-		                 	<span>热门推荐</span>
-		                 </div>
-		                 <img src="/static/images/h-banner1.jpg"> 
-		                 <div class="Txt">
-		                     <div class="Top clearFix">
-		                 	<h2 class="f-l">【年度佳选】山珍海味呷好茶，大海沙滩的五星假期</h2>
-		                 	<div class="f-r">
-		                 		<sup>￥</sup>
-		                 		<span>1399</span>
-		                 		<strong>起</strong>
-		                 	</div> 
-		                     </div>
-		                     <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
-		                 </div>
-		             </a>
-	            </div>
-	            <div class="swiper-slide"> 
-		            <a href="#">
-		                 <div class="Hot">
-		                 	<span>热门推荐</span>
-		                 </div>
-		                 <img src="/static/images/h-banner2.jpg">
-		                 <div class="Txt">
-		                     <div class="Top clearFix">
-		                 	<h2 class="f-l">【年度佳选】22222222222222222222222</h2>
-		                 	<div class="f-r">
-		                 		<sup>￥</sup>
-		                 		<span>1399</span>
-		                 		<strong>起</strong>
-		                 	</div> 
-		                     </div>
-		                     <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
-		                 </div>
-		             </a>
-	            </div>
-	        </div>
-	        <!-- Add Pagination -->
-                     <div class="swiper-pagination"></div>
-	        <!-- Add Arrows -->
-	        <div class="swiper-button-next">
-	        	<img class="img1 tr-02" src="/static/images/banner_right.png" alt="">
-	        	<img class="img2 tr-02" src="/static/images/banner_right_1.png" alt="">
-	        </div>
-	        <div class="swiper-button-prev">
-	        	<img class="img1 tr-02" src="/static/images/banner_left.png" alt="">
-	        	<img class="img2 tr-02" src="/static/images/banner_left_1.png" alt="">
-	        </div>
-	    </div>
-	</div>
-	<div class="Home-B clearFix">
-	    <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>同城精粹</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo0.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-	    			<div class="price f-r">
-	    				<sup>￥</sup>
-	    				<span>880</span>
-	    				<strong>起</strong>
-	    			</div>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">游山玩水</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多同城精粹</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	     <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>纯玩路线</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo1.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-	    			<div class="price f-r">
-	    				<sup>￥</sup>
-	    				<span>998</span>
-	    				<strong>起</strong>
-	    			</div>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">修行之旅</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多纯玩路线</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>短途旅行</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo2.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-	    			<div class="price f-r">
-	    				<sup>￥</sup>
-	    				<span>360</span>
-	    				<strong>起</strong>
-	    			</div>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">放松休闲娱乐</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多短途旅行</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>长途旅行</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo3.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-	    			<div class="price f-r">
-	    				<sup>￥</sup>
-	    				<span>998</span>
-	    				<strong>起</strong>
-	    			</div>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">户外运动探险</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多长途旅行</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>工业旅行</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo4.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">敬请期待</p>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">工业旅行</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多工业旅行</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	    <div class="Nei-Div">
-	             <div class="Hot">
-	                 <span>主题旅行</span>
-	             </div>
-	    	<a href="#" class="Photo">
-	    		<img src="/static/images/photo5.jpg" alt="">
-	    		<!-- <div class="border-1 tr-03"></div>
-	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="/static/images/i-1.png" alt=""></a> -->
-	    	</a>
-	    	<div class="Txt">
-	    		<div class="clearFix top">
-	    			<p class="f-l">敬请期待</p>
-	    		</div>
-	    		<div class="clearFix bottom">
-	    			<h3 class="f-l">主题旅行</h3>
-	    			<a class="f-r" href="#">
-	    			             <i class="tr-02">→</i>
-	    				<span class="tr-02">更多主题旅行</span>
-	    			</a>
-	    		</div>
-	    	</div>
-	    </div>
-	</div>
-</div>
-<!-- /Contene --> 
-<!-- 右侧浮动导航 -->
-<div class="Right-Nav">
-	<ul>
-		<li>
-			<div class="show tr-02">
-				<p>客服电话：138-0000-0000<br/>客服时间：06：00~20：00</p>
-				<i></i>
-			</div>
-		</li>
-		<li></li>
-		<li>
-			<div class="show tr-02">
-				<img src="/static/images/code.jpg" alt="">
-				<i></i>
-			</div>
-		</li>
-		<li id="Return-Top"></li>
-	</ul>
-	<div class="Jd"></div>
-</div>
-<footer id="footer">
-    <div class="w-1180 clearFix">
-             <div class="f-r">
-    		<a href="index.html">
-    			<img src="/static/images/Logo2.png" alt="">
-    			<span>专注大学生旅游</span>
-    		</a>	
-    		<img src="/static/images/code.jpg" alt="">	
-    	</div>	
-    	<div class="f-l">
-    		<ul class="clearFix">
-    			<li class="f-l"><a class="tr-02" href="Join_Us.html">加入我们</a></li>
-    			<li class="f-l"><a class="tr-02" href="Contact_Us.html">联系我们</a></li>
-    			<li class="f-l"><a class="tr-02" href="Common_Problem.html">常见问题</a></li>
-                                        <li class="f-l"><a class="tr-02" href="Disclaimer.html">免责说明</a></li>
-    		</ul>	
-    		<p>悠悠蜗是一家专门针对大学生户外出游的公司,<span>致力于提供优秀的出游体验。</span></p>
-    		<p>地址：上海市杨浦区国定东路200号1号楼1113室     <span>联系电话：021-56082169</span></p>
-    		<p>Copyright ©2017-2019 悠悠蜗版权所有 <span>沪ICP备17003305号</span></p>
-    	</div>
-    </div>	
-</footer>
-<!-- /footer --> 
-<script src="/static/js/style.js"></script><!-- jQuery whole Put in the bottom --> 
-<script src="/static/js/swiper.jquery.min.js"></script><!-- Slide Put in the bottom --> 
-<script>
-//首页第一部分banner切换
-var swiper = new Swiper('.header-swiper', {
-    pagination: '.header-swiper .swiper-pagination',
-    nextButton: '.header-swiper .swiper-button-next',
-    prevButton: '.header-swiper .swiper-button-prev',
-    paginationClickable: true,
-    simulateTouch: true,//禁止滑动
-    centeredSlides: true,
-    autoplay: 6000,
-    fade: {
-        crossFade: true,
-    },
-    autoplayDisableOnInteraction: false,
-    effect: 'fade',//渐变
-    loop: true
-});
-//首页第二部分banner切换
-var swiper = new Swiper('.Home-A-swiper', {
-    pagination: '.Home-A-swiper .swiper-pagination',	
-    nextButton: '.Home-A-swiper .swiper-button-next',
-    prevButton: '.Home-A-swiper .swiper-button-prev',
-    paginationClickable: true,
-    simulateTouch: true,//禁止滑动
-    centeredSlides: true,
-    autoplay: 6000,
-    fade: {
-        crossFade: true,
-    },
-    autoplayDisableOnInteraction: false,
-    effect: 'fade',//渐变
-    loop: true
-});	
-
-</script>
-</body>
-</html>
+<!-- /Contene -->
+{% endblock %}

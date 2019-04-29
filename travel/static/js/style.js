@@ -41,6 +41,42 @@ $(".News-Div-Wra .row > a p").each(function() {
     }
  });
 
+// 轮播图
+$(function(){
+  var an1 = animation('.animated1', 'fadeInUp');
+  //首页第一部分banner切换
+  var swiper = new Swiper('.header-swiper', {
+      pagination: '.header-swiper .swiper-pagination',
+      nextButton: '.header-swiper .swiper-button-next',
+      prevButton: '.header-swiper .swiper-button-prev',
+      paginationClickable: true,
+      simulateTouch: true,//禁止滑动
+      centeredSlides: true,
+      autoplay: 6000,
+      fade: {
+          crossFade: true,
+      },
+      autoplayDisableOnInteraction: false,
+      effect: 'fade',//渐变
+      loop: true
+  });
+  //首页第二部分banner切换
+  var swiper = new Swiper('.Home-A-swiper', {
+      pagination: '.Home-A-swiper .swiper-pagination',
+      nextButton: '.Home-A-swiper .swiper-button-next',
+      prevButton: '.Home-A-swiper .swiper-button-prev',
+      paginationClickable: true,
+      simulateTouch: true,//禁止滑动
+      centeredSlides: true,
+      autoplay: 6000,
+      fade: {
+          crossFade: true,
+      },
+      autoplayDisableOnInteraction: false,
+      effect: 'fade',//渐变
+      loop: true
+  });
+})
 
 
 

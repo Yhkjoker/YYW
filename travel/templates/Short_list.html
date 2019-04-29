@@ -1,0 +1,258 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}<title>短途旅行/悠悠蜗</title>{% endblock %}
+{% block banner %}
+    <!-- Swiper -->
+    <div class="swiper-container header-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img src="{% static 'images/banner1.jpg' %}"> </div>
+            <div class="swiper-slide"> <img src="{% static 'images/banner2.jpg' %}"> </div>
+            <div class="swiper-slide"> <img src="{% static 'images/banner2.jpg' %}"> </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+        	<img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_right_1.png' %}" alt="">
+        </div>
+        <div class="swiper-button-prev">
+        	<img class="img1 tr-02" src="{% static 'images/banner_left.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <div id="Contene" class="w-1180">
+        <!--PC端显示-->
+        <div class="List-Btn List-Btn1">
+            <ul>
+                <li>
+                    <span>时间：</span>
+                    <a class="active" href="#">全部</a>
+                    <a href="#">一月</a>
+                    <a href="#">二月</a>
+                    <a href="#">三月</a>
+                    <a href="#">四月</a>
+                    <a href="#">五月</a>
+                    <a href="#">六月</a>
+                    <a href="#">七月</a>
+                    <a href="#">八月</a>
+                    <a href="#">九月</a>
+                    <a href="#">十月</a>
+                    <a href="#">十一月</a>
+                    <a href="#">十二月</a>
+                </li>
+                <li>
+                    <span>地区：</span>
+                    <a class="active" href="#">全部</a>
+                    <a href="#">东北地区</a>
+                    <a href="#">内蒙古</a>
+                    <a href="#">新疆</a>
+                    <a href="#">西藏</a>
+                    <a href="#">西北地区</a>
+                    <a href="#">云南</a>
+                </li>
+                <li>
+                    <span>天数：</span>
+                    <a class="active" href="#">全部</a>
+                    <a href="#">一天</a>
+                    <a href="#">二天</a>
+                    <a href="#">三天</a>
+                    <a href="#">三天以上</a>
+                </li>
+                <li>
+                    <span>价格：</span>
+                    <a class="active" href="#">全部</a>
+                    <a href="#">1000-2000</a>
+                    <a href="#">2000-3000</a>
+                    <a href="#">3000-5000</a>
+                    <a href="#">5000以上</a>
+                </li>
+            </ul>
+        </div>
+        <!--移动端显示-->
+        <div class="List-Btn List-Btn2">
+            <ul class="clearFix">
+                <li class="f-l">
+                             <span>时间：</span>
+                    <select>
+                      <option value="">全部</option>
+                      <option value="">一月</option>
+                      <option value="">二月</option>
+                      <option value="">三月</option>
+                      <option value="">四月</option>
+                      <option value="">五月</option>
+                      <option value="">六月</option>
+                      <option value="">七月</option>
+                      <option value="">八月</option>
+                      <option value="">久月</option>
+                      <option value="">十月</option>
+                      <option value="">十一月</option>
+                      <option value="">十二月</option>
+                    </select>
+                </li>
+                <li class="f-l">
+                             <span>天数：</span>
+                    <select>
+                      <option value="">全部</option>
+                      <option value="">一天</option>
+                      <option value="">二天</option>
+                      <option value="">三天</option>
+                      <option value="">三天以上</option>
+                    </select>
+                </li>
+                <li class="f-l">
+                    <span>价格：</span>
+                    <select>
+                      <option value="">全部</option>
+                      <option value="">1000-2000</option>
+                      <option value="">2000-3000</option>
+                      <option value="">3000-5000</option>
+                      <option value="">5000以上</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="List-title animated1">东北地区</div>
+        <div class="List-Content">
+            <div class="Content-Div clearFix animated1">
+                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo1.jpg' %}" alt="旅游图片"></a>
+                <div class="txt f-r">
+                    <h2 class="clearFix">
+                              <strong class="f-l">一岛情迷，美丽枸杞</strong>
+                              <div class="f-r"><strong>2</strong><span>DAYS</span></div>
+                    </h2>
+                    <ul>
+                        <li>
+                                 <span>行程</span>
+                                 <strong>昆明-大理古城-喜洲-沙溪-石宝山-泸沽湖-丽江</strong>
+                        </li>
+                        <li>
+                                 <span>体力</span>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                        </li>
+                    </ul>
+                    <p>超高性价比又层次丰富的周末路线：浦江县是有名的书画之乡，童话故事“神笔马良”的诞生地，仙华山风景秀美，石峰耸峭壁立，被称为“第一仙峰”。除了登高望远，还可以跟着国宝级的非遗大师体验匠心的麦秆画...</p>
+                    <div class="Price clearFix">
+                        <div class="f-l">
+                            <sup>￥</sup>
+                            <span>880.00-960.00</span>
+                        </div>
+                        <a class="f-r" href="List_details.html">
+                                               <i class="tr-02">→</i>
+                                      <span class="tr-02">查看详情</span>
+                                     </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Content-Div clearFix animated1">
+                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo2.jpg' %}" alt="旅游图片"></a>
+                <div class="txt f-r">
+                    <h2 class="clearFix">
+                              <strong class="f-l">一岛情迷，美丽枸杞</strong>
+                              <div class="f-r"><strong>2</strong><span>DAYS</span></div>
+                    </h2>
+                    <ul>
+                        <li>
+                                 <span>行程</span>
+                                 <strong>昆明-大理古城-喜洲-沙溪-石宝山-泸沽湖-丽江</strong>
+                        </li>
+                        <li>
+                                 <span>体力</span>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                        </li>
+                    </ul>
+                    <p>超高性价比又层次丰富的周末路线：浦江县是有名的书画之乡，童话故事“神笔马良”的诞生地，仙华山风景秀美，石峰耸峭壁立，被称为“第一仙峰”。除了登高望远，还可以跟着国宝级的非遗大师体验匠心的麦秆画...</p>
+                    <div class="Price clearFix">
+                        <div class="f-l">
+                            <sup>￥</sup>
+                            <span>880.00-960.00</span>
+                        </div>
+                        <a class="f-r" href="List_details.html">
+                                               <i class="tr-02">→</i>
+                                      <span class="tr-02">查看详情</span>
+                                     </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Content-Div clearFix animated1">
+                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo3.jpg' %}" alt="旅游图片"></a>
+                <div class="txt f-r">
+                    <h2 class="clearFix">
+                              <strong class="f-l">一岛情迷，美丽枸杞</strong>
+                              <div class="f-r"><strong>2</strong><span>DAYS</span></div>
+                    </h2>
+                    <ul>
+                        <li>
+                                 <span>行程</span>
+                                 <strong>昆明-大理古城-喜洲-沙溪-石宝山-泸沽湖-丽江</strong>
+                        </li>
+                        <li>
+                                 <span>体力</span>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                        </li>
+                    </ul>
+                    <p>超高性价比又层次丰富的周末路线：浦江县是有名的书画之乡，童话故事“神笔马良”的诞生地，仙华山风景秀美，石峰耸峭壁立，被称为“第一仙峰”。除了登高望远，还可以跟着国宝级的非遗大师体验匠心的麦秆画...</p>
+                    <div class="Price clearFix">
+                        <div class="f-l">
+                            <sup>￥</sup>
+                            <span>880.00-960.00</span>
+                        </div>
+                        <a class="f-r" href="List_details.html">
+                                               <i class="tr-02">→</i>
+                                      <span class="tr-02">查看详情</span>
+                                     </a>
+                    </div>
+                </div>
+            </div>
+            <div class="Content-Div clearFix animated1">
+                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo4.jpg' %}" alt="旅游图片"></a>
+                <div class="txt f-r">
+                    <h2 class="clearFix">
+                              <strong class="f-l">一岛情迷，美丽枸杞</strong>
+                              <div class="f-r"><strong>2</strong><span>DAYS</span></div>
+                    </h2>
+                    <ul>
+                        <li>
+                                 <span>行程</span>
+                                 <strong>昆明-大理古城-喜洲-沙溪-石宝山-泸沽湖-丽江</strong>
+                        </li>
+                        <li>
+                                 <span>体力</span>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1 active"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                                 <i class="Bg1"></i>
+                        </li>
+                    </ul>
+                    <p>超高性价比又层次丰富的周末路线：浦江县是有名的书画之乡，童话故事“神笔马良”的诞生地，仙华山风景秀美，石峰耸峭壁立，被称为“第一仙峰”。除了登高望远，还可以跟着国宝级的非遗大师体验匠心的麦秆画...</p>
+                    <div class="Price clearFix">
+                        <div class="f-l">
+                            <sup>￥</sup>
+                            <span>880.00-960.00</span>
+                        </div>
+                        <a class="f-r" href="List_details.html">
+                                               <i class="tr-02">→</i>
+                                      <span class="tr-02">查看详情</span>
+                                     </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
