@@ -41,6 +41,7 @@ class RegisterView(View):
                 return render(request, 'Register.html', {'msg': '邮箱已被注册'})
             user_profile.username = username
             user_profile.email = email
+            user_profile.is_active = 0
             user_profile.password = make_password(password)
             user_profile.save()
 
