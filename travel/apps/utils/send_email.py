@@ -33,14 +33,14 @@ def send_register_email(email, send_type="register"):
 
     if send_type == 'register':
         email_title = '悠悠蜗大学生旅游网激活'
-        email_body = '请点击网址进行账号激活http:127.0.0.1:8000/active/{0}'.format(code)
+        email_body = '请点击网址进行账号激活http://127.0.0.1:8000/active/{0}'.format(code)
 
         email_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
         if email_status:
             pass
     elif send_type == 'forget':
         email_title = '悠悠蜗大学生旅游网密码找回'
-        email_body = '请点击网址进行账号激活http:127.0.0.1:8000/retrievepwd/{0}'.format(code)
+        email_body = '请点击网址进行账号激活http://127.0.0.1:8000/retrievepwd/{0}'.format(code)
 
         email_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
         if email_status:
