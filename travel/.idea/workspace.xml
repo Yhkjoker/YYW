@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11bfc4aa-4434-4485-a9a8-da8f9d0a2f87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/Common_Problem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Contact_Us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Customized.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Disclaimer.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Identical_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Join_Us.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/List_details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Long_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Orders_signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Short_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/travel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/travel.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/orders/migrations/0005_teamorder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/orders/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/orders/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/route/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/route/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/utils/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/utils/send_email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/travel.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/travel.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Back.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Back.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Land.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Land.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/response.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/travel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travel/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/travel/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,25 +29,25 @@
         <counts>
           <entry key="html" value="28" />
           <entry key="js" value="1" />
-          <entry key="py" value="10" />
+          <entry key="py" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="28" />
           <entry key="JavaScript" value="1" />
-          <entry key="Python" value="10" />
+          <entry key="Python" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1823" />
+          <entry key="html" value="1832" />
           <entry key="py" value="889" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1823" />
+          <entry key="HTML" value="1832" />
           <entry key="Python" value="889" />
         </counts>
       </usages-collector>
@@ -102,10 +83,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+            <state relative-caret-position="212">
+              <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
               <folding>
-                <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
@@ -113,10 +93,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Envs/new_env/Lib/site-packages/pymysql/err.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="149">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="122" column="16" lean-forward="true" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+            <state relative-caret-position="92">
+              <caret line="126" column="92" lean-forward="true" selection-start-line="126" selection-start-column="92" selection-end-line="126" selection-end-column="92" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
@@ -172,15 +161,6 @@
                 <element signature="e#1178#1185#1#HTML" expanded="true" />
                 <element signature="e#10125#10131#1#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Orders_signup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-223">
-              <caret line="190" column="34" lean-forward="true" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -243,8 +223,8 @@
         <option value="$PROJECT_DIR$/templates/Join_Us.html" />
         <option value="$PROJECT_DIR$/templates/Common_Problem.html" />
         <option value="$PROJECT_DIR$/travel/urls.py" />
-        <option value="$PROJECT_DIR$/templates/details.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/details.html" />
       </list>
     </option>
   </component>
@@ -254,7 +234,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="5" />
     <option name="y" value="125" />
     <option name="width" value="1920" />
@@ -380,7 +360,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.50367105" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39941263" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39941263" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -634,24 +614,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="126" column="92" lean-forward="true" selection-start-line="126" selection-start-column="92" selection-end-line="126" selection-end-column="92" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="108" column="30" lean-forward="true" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
+        <state relative-caret-position="212">
+          <caret line="43" column="29" lean-forward="true" selection-start-line="43" selection-start-column="29" selection-end-line="43" selection-end-column="29" />
           <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$USER_HOME$/Envs/new_env/Lib/site-packages/pymysql/err.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="122" column="16" lean-forward="true" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="149">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
