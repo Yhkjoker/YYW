@@ -156,4 +156,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 from .celery_settings import *
 
-from .logging_settings import *
+# from .logging_settings import *
