@@ -45,8 +45,8 @@ class IdenticalListView(View):
             if int(days) < 4:
                 all_theme = all_theme.filter(days=int(days))
             else:
-                all_theme = all_theme.filter()
-
+                days = '4'
+                all_theme = all_theme.filter(days__gte=int(days))
 
         try:
             page = request.GET.get('page', 1)

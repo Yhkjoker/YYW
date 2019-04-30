@@ -30,34 +30,34 @@
             <ul>
                 <li>
                     <span>地区：</span>
-                    <a class="{% if area == '' %}active{% endif %}" href="?area">全部</a>
+                    <a class="{% if area == '' %}active{% endif %}" href="?month={{ month }}&days={{ days }}">全部</a>
                     {% for city in all_area %}
-                        <a class="{% ifequal area  city.id|stringformat:"i" %}active{% endifequal %}" href="?area={{ city.id }}">{{ city.area }}</a>
+                        <a class="{% ifequal area  city.id|stringformat:"i" %}active{% endifequal %}" href="?area={{ city.id }}&month={{ month }}&days={{ days }}">{{ city.area }}</a>
                     {% endfor %}
                 </li>
                 <li>
                     <span>时间：</span>
-                    <a class="{% if month == '' %}active{% endif %}" href="?month">全部</a>
-                    <a class="{% if month == '1' %}active{% endif %}" href="?month=1">一月</a>
-                    <a class="{% if month == '2' %}active{% endif %}" href="?month=2">二月</a>
-                    <a class="{% if month == '3' %}active{% endif %}" href="?month=3">三月</a>
-                    <a class="{% if month == '4' %}active{% endif %}" href="?month=4">四月</a>
-                    <a class="{% if month == '5' %}active{% endif %}" href="?month=5">五月</a>
-                    <a class="{% if month == '6' %}active{% endif %}" href="?month=6">六月</a>
-                    <a class="{% if month == '7' %}active{% endif %}" href="?month=7">七月</a>
-                    <a class="{% if month == '8' %}active{% endif %}" href="?month=8">八月</a>
-                    <a class="{% if month == '9' %}active{% endif %}" href="?month=9">九月</a>
-                    <a class="{% if month == '10' %}active{% endif %}" href="?month=10">十月</a>
-                    <a class="{% if month == '11' %}active{% endif %}" href="?month=11">十一月</a>
-                    <a class="{% if month == '12' %}active{% endif %}" href="?month=12">十二月</a>
+                    <a class="{% if month == '' %}active{% endif %}" href="?area={{ area }}&days={{ days }}">全部</a>
+                    <a class="{% if month == '1' %}active{% endif %}" href="?month=1&area={{ area }}&days={{ days }}">一月</a>
+                    <a class="{% if month == '2' %}active{% endif %}" href="?month=2&area={{ area }}&days={{ days }}">二月</a>
+                    <a class="{% if month == '3' %}active{% endif %}" href="?month=3&area={{ area }}&days={{ days }}">三月</a>
+                    <a class="{% if month == '4' %}active{% endif %}" href="?month=4&area={{ area }}&days={{ days }}">四月</a>
+                    <a class="{% if month == '5' %}active{% endif %}" href="?month=5&area={{ area }}&days={{ days }}">五月</a>
+                    <a class="{% if month == '6' %}active{% endif %}" href="?month=6&area={{ area }}&days={{ days }}">六月</a>
+                    <a class="{% if month == '7' %}active{% endif %}" href="?month=7&area={{ area }}&days={{ days }}">七月</a>
+                    <a class="{% if month == '8' %}active{% endif %}" href="?month=8&area={{ area }}&days={{ days }}">八月</a>
+                    <a class="{% if month == '9' %}active{% endif %}" href="?month=9&area={{ area }}&days={{ days }}">九月</a>
+                    <a class="{% if month == '10' %}active{% endif %}" href="?month=10&area={{ area }}&days={{ days }}">十月</a>
+                    <a class="{% if month == '11' %}active{% endif %}" href="?month=11&area={{ area }}&days={{ days }}">十一月</a>
+                    <a class="{% if month == '12' %}active{% endif %}" href="?month=12&area={{ area }}&days={{ days }}">十二月</a>
                 </li>
                 <li>
                     <span>天数：</span>
-                    <a class="{% if days == '' %}active{% endif %}" href="?day">全部</a>
-                    <a class="{% if days == '1' %}active{% endif %}" href="?day=1">一天</a>
-                    <a class="{% if days == '2' %}active{% endif %}" href="?day=2">二天</a>
-                    <a class="{% if days == '3' %}active{% endif %}" href="?day=3">三天</a>
-                    <a class="{% if days == '4' %}active{% endif %}" href="?day=4">三天以上</a>
+                    <a class="{% if days == '' %}active{% endif %}" href="?area={{ area }}&month={{ month }}">全部</a>
+                    <a class="{% if days == '1' %}active{% endif %}" href="?days=1&area={{ area }}&month={{ month }}">一天</a>
+                    <a class="{% if days == '2' %}active{% endif %}" href="?days=2&area={{ area }}&month={{ month }}">二天</a>
+                    <a class="{% if days == '3' %}active{% endif %}" href="?days=3&area={{ area }}&month={{ month }}">三天</a>
+                    <a class="{% if days == '4' %}active{% endif %}" href="?days=4&area={{ area }}&month={{ month }}">三天以上</a>
                 </li>
                 <li>
                     <span>价格：</span>

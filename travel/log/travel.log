@@ -4389,3 +4389,148 @@ ValueError: invalid literal for int() with base 10: ''
 [2019-04-30 21:45:22,565][Thread-3:3428][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31993]
 [2019-04-30 21:45:25,235][Thread-4:12008][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=5 HTTP/1.1" 200 17691]
 [2019-04-30 21:45:30,092][Thread-5:16764][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31993]
+[2019-04-30 21:59:27,460][Thread-1:12552][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 21:59:27,473][Thread-3:9272][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 21:59:27,497][Thread-4:1856][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 22:05:45,942][Thread-1:12152][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34566]
+[2019-04-30 22:05:45,963][Thread-3:9744][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:05:45,974][Thread-4:12924][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:05:45,989][Thread-5:2172][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:05:46,015][Thread-6:19216][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:05:46,019][Thread-7:1316][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:05:55,901][Thread-8:9608][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21514]
+[2019-04-30 22:10:55,305][Thread-1:2008][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list HTTP/1.1" 301 0]
+[2019-04-30 22:10:55,377][Thread-3:6928][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34566]
+[2019-04-30 22:11:01,440][Thread-4:18548][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?month=1 HTTP/1.1" 200 34590]
+[2019-04-30 22:11:06,375][Thread-5:13812][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2&month=1 HTTP/1.1" 200 21550]
+[2019-04-30 22:11:06,394][Thread-6:16124][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:11:06,401][Thread-7:18800][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:11:06,410][Thread-8:12932][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 304 0]
+[2019-04-30 22:11:18,984][Thread-9:19232][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31993]
+[2019-04-30 22:11:21,185][Thread-10:19412][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?month=1 HTTP/1.1" 200 34590]
+[2019-04-30 22:17:08,858][Thread-12:9020][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?month=1 HTTP/1.1" 200 34899]
+[2019-04-30 22:17:09,008][Thread-13:4240][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 22:17:11,342][Thread-14:18580][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1&month=1&days= HTTP/1.1" 200 32364]
+[2019-04-30 22:17:13,431][Thread-15:16056][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:17:15,207][Thread-16:9364][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:17:17,765][Thread-17:1748][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=1&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:17:21,760][Thread-18:10644][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=1&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:17:23,367][Thread-19:19088][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:19:54,964][Thread-1:9120][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:19:55,118][Thread-3:5916][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 22:19:56,345][Thread-4:4112][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=1&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:19:58,545][Thread-5:7164][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32364]
+[2019-04-30 22:20:15,017][Thread-7:5484][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32368]
+[2019-04-30 22:20:15,137][Thread-8:5436][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 22:20:18,389][Thread-9:15576][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?day=2&area=1&month=1 HTTP/1.1" 200 32368]
+[2019-04-30 22:20:18,469][Thread-10:10064][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 22:20:20,401][Thread-11:11204][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?days=1&area=1&month=1 HTTP/1.1" 200 32390]
+[2019-04-30 22:20:21,973][Thread-12:19388][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?days=2&area=1&month=1 HTTP/1.1" 200 12265]
+[2019-04-30 22:20:24,575][Thread-13:14552][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?days=1&area=1&month=1 HTTP/1.1" 200 32390]
+[2019-04-30 22:23:52,476][Thread-1:16208][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /identical_list/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'route_traveltheme.theme_intro' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\object\YYW\travel\apps\route\views.py", line 63, in get
+    'days':days,
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 173, in render
+    len_values = len(values)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\query.py", line 232, in __len__
+    self._fetch_all()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\query.py", line 1102, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\sql\compiler.py", line 876, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\utils.py", line 80, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\backends\mysql\base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\cursors.py", line 170, in execute
+    result = self._query(query)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\cursors.py", line 328, in _query
+    conn.query(q)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 732, in _read_query_result
+    result.read()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'route_traveltheme.theme_intro' in 'field list'")
+[2019-04-30 22:23:52,891][Thread-1:16208][task_id:django.server][basehttp.py:124][ERROR]["GET /identical_list/?month=1&days=1 HTTP/1.1" 500 314950]
