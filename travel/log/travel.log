@@ -3297,3 +3297,1095 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'contact_uso' not found. 'con
 [2019-04-29 20:36:36,935][Thread-81:9188][task_id:django.server][basehttp.py:124][WARNING]["GET /static/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1709]
 [2019-04-29 20:36:38,950][Thread-82:11888][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 16617]
 [2019-04-29 20:36:39,102][Thread-83:5144][task_id:django.server][basehttp.py:124][WARNING]["GET /static/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1709]
+[2019-04-29 20:57:08,851][Thread-1:13904][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18134]
+[2019-04-29 20:57:08,878][Thread-3:11708][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-29 20:57:09,066][Thread-4:13044][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-29 20:59:26,999][Thread-5:12100][task_id:django.request][base.py:152][WARNING][Not Found: /short_list/List_details.html]
+[2019-04-29 20:59:27,001][Thread-5:12100][task_id:django.server][basehttp.py:124][WARNING]["GET /short_list/List_details.html HTTP/1.1" 404 4765]
+[2019-04-29 21:05:25,119][Thread-8:920][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 16617]
+[2019-04-29 21:05:54,384][Thread-10:5148][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 18110]
+[2019-04-29 21:06:00,291][Thread-11:16876][task_id:django.server][basehttp.py:124][INFO]["GET /list_details/ HTTP/1.1" 200 29934]
+[2019-04-29 21:06:00,313][Thread-12:10496][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo6.jpg HTTP/1.1" 200 261162]
+[2019-04-29 21:06:00,320][Thread-13:18336][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/map.jpg HTTP/1.1" 200 54920]
+[2019-04-29 21:06:00,339][Thread-14:2828][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/map_max.jpg HTTP/1.1" 200 151798]
+[2019-04-29 21:06:00,354][Thread-15:12976][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/icon1.png HTTP/1.1" 200 3537]
+[2019-04-29 21:06:04,502][Thread-16:8496][task_id:django.server][basehttp.py:124][INFO]["GET /list_details/ HTTP/1.1" 200 29934]
+[2019-04-29 21:06:20,843][Thread-18:17888][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 16617]
+[2019-04-30 14:47:13,829][Thread-1:15400][task_id:django.server][basehttp.py:124][INFO]["GET /yyw HTTP/1.1" 301 0]
+[2019-04-30 14:47:14,278][Thread-3:11056][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 14:47:14,409][Thread-4:2036][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/bootstrap.min.css HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,421][Thread-6:13684][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/style.css HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,424][Thread-5:16632][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 200 61985]
+[2019-04-30 14:47:14,425][Thread-7:9592][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/animate.css HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,436][Thread-8:12484][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/jquery.min.js HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,438][Thread-9:9452][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 200 6953]
+[2019-04-30 14:47:14,443][Thread-11:16776][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/swiper.jquery.min.js HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,445][Thread-10:11228][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/swiper.min.css HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,446][Thread-12:15304][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/bootstrap.min.js HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,518][Thread-13:4464][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner1.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,524][Thread-14:13464][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner2.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,710][Thread-15:8684][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner_right.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,711][Thread-16:12844][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner_right_1.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,721][Thread-17:4544][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner_left.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,725][Thread-18:9040][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner_left_1.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,765][Thread-19:16652][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/Logo.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,765][Thread-21:9420][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/h-banner2.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,765][Thread-20:12728][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/h-banner1.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,769][Thread-22:11744][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo0.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,785][Thread-23:7580][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo1.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,864][Thread-24:7420][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo2.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,886][Thread-25:3372][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-2.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,890][Thread-26:7436][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-4.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,892][Thread-27:9392][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/a.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,900][Thread-28:14208][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/code.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,905][Thread-29:16144][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/Bg1.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,907][Thread-30:18076][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/Bg2.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:14,946][Thread-31:10768][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo3.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:15,041][Thread-32:15708][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo4.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:15,047][Thread-33:15404][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/photo5.jpg HTTP/1.1" 304 0]
+[2019-04-30 14:47:15,050][Thread-34:11756][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/Logo2.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:15,050][Thread-35:18300][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-5.png HTTP/1.1" 304 0]
+[2019-04-30 14:47:15,056][Thread-36:17384][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-3.png HTTP/1.1" 304 0]
+[2019-04-30 15:29:59,149][Thread-1:15120][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin HTTP/1.1" 301 0]
+[2019-04-30 15:30:00,357][Thread-3:8836][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/ HTTP/1.1" 200 4366]
+[2019-04-30 15:30:00,483][Thread-8:12152][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 186]
+[2019-04-30 15:30:00,605][Thread-5:5908][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1949]
+[2019-04-30 15:30:00,608][Thread-7:9420][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8750]
+[2019-04-30 15:30:00,623][Thread-9:17580][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4610]
+[2019-04-30 15:30:00,718][Thread-4:1476][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 133529]
+[2019-04-30 15:30:00,735][Thread-6:8892][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 22996]
+[2019-04-30 15:30:00,779][Thread-13:10336][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15590]
+[2019-04-30 15:30:00,863][Thread-11:15016][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4373]
+[2019-04-30 15:30:00,886][Thread-12:13464][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8515]
+[2019-04-30 15:30:00,908][Thread-14:2704][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4730]
+[2019-04-30 15:30:00,961][Thread-18:16956][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165]
+[2019-04-30 15:30:00,971][Thread-10:15984][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 248951]
+[2019-04-30 15:30:00,980][Thread-17:12624][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3508]
+[2019-04-30 15:30:00,993][Thread-15:16112][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 43825]
+[2019-04-30 15:30:01,157][Thread-16:11272][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 60329]
+[2019-04-30 15:30:01,169][Thread-20:7888][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3583]
+[2019-04-30 15:30:01,181][Thread-19:3480][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 33207]
+[2019-04-30 15:30:01,475][Thread-21:12776][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432]
+[2019-04-30 15:30:02,141][Thread-22:9324][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-04-30 15:30:02,143][Thread-22:9324][task_id:django.server][basehttp.py:124][WARNING]["GET /favicon.ico HTTP/1.1" 404 4714]
+[2019-04-30 15:30:23,083][Thread-23:14924][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/ HTTP/1.1" 302 0]
+[2019-04-30 15:30:29,007][Thread-24:7136][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/ HTTP/1.1" 200 13129]
+[2019-04-30 15:30:29,087][Thread-25:14216][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 836]
+[2019-04-30 15:30:29,103][Thread-27:18076][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3285]
+[2019-04-30 15:30:29,110][Thread-28:15052][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 200 1029]
+[2019-04-30 15:30:29,166][Thread-26:1968][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:30:38,286][Thread-29:12888][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /xadmin/route/traveltheme/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 617, in get_field
+    return self.fields_map[field_name]
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 340, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 317, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: TravelTheme has no field named 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 441, in result_header
+    return_attr=True
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'price' on TravelTheme or routetravelthemeAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+[2019-04-30 15:30:39,262][Thread-29:12888][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/route/traveltheme/ HTTP/1.1" 500 253274]
+[2019-04-30 15:30:51,438][Thread-31:2476][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/ HTTP/1.1" 200 13129]
+[2019-04-30 15:30:54,699][Thread-32:14812][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/users/userprofile/ HTTP/1.1" 200 42263]
+[2019-04-30 15:30:54,772][Thread-33:17720][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763]
+[2019-04-30 15:30:54,877][Thread-35:15888][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:30:54,879][Thread-34:1468][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 10526]
+[2019-04-30 15:30:54,891][Thread-36:656][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 200 2380]
+[2019-04-30 15:30:54,892][Thread-37:17636][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 200 545]
+[2019-04-30 15:30:54,905][Thread-40:1232][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 200 2046]
+[2019-04-30 15:30:54,907][Thread-39:11476][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 200 3069]
+[2019-04-30 15:30:54,908][Thread-38:15484][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 33703]
+[2019-04-30 15:30:54,916][Thread-41:18064][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.actions.js HTTP/1.1" 200 4316]
+[2019-04-30 15:30:54,923][Thread-42:17452][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 200 1133]
+[2019-04-30 15:30:54,943][Thread-43:7284][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1999]
+[2019-04-30 15:35:55,098][Thread-1:17176][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/users/userprofile/ HTTP/1.1" 200 42263]
+[2019-04-30 15:35:55,128][Thread-3:9040][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:35:59,888][Thread-4:16268][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /xadmin/route/traveltheme/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 617, in get_field
+    return self.fields_map[field_name]
+KeyError: 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 340, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 317, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: TravelTheme has no field named 'price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 441, in result_header
+    return_attr=True
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'price' on TravelTheme or routetravelthemeAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+[2019-04-30 15:36:00,018][Thread-4:16268][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/route/traveltheme/ HTTP/1.1" 500 252885]
+[2019-04-30 15:37:32,283][Thread-3:2364][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/users/userprofile/ HTTP/1.1" 200 42262]
+[2019-04-30 15:37:32,331][Thread-4:13696][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:37:34,309][Thread-1:18364][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/users/userprofile/ HTTP/1.1" 200 42262]
+[2019-04-30 15:37:34,701][Thread-1:18364][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/users/userprofile/ HTTP/1.1" 500 59]
+[2019-04-30 15:37:36,287][Thread-5:17292][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /xadmin/route/traveltheme/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 617, in get_field
+    return self.fields_map[field_name]
+KeyError: 'mix_price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 340, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 317, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: TravelTheme has no field named 'mix_price'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 441, in result_header
+    return_attr=True
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'mix_price' on TravelTheme or routetravelthemeAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+[2019-04-30 15:37:36,421][Thread-5:17292][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/route/traveltheme/ HTTP/1.1" 500 253148]
+[2019-04-30 15:38:34,547][Thread-1:11680][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/users/userprofile/ HTTP/1.1" 200 42263]
+[2019-04-30 15:38:34,611][Thread-3:10340][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:38:39,593][Thread-4:15656][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 24228]
+[2019-04-30 15:38:39,625][Thread-5:17636][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:38:42,335][Thread-6:12556][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/themeinfo/ HTTP/1.1" 200 23171]
+[2019-04-30 15:38:42,361][Thread-7:8928][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:38:43,738][Thread-8:17424][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /xadmin/route/tours/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 617, in get_field
+    return self.fields_map[field_name]
+KeyError: 'date'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 340, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 317, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Tours has no field named 'date'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 441, in result_header
+    return_attr=True
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'date' on Tours or routetoursAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+[2019-04-30 15:38:43,863][Thread-8:17424][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/route/tours/ HTTP/1.1" 500 251607]
+[2019-04-30 15:40:45,874][Thread-1:14424][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/themeinfo/ HTTP/1.1" 200 23171]
+[2019-04-30 15:40:45,915][Thread-3:2064][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:40:57,619][Thread-4:11076][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/tours/ HTTP/1.1" 200 23239]
+[2019-04-30 15:40:57,650][Thread-5:16396][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:40:59,514][Thread-6:284][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /xadmin/orders/orderdetail/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 617, in get_field
+    return self.fields_map[field_name]
+KeyError: 'order_tours_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 340, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 317, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\db\models\options.py", line 619, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: OrderDetail has no field named 'order_tours_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 279, in view
+    return handler(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\utils\decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 78, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 61, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 47, in filter_chain
+    return func()
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 60, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\base.py", line 72, in _inner_method
+    return func(self, *args, **kwargs)
+  File "E:\object\YYW\travel\extra_apps\xadmin\views\list.py", line 441, in result_header
+    return_attr=True
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\contrib\admin\utils.py", line 364, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'order_tours_id' on OrderDetail or ordersorderdetailAdminListAdminViewModelAdminViewGlobalSettingsCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+[2019-04-30 15:40:59,768][Thread-6:284][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 500 253399]
+[2019-04-30 15:41:01,264][Thread-7:14816][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/tours/ HTTP/1.1" 200 23239]
+[2019-04-30 15:47:16,733][Thread-1:12404][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/tours/ HTTP/1.1" 200 23675]
+[2019-04-30 15:47:16,735][Thread-1:12404][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/route/tours/ HTTP/1.1" 500 59]
+[2019-04-30 15:47:17,274][Thread-3:7828][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/tours/ HTTP/1.1" 200 23675]
+[2019-04-30 15:47:17,301][Thread-4:15444][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:47:20,990][Thread-5:10324][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 200 24650]
+[2019-04-30 15:47:21,019][Thread-6:7712][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:47:22,828][Thread-7:10408][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/orders/teamorder/ HTTP/1.1" 200 24839]
+[2019-04-30 15:47:22,850][Thread-8:16056][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:47:24,663][Thread-9:2796][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 200 24650]
+[2019-04-30 15:47:24,690][Thread-10:6016][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:50:55,257][Thread-1:1708][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 200 24655]
+[2019-04-30 15:50:55,258][Thread-1:1708][task_id:django.server][basehttp.py:124][ERROR]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 500 59]
+[2019-04-30 15:50:55,291][Thread-3:6684][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/orders/orderdetail/ HTTP/1.1" 200 24655]
+[2019-04-30 15:50:55,325][Thread-4:1232][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:51:00,695][Thread-5:16532][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 24669]
+[2019-04-30 15:51:00,721][Thread-6:8560][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:51:04,749][Thread-7:18056][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 23597]
+[2019-04-30 15:51:04,776][Thread-8:9040][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap-image-gallery/css/bootstrap-image-gallery.css HTTP/1.1" 200 3492]
+[2019-04-30 15:51:04,820][Thread-13:9464][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 15:51:04,848][Thread-14:16756][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/bootstrap-image-gallery/js/bootstrap-image-gallery.js HTTP/1.1" 200 16013]
+[2019-04-30 15:51:04,852][Thread-9:9420][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 200 19841]
+[2019-04-30 15:51:04,858][Thread-12:7932][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/load-image/load-image.js HTTP/1.1" 200 8551]
+[2019-04-30 15:51:04,858][Thread-10:7884][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/selectize/selectize.css HTTP/1.1" 200 8742]
+[2019-04-30 15:51:04,879][Thread-15:8768][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/selectize/selectize.js HTTP/1.1" 200 102268]
+[2019-04-30 15:51:04,897][Thread-18:11452][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.widget.select.js HTTP/1.1" 200 1382]
+[2019-04-30 15:51:04,901][Thread-11:11616][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/selectize/selectize.bootstrap3.css HTTP/1.1" 200 11003]
+[2019-04-30 15:51:04,918][Thread-16:17176][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 200 107692]
+[2019-04-30 15:51:04,923][Thread-17:6232][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/vendor/select2/select2_locale_zh-hans.js HTTP/1.1" 200 708]
+[2019-04-30 15:53:46,614][Thread-1:10336][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 24668]
+[2019-04-30 15:57:21,729][Thread-1:10344][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 24668]
+[2019-04-30 15:57:21,760][Thread-3:1748][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:01:47,369][Thread-1:10076][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 25074]
+[2019-04-30 16:01:47,397][Thread-3:9580][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:01:51,777][Thread-4:10884][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/ HTTP/1.1" 200 22807]
+[2019-04-30 16:01:51,809][Thread-5:6444][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:01:53,615][Thread-6:10364][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15833]
+[2019-04-30 16:01:53,638][Thread-7:1320][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:02:34,971][Thread-8:8928][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15833]
+[2019-04-30 16:02:35,003][Thread-9:8216][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:02:39,435][Thread-1:15912][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15874]
+[2019-04-30 16:02:39,481][Thread-3:6788][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:03:15,589][Thread-1:8236][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15857]
+[2019-04-30 16:03:15,621][Thread-3:9420][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:03:43,155][Thread-4:17536][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15857]
+[2019-04-30 16:03:43,182][Thread-5:8148][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:03:47,944][Thread-1:7284][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15857]
+[2019-04-30 16:03:47,974][Thread-3:6232][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:07,375][Thread-4:10100][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:04:07,485][Thread-5:9532][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/ HTTP/1.1" 200 26103]
+[2019-04-30 16:04:07,531][Thread-6:11464][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:12,433][Thread-7:15476][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 15857]
+[2019-04-30 16:04:12,459][Thread-8:15288][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:22,586][Thread-9:16524][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:04:22,714][Thread-10:6568][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 16205]
+[2019-04-30 16:04:22,752][Thread-11:11448][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:33,103][Thread-12:15624][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:04:33,173][Thread-13:1504][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 16202]
+[2019-04-30 16:04:33,204][Thread-14:17272][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:43,500][Thread-15:15996][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:04:43,563][Thread-16:8456][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 16202]
+[2019-04-30 16:04:43,595][Thread-17:11832][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:04:59,597][Thread-18:9040][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:04:59,664][Thread-19:17052][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/add/ HTTP/1.1" 200 16202]
+[2019-04-30 16:04:59,724][Thread-20:216][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:05:19,041][Thread-21:15640][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/city/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:05:19,186][Thread-22:10328][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/ HTTP/1.1" 200 30943]
+[2019-04-30 16:05:19,238][Thread-23:6748][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:05:22,535][Thread-24:9764][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 25074]
+[2019-04-30 16:05:22,562][Thread-25:7992][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:05:24,408][Thread-26:8444][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24592]
+[2019-04-30 16:05:24,451][Thread-27:18256][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:05:24,514][Thread-28:7668][task_id:django.server][basehttp.py:124][INFO]["GET /static/xadmin/js/xadmin.plugin.quick-form.js HTTP/1.1" 200 7777]
+[2019-04-30 16:10:26,022][Thread-1:2884][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:10:40,720][Thread-3:10220][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 34609]
+[2019-04-30 16:10:40,775][Thread-4:11332][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:10:53,832][Thread-5:15580][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/1/update/ HTTP/1.1" 200 25579]
+[2019-04-30 16:10:53,870][Thread-7:8928][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/photo1.jpg]
+[2019-04-30 16:10:53,876][Thread-6:15688][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:10:53,878][Thread-7:8928][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/photo1.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:11:36,830][Thread-8:11420][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/1/update/ HTTP/1.1" 302 0]
+[2019-04-30 16:11:36,971][Thread-9:7828][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 34552]
+[2019-04-30 16:11:37,036][Thread-10:15540][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:12:00,244][Thread-11:9536][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/city/5/detail/?_format=html HTTP/1.1" 200 713]
+[2019-04-30 16:12:28,301][Thread-12:12920][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24611]
+[2019-04-30 16:12:28,337][Thread-13:15400][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:12:33,914][Thread-14:14488][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 34299]
+[2019-04-30 16:12:36,749][Thread-15:10504][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24611]
+[2019-04-30 16:12:36,796][Thread-16:1892][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:18:28,998][Thread-17:7972][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 34299]
+[2019-04-30 16:20:39,783][Thread-1:15820][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 34299]
+[2019-04-30 16:20:39,809][Thread-3:14856][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:20:44,595][Thread-4:12020][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24611]
+[2019-04-30 16:20:44,629][Thread-5:10036][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:23:22,348][Thread-6:10756][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:23:22,491][Thread-7:7884][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24972]
+[2019-04-30 16:23:22,526][Thread-8:13032][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:26:00,453][Thread-9:12000][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:26:00,608][Thread-10:15444][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24972]
+[2019-04-30 16:26:00,651][Thread-11:1636][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:28:09,156][Thread-12:7776][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:28:09,303][Thread-13:14848][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24981]
+[2019-04-30 16:28:09,338][Thread-14:5096][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:31:42,217][Thread-15:12444][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:31:42,373][Thread-16:16664][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24978]
+[2019-04-30 16:31:42,414][Thread-17:16532][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:33:14,160][Thread-18:4236][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:33:14,300][Thread-19:9784][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 46185]
+[2019-04-30 16:33:14,354][Thread-20:6824][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:33:56,242][Thread-21:17760][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24611]
+[2019-04-30 16:33:56,279][Thread-22:1516][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:35:23,804][Thread-23:7520][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:35:23,958][Thread-24:15420][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/add/ HTTP/1.1" 200 24984]
+[2019-04-30 16:35:23,995][Thread-25:10740][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:36:47,994][Thread-26:10404][task_id:django.server][basehttp.py:124][INFO]["POST /xadmin/route/traveltheme/add/ HTTP/1.1" 302 0]
+[2019-04-30 16:36:48,155][Thread-27:8932][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 50826]
+[2019-04-30 16:36:48,210][Thread-28:5128][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:37:00,033][Thread-29:1156][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/1/update/ HTTP/1.1" 200 25599]
+[2019-04-30 16:37:00,067][Thread-30:6124][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/jsi18n/ HTTP/1.1" 200 4828]
+[2019-04-30 16:37:00,092][Thread-31:15780][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/photo1_BGAVTuR.jpg]
+[2019-04-30 16:37:00,094][Thread-31:15780][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 404 4795]
+[2019-04-30 16:37:05,805][Thread-32:7932][task_id:django.server][basehttp.py:124][INFO]["GET /xadmin/route/traveltheme/ HTTP/1.1" 200 50513]
+[2019-04-30 16:55:52,090][Thread-1:12404][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list HTTP/1.1" 301 0]
+[2019-04-30 16:55:52,181][Thread-3:17796][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 28361]
+[2019-04-30 16:55:52,300][Thread-4:15132][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 16:55:52,306][Thread-5:7380][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 16:55:52,416][Thread-6:14896][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/6f84_b.jpg]
+[2019-04-30 16:55:52,421][Thread-7:6948][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/photo1_BGAVTuR.jpg]
+[2019-04-30 16:55:52,426][Thread-8:14788][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/d802_m.jpg]
+[2019-04-30 16:55:52,428][Thread-6:14896][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:55:52,428][Thread-7:6948][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 404 4795]
+[2019-04-30 16:55:52,428][Thread-8:14788][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:55:52,436][Thread-9:10980][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg]
+[2019-04-30 16:55:52,437][Thread-9:10980][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 404 4834]
+[2019-04-30 16:55:52,484][Thread-10:9320][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/87ba_b.jpg]
+[2019-04-30 16:55:52,490][Thread-11:16684][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/34f6_m.jpg]
+[2019-04-30 16:55:52,491][Thread-10:9320][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:55:52,492][Thread-11:16684][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:55:52,498][Thread-12:7032][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/d75b_b.jpg]
+[2019-04-30 16:55:52,505][Thread-13:12708][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/12_14574217073Kf5.jpg]
+[2019-04-30 16:55:52,505][Thread-12:7032][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:55:52,506][Thread-13:12708][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 404 4804]
+[2019-04-30 16:55:52,531][Thread-14:9096][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-13.png HTTP/1.1" 304 0]
+[2019-04-30 16:56:13,035][Thread-15:14948][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 28342]
+[2019-04-30 16:56:13,056][Thread-16:18352][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/photo1_BGAVTuR.jpg]
+[2019-04-30 16:56:13,058][Thread-16:18352][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 404 4795]
+[2019-04-30 16:56:13,071][Thread-17:9460][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/6f84_b.jpg]
+[2019-04-30 16:56:13,072][Thread-17:9460][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:56:13,084][Thread-18:1504][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/d802_m.jpg]
+[2019-04-30 16:56:13,089][Thread-19:4100][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg]
+[2019-04-30 16:56:13,089][Thread-19:4100][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 404 4834]
+[2019-04-30 16:56:13,090][Thread-18:1504][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:56:13,110][Thread-20:16848][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/87ba_b.jpg]
+[2019-04-30 16:56:13,116][Thread-21:8780][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/34f6_m.jpg]
+[2019-04-30 16:56:13,122][Thread-22:7904][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/d75b_b.jpg]
+[2019-04-30 16:56:13,122][Thread-20:16848][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:56:13,123][Thread-21:8780][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:56:13,124][Thread-22:7904][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 404 4771]
+[2019-04-30 16:56:13,131][Thread-23:15700][task_id:django.request][base.py:152][WARNING][Not Found: /media/imgae/2019/04/12_14574217073Kf5.jpg]
+[2019-04-30 16:56:13,133][Thread-23:15700][task_id:django.server][basehttp.py:124][WARNING]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 404 4804]
+[2019-04-30 16:56:13,240][Thread-24:17104][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 16:56:20,347][Thread-25:6232][task_id:django.server][basehttp.py:124][WARNING]["GET /static/js/maps/swiper.jquery.min.js.map HTTP/1.1" 404 1709]
+[2019-04-30 17:02:08,680][Thread-1:9260][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 28342]
+[2019-04-30 17:02:08,699][Thread-3:5184][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 200 164771]
+[2019-04-30 17:02:08,704][Thread-4:15460][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 200 89590]
+[2019-04-30 17:02:08,760][Thread-8:4232][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 200 5883]
+[2019-04-30 17:02:08,761][Thread-5:4088][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 200 11199]
+[2019-04-30 17:02:08,763][Thread-9:5656][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 200 93592]
+[2019-04-30 17:02:08,764][Thread-7:9376][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 200 133131]
+[2019-04-30 17:02:08,765][Thread-6:220][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 200 32189]
+[2019-04-30 17:02:08,769][Thread-10:14612][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 200 71545]
+[2019-04-30 17:02:08,874][Thread-11:8928][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 17:03:58,084][Thread-12:6016][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 40987]
+[2019-04-30 17:03:58,257][Thread-13:14296][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 17:14:30,689][Thread-14:3756][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 41034]
+[2019-04-30 17:14:30,709][Thread-15:16504][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,722][Thread-16:7884][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,727][Thread-17:12376][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,733][Thread-18:13340][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,782][Thread-21:7612][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,784][Thread-23:5096][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,784][Thread-22:2884][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,784][Thread-19:16764][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,784][Thread-20:16736][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,787][Thread-24:14092][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 304 0]
+[2019-04-30 17:14:30,849][Thread-25:10124][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 19:07:55,222][Thread-26:4108][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 19:07:55,237][Thread-27:5620][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 19:07:55,247][Thread-28:10548][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 19:41:14,250][Thread-1:2572][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 19:41:14,268][Thread-3:6796][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 19:41:14,276][Thread-4:12416][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 19:41:14,415][Thread-5:15736][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 19:41:16,389][Thread-6:11076][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 19:41:16,500][Thread-7:9024][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 19:41:25,205][Thread-8:3532][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /identical_list/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\object\YYW\travel\apps\route\views.py", line 39, in get
+    'all_area': all_area
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 172, in render
+    values = list(values)
+TypeError: 'Page' object is not iterable
+[2019-04-30 19:41:25,480][Thread-8:3532][task_id:django.server][basehttp.py:124][ERROR]["GET /identical_list/ HTTP/1.1" 500 176592]
+[2019-04-30 19:55:41,176][Thread-10:11472][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 19:55:41,277][Thread-11:8860][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 19:55:42,582][Thread-12:1712][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /identical_list/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\object\YYW\travel\apps\route\views.py", line 39, in get
+    'all_area': all_area
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\backends\django.py", line 66, in render
+    return self.template.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 207, in render
+    return self._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 177, in render
+    return compiled_parent._render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 72, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 990, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 957, in render_annotated
+    return self.render(context)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 172, in render
+    values = list(values)
+TypeError: 'Page' object is not iterable
+[2019-04-30 19:55:42,669][Thread-12:1712][task_id:django.server][basehttp.py:124][ERROR]["GET /identical_list/ HTTP/1.1" 500 177001]
+[2019-04-30 19:58:45,823][Thread-14:1708][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 19:58:45,921][Thread-15:7900][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 19:58:46,882][Thread-16:15912][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 19:58:46,898][Thread-17:8844][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:58:46,903][Thread-18:16004][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:58:46,924][Thread-19:17924][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:58:46,930][Thread-20:16764][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:58:46,931][Thread-21:15716][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:59:00,266][Thread-22:11744][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21125]
+[2019-04-30 19:59:00,283][Thread-23:8612][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:59:00,286][Thread-24:10404][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:59:00,300][Thread-25:15408][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 304 0]
+[2019-04-30 19:59:09,221][Thread-26:14216][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=1 HTTP/1.1" 200 34177]
+[2019-04-30 19:59:51,136][Thread-28:3376][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21125]
+[2019-04-30 20:00:25,233][Thread-1:9912][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21452]
+[2019-04-30 20:00:25,319][Thread-3:8548][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:00:28,089][Thread-4:15124][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=1 HTTP/1.1" 200 21655]
+[2019-04-30 20:00:32,000][Thread-5:3760][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21452]
+[2019-04-30 20:01:25,027][Thread-7:7612][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=3 HTTP/1.1" 200 19347]
+[2019-04-30 20:01:28,200][Thread-8:6048][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=4 HTTP/1.1" 200 18342]
+[2019-04-30 20:01:36,882][Thread-9:14660][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21452]
+[2019-04-30 20:23:46,121][Thread-1:17924][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:23:46,136][Thread-3:5924][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 20:23:46,154][Thread-4:3428][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 20:23:48,621][Thread-5:15120][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:23:48,640][Thread-6:7032][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:23:48,642][Thread-7:2044][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:23:48,672][Thread-8:15176][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:23:48,677][Thread-10:5624][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:23:48,678][Thread-9:16004][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:23:49,382][Thread-11:7904][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 20:23:50,085][Thread-12:17292][task_id:django.server][basehttp.py:124][INFO]["GET /long_list/ HTTP/1.1" 200 18657]
+[2019-04-30 20:25:19,367][Thread-14:10436][task_id:django.server][basehttp.py:124][INFO]["GET /long_list/ HTTP/1.1" 200 18657]
+[2019-04-30 20:25:19,466][Thread-15:14828][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:25:20,940][Thread-16:1516][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:25:22,630][Thread-17:8560][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 20:25:23,265][Thread-18:11248][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:25:24,220][Thread-19:15524][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:25:24,813][Thread-20:17476][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:26:50,974][Thread-22:16248][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:26:51,066][Thread-23:6788][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:26:52,071][Thread-24:2572][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:26:52,868][Thread-25:17296][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:26:54,137][Thread-26:6016][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:26:54,973][Thread-27:10292][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:26:55,572][Thread-28:5380][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 20:26:56,141][Thread-29:4624][task_id:django.server][basehttp.py:124][INFO]["GET /long_list/ HTTP/1.1" 200 18657]
+[2019-04-30 20:26:56,722][Thread-30:11284][task_id:django.server][basehttp.py:124][INFO]["GET /customized_list/ HTTP/1.1" 200 9272]
+[2019-04-30 20:26:56,734][Thread-31:11548][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/banner5.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:26:56,760][Thread-32:15476][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/i-14.png HTTP/1.1" 304 0]
+[2019-04-30 20:26:57,303][Thread-33:11680][task_id:django.server][basehttp.py:124][INFO]["GET /long_list/ HTTP/1.1" 200 18657]
+[2019-04-30 20:26:57,892][Thread-34:12052][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 20:26:58,403][Thread-35:5360][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:26:58,858][Thread-36:7520][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:27:02,802][Thread-37:7932][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:27:06,989][Thread-38:15768][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:27:07,604][Thread-39:11104][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:27:08,239][Thread-40:9440][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 20:27:09,027][Thread-41:13832][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:27:09,912][Thread-42:14116][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:27:10,875][Thread-43:16924][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 20:27:53,194][Thread-45:224][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34177]
+[2019-04-30 20:37:16,048][Thread-1:2972][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34356]
+[2019-04-30 20:37:16,183][Thread-3:14396][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:37:17,999][Thread-4:1892][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31783]
+[2019-04-30 20:37:18,015][Thread-5:6180][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:37:28,301][Thread-6:14516][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1&page=2 HTTP/1.1" 200 18132]
+[2019-04-30 20:37:28,318][Thread-7:16396][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:37:28,321][Thread-8:5492][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:37:33,488][Thread-9:16584][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=2 HTTP/1.1" 200 11681]
+[2019-04-30 20:37:36,041][Thread-10:15476][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=3 HTTP/1.1" 200 11681]
+[2019-04-30 20:37:38,622][Thread-11:16468][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=4 HTTP/1.1" 200 11681]
+[2019-04-30 20:37:40,152][Thread-12:12896][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31783]
+[2019-04-30 20:37:41,716][Thread-13:5360][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34376]
+[2019-04-30 20:37:45,711][Thread-14:7900][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=&page=2 HTTP/1.1" 200 21334]
+[2019-04-30 20:38:54,709][Thread-17:9324][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34321]
+[2019-04-30 20:38:54,806][Thread-18:1636][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:39:06,354][Thread-19:7612][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34370]
+[2019-04-30 20:39:06,464][Thread-20:7904][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:47:03,291][Thread-1:3532][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /identical_list/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\object\YYW\travel\apps\route\views.py", line 47, in get
+    'area':area,
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\backends\django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\engine.py", line 162, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\engine.py", line 136, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loaders\base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 230, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 312, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\loader_tags.py", line 255, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 827, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 515, in parse
+    raise self.error(token, e)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 513, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 871, in ifequal
+    return do_ifequal(parser, token, False)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\defaulttags.py", line 850, in do_ifequal
+    val2 = parser.compile_filter(bits[2])
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 694, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'stringfloat'
+[2019-04-30 20:47:03,635][Thread-1:3532][task_id:django.server][basehttp.py:124][ERROR]["GET /identical_list/?area=1 HTTP/1.1" 500 224148]
+[2019-04-30 20:49:18,017][Thread-5:10036][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34424]
+[2019-04-30 20:49:18,034][Thread-6:17132][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:49:18,050][Thread-7:14084][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:49:18,056][Thread-8:13064][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:49:18,078][Thread-9:9464][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:49:18,085][Thread-10:10864][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 20:49:18,192][Thread-11:6588][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:49:26,149][Thread-12:17468][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31825]
+[2019-04-30 20:49:28,026][Thread-13:5656][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=2 HTTP/1.1" 200 11723]
+[2019-04-30 20:49:31,378][Thread-14:9980][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=3 HTTP/1.1" 200 11723]
+[2019-04-30 20:49:34,054][Thread-15:10032][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34424]
+[2019-04-30 20:50:09,745][Thread-1:1292][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /identical_list/]
+Traceback (most recent call last):
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\22959\Envs\new_env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\object\YYW\travel\apps\route\views.py", line 47, in get
+    'area':int(area),
+ValueError: invalid literal for int() with base 10: ''
+[2019-04-30 20:50:09,914][Thread-1:1292][task_id:django.server][basehttp.py:124][ERROR]["GET /identical_list/?area HTTP/1.1" 500 82234]
+[2019-04-30 20:52:29,854][Thread-4:8928][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=3 HTTP/1.1" 200 11723]
+[2019-04-30 20:52:29,942][Thread-5:14076][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:52:32,491][Thread-6:10408][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34424]
+[2019-04-30 20:52:34,297][Thread-7:10340][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31825]
+[2019-04-30 20:52:36,187][Thread-8:5908][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=2 HTTP/1.1" 200 11723]
+[2019-04-30 20:52:37,708][Thread-9:2336][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=3 HTTP/1.1" 200 11723]
+[2019-04-30 20:54:44,707][Thread-11:11088][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=3 HTTP/1.1" 200 11729]
+[2019-04-30 20:54:44,857][Thread-12:17596][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 20:54:47,042][Thread-13:17272][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=4 HTTP/1.1" 200 11729]
+[2019-04-30 20:54:48,715][Thread-14:2768][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34424]
+[2019-04-30 20:54:50,296][Thread-15:11016][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31831]
+[2019-04-30 20:54:58,410][Thread-16:12240][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=5 HTTP/1.1" 200 17529]
+[2019-04-30 21:18:04,443][Thread-1:9580][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area HTTP/1.1" 200 34586]
+[2019-04-30 21:18:04,457][Thread-3:2796][task_id:django.server][basehttp.py:124][INFO]["GET /static/css/css.css HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,470][Thread-4:18308][task_id:django.server][basehttp.py:124][INFO]["GET /static/js/style.js HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,477][Thread-5:14516][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/photo1_BGAVTuR.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,484][Thread-6:9280][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/6f84_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,527][Thread-7:5360][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d802_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,531][Thread-8:17232][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/u8481272762671770324fm27gp0.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:18:04,541][Thread-9:7352][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/87ba_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:18:12,558][Thread-10:16052][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 21:32:38,097][Thread-12:3660][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 21:32:38,833][Thread-13:4944][task_id:django.server][basehttp.py:124][INFO]["GET /static/images/yyw.jpg HTTP/1.1" 200 133516]
+[2019-04-30 21:32:49,968][Thread-14:3624][task_id:django.server][basehttp.py:124][INFO]["GET /yyw/ HTTP/1.1" 200 17128]
+[2019-04-30 21:32:54,441][Thread-15:16780][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34566]
+[2019-04-30 21:32:55,715][Thread-16:17148][task_id:django.server][basehttp.py:124][INFO]["GET /short_list/ HTTP/1.1" 200 18616]
+[2019-04-30 21:33:01,589][Thread-17:4980][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/ HTTP/1.1" 200 34566]
+[2019-04-30 21:36:03,999][Thread-19:14100][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?page=2 HTTP/1.1" 200 21514]
+[2019-04-30 21:36:04,017][Thread-20:18076][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/34f6_m.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:36:04,022][Thread-21:5292][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/d75b_b.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:36:04,036][Thread-22:9860][task_id:django.server][basehttp.py:124][INFO]["GET /media/imgae/2019/04/12_14574217073Kf5.jpg HTTP/1.1" 304 0]
+[2019-04-30 21:45:19,334][Thread-1:3308][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=2 HTTP/1.1" 200 11891]
+[2019-04-30 21:45:22,565][Thread-3:3428][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31993]
+[2019-04-30 21:45:25,235][Thread-4:12008][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=5 HTTP/1.1" 200 17691]
+[2019-04-30 21:45:30,092][Thread-5:16764][task_id:django.server][basehttp.py:124][INFO]["GET /identical_list/?area=1 HTTP/1.1" 200 31993]

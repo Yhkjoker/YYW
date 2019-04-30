@@ -2651,6 +2651,26 @@ a:active, a:focus {
 	color: #ff6600;
 }
 
+/*页脚*/
+.page{
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}
+.page li{
+	display: inline-block;
+}
+.page li a{
+	padding: 0px 10px;
+	color: #333;
+}
+.page li a:hover{
+	color: #428bca
+}
+.active_page{
+	background: #8fbf55;
+    color: #fff;
+}
 
 
 

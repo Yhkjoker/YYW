@@ -31,6 +31,17 @@ $('#header .Nav-Wra .Top2-Nav ul li').eq(0).click(function(event){
        event.stopPropagation(); 
 });
 
+// 页脚点击事件
+$(function(){
+  $(".page li a").click(function(){
+    var fathers = $(this).parent("li[class]").siblings();
+    fathers.each(function(){
+      $(this).find("a").removeClass("active_page")
+    });
+    $(this).addClass("active_page");
+  });
+});
+
       
 
 //截取字符

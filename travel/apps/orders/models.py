@@ -43,7 +43,13 @@ class TeamOrder(models.Model):
     end_time = models.DateTimeField(verbose_name='结束时间')
     budget = models.IntegerField(verbose_name='出游预算')
     people_num = models.IntegerField(verbose_name='出游人数')
-    remarks = models.IntegerField(verbose_name='备注')
+    remarks = models.CharField(verbose_name='备注',max_length=50)
     name = models.CharField(verbose_name='姓名',max_length=10)
-    phone = models.IntegerField(verbose_name='手机')
+    phone = models.CharField(verbose_name='手机', max_length=11)
 
+    class Meta:
+        verbose_name = '团队定制'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.name

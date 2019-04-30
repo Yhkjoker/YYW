@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'orders',
     'xadmin',
     'crispy_forms',
+    'pure_pagination',
     'captcha',
     'djcelery',
 ]
@@ -78,6 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -94,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'travel',
         'USER': 'root',
-        'PASSWORD': 'wth123456',
+        'PASSWORD': '4251..',
         'HOST': '127.0.0.1',
     }
 }
@@ -148,6 +150,9 @@ EMAIL_HOST_USER = 'yuhaikun0325@sina.com'
 EMAIL_HOST_PASSWORD = 'Y8464382654u'
 EMAIL_USE_TLS = False
 EMAIL_FROM = 'yuhaikun0325@sina.com'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 from .celery_settings import *
 

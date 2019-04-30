@@ -118,7 +118,7 @@
         <div class="List-title animated1">东北地区</div>
         <div class="List-Content">
             <div class="Content-Div clearFix animated1">
-                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo1.jpg' %}" alt="旅游图片"></a>
+                <a class="f-l" href="{% url 'list_details' %}"><img class="tr-02" src="{% static 'images/photo1.jpg' %}" alt="旅游图片"></a>
                 <div class="txt f-r">
                     <h2 class="clearFix">
                               <strong class="f-l">一岛情迷，美丽枸杞</strong>
@@ -144,7 +144,7 @@
                             <sup>￥</sup>
                             <span>880.00-960.00</span>
                         </div>
-                        <a class="f-r" href="List_details.html">
+                        <a class="f-r" href="{% url 'list_details' %}">
                                                <i class="tr-02">→</i>
                                       <span class="tr-02">查看详情</span>
                                      </a>
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="Content-Div clearFix animated1">
-                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo2.jpg' %}" alt="旅游图片"></a>
+                <a class="f-l" href="{% url 'list_details' %}"><img class="tr-02" src="{% static 'images/photo2.jpg' %}" alt="旅游图片"></a>
                 <div class="txt f-r">
                     <h2 class="clearFix">
                               <strong class="f-l">一岛情迷，美丽枸杞</strong>
@@ -178,7 +178,7 @@
                             <sup>￥</sup>
                             <span>880.00-960.00</span>
                         </div>
-                        <a class="f-r" href="List_details.html">
+                        <a class="f-r" href="{% url 'list_details' %}">
                                                <i class="tr-02">→</i>
                                       <span class="tr-02">查看详情</span>
                                      </a>
@@ -186,7 +186,7 @@
                 </div>
             </div>
             <div class="Content-Div clearFix animated1">
-                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo3.jpg' %}" alt="旅游图片"></a>
+                <a class="f-l" href="{% url 'list_details' %}"><img class="tr-02" src="{% static 'images/photo3.jpg' %}" alt="旅游图片"></a>
                 <div class="txt f-r">
                     <h2 class="clearFix">
                               <strong class="f-l">一岛情迷，美丽枸杞</strong>
@@ -212,7 +212,7 @@
                             <sup>￥</sup>
                             <span>880.00-960.00</span>
                         </div>
-                        <a class="f-r" href="List_details.html">
+                        <a class="f-r" href="{% url 'list_details' %}">
                                                <i class="tr-02">→</i>
                                       <span class="tr-02">查看详情</span>
                                      </a>
@@ -220,7 +220,7 @@
                 </div>
             </div>
             <div class="Content-Div clearFix animated1">
-                <a class="f-l" href="List_details.html"><img class="tr-02" src="{% static 'images/photo4.jpg' %}" alt="旅游图片"></a>
+                <a class="f-l" href="{% url 'list_details' %}"><img class="tr-02" src="{% static 'images/photo4.jpg' %}" alt="旅游图片"></a>
                 <div class="txt f-r">
                     <h2 class="clearFix">
                               <strong class="f-l">一岛情迷，美丽枸杞</strong>
@@ -246,12 +246,24 @@
                             <sup>￥</sup>
                             <span>880.00-960.00</span>
                         </div>
-                        <a class="f-r" href="List_details.html">
+                        <a class="f-r" href="{% url 'list_details' %}">
                                                <i class="tr-02">→</i>
                                       <span class="tr-02">查看详情</span>
                                      </a>
                     </div>
                 </div>
+            </div>
+{#            页脚#}
+            <div class="page">
+                <ul>
+                    <li class="page_num"><a href="#">上一页</a></li>
+                    <li class="page_num"><a class="active_page" href="#">1</a></li>
+                    <li class="page_num"><a href="#">2</a></li>
+                    <li>...</li>
+                    <li class="page_num"><a href="#">3</a></li>
+                    <li class="page_num"><a href="#">4</a></li>
+                    <li class="page_num"><a href="#">下一页</a></li>
+                </ul>
             </div>
         </div>
     </div>
