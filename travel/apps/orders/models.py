@@ -1,6 +1,8 @@
 # _*_ encoding:utf-8 _*_
 
 from django.db import models
+from datetime import datetime
+
 from route.models import *
 from users.models import *
 # Create your models here.
@@ -43,9 +45,10 @@ class TeamOrder(models.Model):
     end_time = models.DateTimeField(verbose_name='结束时间')
     budget = models.IntegerField(verbose_name='出游预算')
     people_num = models.IntegerField(verbose_name='出游人数')
-    remarks = models.CharField(verbose_name='备注',max_length=50)
+    remarks = models.CharField(verbose_name='备注',max_length=50, help_text=u'最长字段为50')
     name = models.CharField(verbose_name='姓名',max_length=10)
     phone = models.CharField(verbose_name='手机', max_length=11)
+    add_time = models.DateField(verbose_name=u'添加时间', default=datetime.now)
 
     class Meta:
         verbose_name = '团队定制'

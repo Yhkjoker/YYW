@@ -54,7 +54,7 @@ class ThemeInfo(models.Model):
     主题详情
     """
     theme = models.ForeignKey(TravelTheme,on_delete=models.CASCADE,verbose_name='所属的主题')
-    img = models.ImageField(upload_to="imgae/%Y/%m", verbose_name='图片')
+    img = models.ImageField(upload_to="details_img/%Y/%m", verbose_name='图片')
     baidu_baike = models.CharField(verbose_name='百科介绍',max_length=255)
     attraction_port = models.CharField(verbose_name='景点',max_length=255)
     schedule = models.CharField(verbose_name='行程安排',max_length=2000,help_text='此字段为列表结构[[day1,[一点干啥，两点干啥,.....]],[day2,[]]]')
@@ -74,13 +74,13 @@ class Tours(models.Model):
     旅行队伍
     """
     theme = models.ForeignKey(TravelTheme,on_delete=models.CASCADE,verbose_name='所属的主题')
-    go_off = models.CharField(verbose_name='出发时间',max_length=10, default='')
-    end_time = models.CharField(verbose_name='结束时间',max_length=10, default='')
+    go_off = models.CharField(verbose_name='出发时间',max_length=10, help_text=u'格式:月-日', default='')
+    end_time = models.CharField(verbose_name='结束时间',max_length=10, help_text=u'格式:月-日', default='')
     team_num = models.IntegerField(verbose_name='队伍编号')
-    status = models.IntegerField(verbose_name='报名状态',choices=(('bm',1),('ym',0)))
+    status = models.IntegerField(verbose_name='报名状态',choices=(('1','报名'),('0','已满')))
     price = models.IntegerField(verbose_name='价格')
     max_num = models.IntegerField(verbose_name='最大人数')
-    now_num = models.IntegerField(verbose_name='当前人数')
+    now_num = models.IntegerField(verbose_name='当前人数', default=0)
 
     class Meta:
         verbose_name = '报名队伍'
