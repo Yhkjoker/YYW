@@ -1,19 +1,91 @@
-{% extends 'base.html' %}
+<!doctype html>
 {% load staticfiles %}
-{% block custom_js %}
-    <script type="text/javascript">
-            if (top.location != self.location)top.location=self.location;
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--移动设备优先-->
+<title>团体定制/悠悠蜗</title>
+<meta name="keywords" content="关键字" />
+<meta name="description" content="描述" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<!--通知IE采用最新的模式-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="fromat-detecition" content="telephone=no" />
+<!-- 屏蔽浏览器自动识别数字为电话号码 -->
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<!--  Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="{% static 'css/css.css' %}">
+<!--  样式表 -->
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--  媒体查询样式表 -->
+<link href="{% static 'css/swiper.min.css' %}" rel="stylesheet">
+<!--滑动插件-->
+<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+<!--动画插件-->
+<script src="{% static 'js/jquery.min.js' %}"></script><!-- jQuery文件 -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script><!--  Bootstrap 核心 JavaScript 文件 -->
+<link href="{% static 'css/date/calendarj.css' %}" rel="stylesheet" />
+<!-- 日期插件 -->
+<script type="text/javascript">
+    if (top.location != self.location)top.location=self.location;
             var src_url="";
             var src_www="";
-    </script>
-{% endblock %}
-{% block title %}<title>团体定制/悠悠蜗</title>{% endblock %}
-{% block banner %}<div class="banner Ttdz"><img src="{% static 'images/banner5.jpg' %}" alt=""></div>{% endblock %}
-{% block other %}
+</script>
+</head>
+
+<body class="LangRegister">
+<header id="header">
+    <div class="banner Ttdz"><img src="{% static 'images/banner5.jpg' %}" alt=""></div>
+    <div class="Nav-Wra">
+        <nav class="navbar navbar-default w-1180">
+            <div class="container-fluid m-0 p-0">
+                <div class="navbar-header"><!-- 下拉导航栏按钮 -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand m-0 p-0" href="{% url 'index' %}"><img src="{% static 'images/Logo.png' %}" alt=""><span>专注大学生旅游</span></a><!-- LOGO -->
+                </div>
+                <div class="collapse navbar-collapse p-0 m-0" id="bs-example-navbar-collapse-1"><!-- 导航栏 -->
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="{% url 'identical_list' %}">同城精粹</a></li>
+                        <li><a href="{% url 'short_list' %}">短途旅行</a></li>
+                        <li><a href="{% url 'long_list' %}">长途旅行</a></li>
+                        <li><a href="{% url 'customized_list' %}">团体定制</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+            <div class="Top2-Nav">
+                <ul class="clearFix">
+                    <li class="f-l">
+                            <form class="form tr-02">
+                              <input class="text" type="text" />
+                              <button class="submit Bg1 tr-02" type="button" name="" value=""></button>
+                            </form>
+                      </li>
+                    <li class="f-l Bg1"><a href="#"></a></li>
+                    {% if request.user.is_authenticated %}
+                        <li class="f-l L-R"><a href="Register.html">个人中心</a></li>
+                        <li class="f-l L-R"><a href="Register.html">退出</a></li>
+                    {% else %}
+                        <li class="f-l L-R"><a href="{% url 'login' %}">登录</a></li>
+                        <li class="f-l L-R"><a href="{% url 'register' %}">注册</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
     <div class="content-Wra w-1180">
-    	<div class="content">
-            <form action="" method="post">
-                <h2>定制线路</h2>
+    	<div class="content" style="text-align: center;">
+    		<h2>定制线路</h2>
+            <form class="team_form" action="{% url 'order:team' %}" method="post">
+            {% csrf_token %}
                 <ul>
                     <li class="clearFix">
                         <div class="f-l text-left">
@@ -29,7 +101,7 @@
                     <li class="clearFix">
                         <div class="f-l text-left">
                             <span><i>*</i>行程天数：</span>
-                            <input class="Input-txt1 focus-input1" name="days" type="number"/>
+                            <input class="Input-txt1 focus-input1"  name="days" type="number"/>
                         </div>
                         <div class="f-r text-right">
                             <span>出游性质：</span>
@@ -40,12 +112,12 @@
                     <li class="clearFix pcshow">
                         <div class="f-l text-left positionr">
                             <span><i>*</i>出游时间：</span>
-                            <input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="2017-05-10" id="fromDate" name="start_time" readonly="" />
+                            <input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="{{ date }}" id="fromDate" name="start_time" readonly="" />
                             <div id="fromDate-date" style="position: absolute; z-index: 999; width: 456px; left: 0px; top: 30px;"></div>
                         </div>
                         <div class="f-r text-right positionr">
                             <span class="text-center">到：</span>
-                            <input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="2017-05-11" id="toDate" name="end_time" readonly="" />
+                            <input class="Input-txt1 focus-input1 ico1" type="text" autocomplete="off" value="{{ date }}" id="toDate" name="end_time" readonly="" />
                             <div id="toDate-date" style="position: absolute; z-index: 999; width: 456px; left: 0px; top: 30px;"></div>
                         </div>
                     </li>
@@ -53,11 +125,11 @@
                     <li class="clearFix appshow">
                         <div class="f-l text-left positionr">
                             <span><i>*</i>出游时间：</span>
-                            <input class="Input-txt1 focus-input1 ico1" type="date" name="start_time" autocomplete="off" value=""/>
+                            <input class="Input-txt1 focus-input1 ico1" type="date" name="start_time" autocomplete="off" value="{{ date }}"/>
                         </div>
                         <div class="f-r text-right positionr">
                             <span class="text-center">到：</span>
-                            <input class="Input-txt1 focus-input1 ico1" type="date" name="end_time" autocomplete="off" value=""/>
+                            <input class="Input-txt1 focus-input1 ico1" type="date" name="end_time" autocomplete="off" value="{{ date }}"/>
                         </div>
                     </li>
                     <hr>
@@ -89,8 +161,47 @@
                         </div>
                     </li>
                 </ul>
-                <button type="submit" class="btn">提&nbsp;交</button>
+                <span class="error_msg" style="font-size: 20px;color:#be052f;">{{ msg }}</span>
+                {% if request.user.is_authenticated %}
+                    <button type="submit" class="btn team_order">提&nbsp;交</button>
+                {% else %}
+                    <button type="button" class="btn"><a href="{% url 'login' %}" style="color: #fff">提&nbsp;交</a></button>
+                {% endif %}
+
             </form>
     	</div>
     </div>
-{% endblock %}
+</header>
+<!-- /header -->
+
+<footer id="footer">
+    <div class="w-1180 clearFix">
+             <div class="f-r">
+    		<a href="index.html">
+    			<img src="{% static 'images/Logo2.png' %}" alt="">
+    			<span>专注大学生旅游</span>
+    		</a>
+    		<img src="{% static 'images/code.jpg' %}" alt="">
+    	</div>
+    	<div class="f-l">
+    		<ul class="clearFix">
+    			<li class="f-l"><a class="tr-02" href="Join_Us.html">加入我们</a></li>
+    			<li class="f-l"><a class="tr-02" href="Contact_Us.html">联系我们</a></li>
+    			<li class="f-l"><a class="tr-02" href="Common_Problem.html">常见问题</a></li>
+                                        <li class="f-l"><a class="tr-02" href="Disclaimer.html">免责说明</a></li>
+    		</ul>
+    		<p>悠悠蜗是一家专门针对大学生户外出游的公司,<span>致力于提供优秀的出游体验。</span></p>
+    		<p>地址：上海市杨浦区国定东路200号1号楼1113室     <span>联系电话：021-56082169</span></p>
+    		<p>Copyright ©2017-2019 悠悠蜗版权所有 <span>沪ICP备17003305号</span></p>
+    	</div>
+    </div>
+</footer>
+<!-- /footer -->
+<script src="{% static 'js/style.js' %}"></script><!-- jQuery whole Put in the bottom -->
+<script src="{% static 'js/swiper.jquery.min.js' %}"></script><!-- Slide Put in the bottom -->
+<script src="{% static 'js/date/calendarJ.js' %}"></script>
+<script src="{% static 'js/date/index.js' %}"></script>
+<script>
+</script>
+</body>
+</html>
