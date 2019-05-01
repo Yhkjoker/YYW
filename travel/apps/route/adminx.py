@@ -5,7 +5,7 @@ from .models import *
 
 
 class TravelThemeAdmin(object):
-    list_display = ['big_type', 'area', 'fit_month', 'days', 'title', 'min_price', 'max_price', 'img', 'click_num']
+    list_display = ['big_type', 'area', 'fit_month', 'days', 'title', 'price', 'img', 'click_num']
 
 
 class ThemeInfoAdmin(object):

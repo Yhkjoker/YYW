@@ -25,12 +25,15 @@ from users.views import *
 from route.views import *
 from orders import views as orderview
 
+
 urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^yyw/$', IndexView.as_view(), name="index"),
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
+    # 加载验证码
     url(r'^captcha/', include('captcha.urls')),
+
     url(r'^active/(?P<active_code>.*)/$', ActiveUserView.as_view(), name="useractive"),
     url(r'^forget$', ForgetView.as_view(), name="forget"),
     url(r'^retrievepwd/(?P<active_code>.*)/$', RetrievePwdView.as_view(), name="retrievepwd"),
@@ -42,12 +45,14 @@ urlpatterns = [
     url(r'^list_details/$', ListDetailsView.as_view(), name="list_details"),
     # 处理静态文件的函数
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
+
     url(r'^order_signup/$', OrderSignUpView.as_view(), name="order_signup"),
     url(r'^common_problem/$', CommonProblemView.as_view(), name="common_problem"),
     url(r'^contact_us/$', ContactUsView.as_view(), name="contact_us"),
     url(r'^join_us/$', JoinUs.as_view(), name="join_us"),
     url(r'^disclaimer/$', DisclaimerView.as_view(), name="disclaimer"),
     url(r'^base/$', BaseView.as_view(), name='base'),
+
     url(r'^celery/',orderview.celery,name='celery'),
     url(r'^log/',orderview.log_test,name='log'),
 ]
