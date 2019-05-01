@@ -28,7 +28,7 @@ class TravelTheme(models.Model):
     big_type = models.CharField(verbose_name='旅行分类',choices=(('tc','同城旅行'),('dt','短途旅行'),('ct','长途旅行'),('zt','主题旅行')),max_length=4)
     area = models.ForeignKey(City, verbose_name=u'所在区域')
     fit_month = models.CharField(max_length=4, verbose_name=u'适宜月份', default='0', choices=month)
-    price = models.IntegerField(verbose_name='价格',default=1,choices=((1,1),(2,2),(3,3),(4,4),(5,5)),help_text='每个数字代表一个价格')
+    price = models.CharField(max_length=50, verbose_name=u'价格区间', default='0')
     days = models.IntegerField(verbose_name='旅游天数')
     title = models.CharField(verbose_name='主题名称', max_length=50)
     route = models.CharField(verbose_name='路线',help_text='字段之间请以逗号相隔',max_length=255)
