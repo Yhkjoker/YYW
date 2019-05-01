@@ -87,3 +87,22 @@ class Tours(models.Model):
 
     def __str__(self):
         return self.theme.title
+
+class Utils(models.Model):
+    """
+    筛选类
+    """
+
+    month = models.CharField(verbose_name='时间月份',max_length=1000, default='')
+    area = models.CharField(verbose_name='区域',max_length=1000, default='')
+    days = models.CharField(verbose_name='天数',max_length=1000, default='')
+    price = models.CharField(verbose_name='价格',max_length=1000, default='')
+    type = models.CharField(verbose_name='路线类型',max_length=1000, default='',choices=(('0','同城'),('1','短途'),('2','长途')))
+
+    class Meta:
+        verbose_name = '筛选'
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return self.type
+
