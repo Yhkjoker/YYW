@@ -96,8 +96,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'travel',
         'USER': 'root',
-        'PASSWORD': '4251..',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '123456',
+        'HOST': '47.107.238.126',
     }
 }
 

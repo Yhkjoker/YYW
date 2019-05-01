@@ -6,7 +6,7 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
 from .models import TravelTheme, City
-
+from .views_long import LongListView
 # Create your views here.
 
 
@@ -70,10 +70,6 @@ class ShortListView(View):
         return render(request, 'Short_list.html', {})
 
 
-# 长途
-class LongListView(View):
-    def get(self, request):
-        return render(request, 'Long_list.html', {})
 
 
 # 团队定制
