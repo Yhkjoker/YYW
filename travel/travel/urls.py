@@ -23,6 +23,7 @@ from .settings import MEDIA_ROOT
 
 from users.views import *
 from route.views import *
+from route.views_long import *
 from orders import views as orderview
 
 

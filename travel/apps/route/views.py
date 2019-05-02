@@ -6,9 +6,6 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
 from .models import TravelTheme, City
-from .views_long import LongListView
-
-
 # Create your views here.
 
 
@@ -21,57 +18,6 @@ class BaseView(View):
 class IndexView(View):
     def get(self, request):
         return render(request, 'index.html', {})
-
-
-# 同城
-class IdenticalListView(View):
-    def get(self, request):
-        # 获取所有旅游的主题
-        all_theme = TravelTheme.objects.all()
-        # 获取所有的城市
-        all_area = City.objects.all()
-
-        area = request.GET.get('area', '')
-        month = request.GET.get('month', '')
-        days = request.GET.get('days', '')
-        price = request.GET.get('price', '')
-
-        # 区域筛选
-        if area:
-            all_theme = all_theme.filter(area_id=int(area))
-        # 月份筛选
-        if month:
-            all_theme = all_theme.filter(Q(fit_month=month)|Q(fit_month='0'))
-        # 天数筛选
-        if days:
-            if int(days) < 4:
-                all_theme = all_theme.filter(days=int(days))
-            else:
-                days = '4'
-                all_theme = all_theme.filter(days__gte=int(days))
-
-        try:
-            page = request.GET.get('page', 1)
-        except PageNotAnInteger:
-            page = 1
-        p = Paginator(all_theme, 5, request=request)
-
-        theme = p.page(page)
-        return render(request, 'Identical_list.html', {
-            'all_theme': theme,
-            'all_area': all_area,
-            'area':area,
-            'month':month,
-            'days':days,
-        })
-
-
-# 短途
-class ShortListView(View):
-    def get(self, request):
-        return render(request, 'Short_list.html', {})
-
-
 
 
 # 团队定制
