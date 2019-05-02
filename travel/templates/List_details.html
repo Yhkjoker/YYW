@@ -7,7 +7,7 @@
         <div class="List-Details-Content clearFix">
             <div class="f-l">
                 <ul class="Click-Btn clearFix">
-                    <li class="icon f-l"><a href="Short_List.html"></a></li>
+                    <li class="icon f-l"><a href="{% url 'index' %}"></a></li>
                     <li class="f-l active">线路简介</li>
                     <li class="f-l">行程安排</li>
                     <li class="f-l">注意事项</li>
@@ -16,21 +16,21 @@
 
                 <!-- 线路简介 -->
                 <div class="List-Details-Div active">
-                            <div class="Photo"><img src="{% static 'images//photo6.jpg' %}" alt="详情图片"></div>
+                            <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
-                            <strong>2</strong>
+                            <strong>{{ days }}</strong>
                             <span>DAYS</span>
                         </div>
-                        <h2 class="f-l">一岛情迷，美丽枸杞</h2>
+                        <h2 class="f-l">{{ title }}</h2>
                     </div>
                     <section>
                         <div class="Txt clearFix">
-                                     <div class="f-r tr-02" data-toggle="modal" data-target="#layer"><img src="{% static 'images//map.jpg' %}" alt="地图图片"></div>
-                                     <!--弹出框-->
+                             <div class="f-r tr-02" data-toggle="modal" data-target="#layer"><img src="{% static 'images//map.jpg' %}" alt="地图图片"></div>
+                             <!--弹出框-->
                             <div role="dialog" class="modal fade" id="layer">
                                           <button type="button" class="close" data-dismiss="modal">
-                                                         <span>&times;</span>
+                                                         <span>弹出框&times;</span>
                                              </button>
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -43,14 +43,14 @@
                             </div>
                             <div class="f-l">
                                 <h3>枸杞百科</h3>
-                                <p>浙江东南沿海隐藏着不少神奇的地方等待着我们去探索。这次我们去的临海东海岸，曾经有过激烈的火山喷发。我们会带你去火山地质公园，那里遍布奇怪的火山岩石，登上最高的石柱峰，远眺被河网分割成棋盘状的片片绿洲，蓝天白云倒映水面，你一定会惊讶于这样的景色。</p>
+                                <p>{{ baike }}</p>
                             </div>
                         </div>
                     </section>
                     <section>
                         <div class="Txt">
                             <h3>旅游景点</h3>
-                            <p>浙江东南沿海隐藏着不少神奇的地方等待着我们去探索。这次我们去的临海东海岸，曾经有过激烈的火山喷发。我们会带你去火山地质公园，那里遍布奇怪的火山岩石，登上最高的石柱峰，远眺被河网分割成棋盘状的片片绿洲，蓝天白云倒映水面，你一定会惊讶于这样的景色。夜晚我们住在海滨旅馆，仰望满天星斗，尽情地欢乐直到枕着涛声入睡。清晨，看旭日从海面升起，把整片大海映染成金红色。我们可以沿曲折的海岸行走探索，观察火山熔岩遇海水凝固成的奇形怪状。或者赤着脚丫涉步滩涂，拉着风筝狂奔，尽情和沙滩海水亲近。</p>
+                            <p>{{ details.attraction_port }}</p>
                         </div>
                     </section>
 
@@ -73,13 +73,7 @@
                                     <strong>上海-安吉</strong>
                                 </div>
                                 <div class="f-r">
-                                    <p>07：15 上海指定地点集合。注意：节假日或遇特殊情况，我们可能会对集合时间做微调，具体请以出发前2天的集合邮件为准。 </p>
-                                    <p>07：30 我们准时发车。</p>
-                                    <p>13：30 沿着山谷里的溪流，我们到达今天【徽开古道】徒步的起点——【泰厦村】。</p>
-                                    <p>14：00 稍作休整和热身，我们便开始上路。这一程非常安静，踩着满地的落叶，踏着徽开古道的青石板路而上，我们会穿过一个始建于明代的【古洞门】，这便是【安徽】与【浙江】的交界处； </p>
-                                    <p>16：00 走过山间的树林，我们来到了两条溪流的交汇处——【大溪口】。在铺满鹅卵石的溪流边，咱们不妨找个地方坐下来，听听流水的声音，让自己安静下来。  </p>
-                                    <p>18：00 终于到达白际。这是大山深入一个世外桃源。 </p>
-                                    <p>19：00 在老乡家里，我们为大家安排了一桌丰盛的晚餐【含餐】  </p>
+                                    {{ details.schedule }}
                                 </div>
                             </div>
                         </section>
@@ -114,8 +108,7 @@
                     </div>
                     <section>
                         <div class="Top">
-                            <p class="Color-Red">提交报名和付款成功，您都会收到短信提示。出发前2天悠悠蜗会将电子合同，集合文件，注意事项，出发准备，领队信息等重要文件发到您的邮箱。所以请在报名的时候，一定要正确填写自己的常用邮箱哦～</p>
-                            <p>悠悠蜗所有线路只限18～26周岁在校大学生（含大专生，本科生，研究生）参加，专注大学生旅游！</p>
+                            {{ details.attraction }}
                         </div>
                     </section>
                     <hr>
@@ -164,12 +157,7 @@
                             <h3>关于安全告知：</h3>
                             <section>
                                 <h4>【观光游览安全注意事项】</h4>
-                                <p>1.听取随团工作人员有关安全的提示。</p>
-                                <p>2.参与活动时请结合自身身体的健康状况，避免过度透支体力，注意适当休息。</p>
-                                <p>3.在游览时请注意看脚下的路，经过危险地段时（如陡峭/狭窄/湿滑的道路），请务必谨慎慢行。</p>
-                                <p>4.尽量结伴游览，如果游览过程中迷路或与队伍走散，请保持冷静，尽量在原地或有显著标志的地方等候，打电话给随团工作人员寻求帮助。</p>
-                                <p>5.拍照：请不要随意停下来拍照，切忌边走边拍，以避免脚滑受伤、财物损失等。</p>
-                                <p>6.蛇虫危险：在行走过程中请尽量穿长袖长裤，避免蚊虫叮咬。如遇蛇虫，请勿惊慌，小心行走，避免与蛇虫正面冲突。</p>
+                                <p>{{ details.cost_state }}</p>
                                   </section>
                                   <section>
                                 <h4>【观光游览安全注意事项】</h4>
@@ -265,48 +253,28 @@
                         <th class="text-center">价格</th>
                         <th class="text-center">&nbsp;</th>
                     </tr>
+                    {% for tour in tours %}
                     <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>1队</td>
-                        <td class="color1">报名</td>
-                        <td>￥880.00</td>
-                        <td><a href="Orders_signup.html" class="btn btn-xs">马上报名</a></td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>2队</td>
+                        <td>{{ tour.go_off }}~{{ tour.end_time }}</td>
+                        <td>{{ tour.team_num }}队</td>
+                        {% if tour.max_num == tour.now_num %}
                         <td class="color2">人满</td>
-                        <td>￥880.00</td>
-                        <td><a href="JavaScript:;" class="btn btn-xs btn2">截止报名</a></td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>1队</td>
+                        {% else %}
                         <td class="color1">报名</td>
-                        <td>￥880.00</td>
-                        <td><a href="Orders_signup.html" class="btn btn-xs">马上报名</a></td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>2队</td>
-                        <td class="color2">人满</td>
-                        <td>￥880.00</td>
+                        {% endif %}
+                        <td>￥{{ tour.price }}.00</td>
+                        {% if tour.max_num == tour.now_num %}
                         <td><a href="JavaScript:;" class="btn btn-xs btn2">截止报名</a></td>
-                    </tr>
-                    <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>1队</td>
-                        <td class="color1">报名</td>
-                        <td>￥880.00</td>
+                        {% else %}
+                        {% if request.user.is_authenticated %}
                         <td><a href="Orders_signup.html" class="btn btn-xs">马上报名</a></td>
+                        {% else %}
+                        <td><a href="{% url 'login' %}" class="btn btn-xs">马上报名</a></td>
+                        {% endif %}
+                        {% endif %}
+
                     </tr>
-                    <tr class="text-center">
-                        <td>05.09~05.10</td>
-                        <td>2队</td>
-                        <td class="color2">人满</td>
-                        <td>￥880.00</td>
-                        <td><a href="JavaScript:;" class="btn btn-xs btn2">截止报名</a></td>
-                    </tr>
+                    {% endfor %}
                 </table>
             </div>
         </div>

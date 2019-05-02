@@ -39,5 +39,14 @@ class Constant(object):
             'dt':'/short_list',
             'ct':'/long_list'
         }
-
+    def type(self,type):
+        if type == 'tc':
+            type = '同城旅行'
+        if type == 'dt':
+            type = '短途旅行'
+        if type == 'ct':
+            type = '长途旅行'
+        if type == 'zt':
+            type == '主题旅行'
+        return type
 CONSTANT = Constant()
