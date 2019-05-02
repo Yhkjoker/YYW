@@ -9,6 +9,7 @@ from django.db.models import Q
 
 
 from .models import TravelTheme, City,Utils
+from apps.utils.constant_service import CONSTANT
 
 # Create your views here.
 
@@ -21,21 +22,22 @@ class LongListView(View):
         price = request.GET.get('price','6')
         theme_list = TravelTheme.objects.filter(fit_month=month,area=area,days=days,price=price)
 
-        screen = Utils.objects.get(type='0')
+        screen = CONSTANT
         # 获取当前旅游类型的月份
-        all_month = screen.month
-        context['all_month'] = ast.literal_eval(all_month)
+        context['all_month'] = CONSTANT.month
         # 获取当前旅游类型的所有城市或区域
-        all_area = screen.area
-        context['all_area'] = ast.literal_eval(all_area)
-        print(all_area)
+        context['all_area'] = CONSTANT.area_long
         # 获取当前旅游类型的所有天数
-        all_days = screen.days
-        context['all_days'] = ast.literal_eval(all_days)
+        context['all_days'] = CONSTANT.days
         # 获取当前旅游类型所有价格
-        all_price = screen.price
-        context['all_price'] = ast.literal_eval(all_price)
+        context['all_price'] = CONSTANT.price
 
+
+        for i in CONSTANT.area_long:
+            if i['key'] == str(area):
+                location = i['value']
+
+        context['location'] = location
         context['theme_list'] = theme_list
         context['month'] = month
         context['area'] = area
