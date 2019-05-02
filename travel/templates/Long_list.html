@@ -145,7 +145,7 @@
 
                                 {% if page %}
                                     {% ifequal page theme_list.number %}
-                                        <li style="font-size: x-large"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                        <li class="active_page"><a href="?{{ page.querystring }}">{{ page }}</a></li>
                                     {% else %}
                                         <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
                                     {% endifequal %}
