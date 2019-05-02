@@ -30,13 +30,13 @@
                 <li>
                     <span>时间：</span>
                     {% for i in all_month %}
-                        <a class="{% if month == i.key %}active{% endif %}" href="{{ target_url }}/?month={{ i.key }}&area={{ area }}&days={{ days }}&price={{ price }}">{{ i.value }}</a>
+                        <a class="{% if month == i.key %}active{% endif %}" href="?month={{ i.key }}&area={{ area }}&days={{ days }}&price={{ price }}">{{ i.value }}</a>
                     {% endfor %}
                 </li>
                 <li>
                     <span>地区：</span>
                     {% for i in all_area %}
-                        <a class="{% if area == i.id %}active{% endif %}" href="{{ target_url }}/?area={{ i.id }}&month={{ month }}&days={{ days }}&price={{ price }}">{{ i.area }}</a>
+                        <a class="{% if area == i.id %}active{% endif %}" href="?area={{ i.id }}&month={{ month }}&days={{ days }}&price={{ price }}">{{ i.area }}</a>
                     {% endfor %}
                 </li>
                 <li>
@@ -48,7 +48,7 @@
                 <li>
                     <span>价格：</span>
                     {% for i in all_price %}
-                        <a class="{% if price == i.key %}active{% endif %}" href="{{ target_url }}/?price={{ i.key }}&area={{ area }}&days={{ days }}&month={{ month }}">{{ i.value }}</a>
+                        <a class="{% if price == i.key %}active{% endif %}" href="?price={{ i.key }}&area={{ area }}&days={{ days }}&month={{ month }}">{{ i.value }}</a>
                     {% endfor %}
                 </li>
             </ul>
