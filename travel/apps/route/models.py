@@ -90,6 +90,7 @@ class Tours(models.Model):
     def __str__(self):
         return self.theme.title
 
+
 class Utils(models.Model):
     """
     筛选类
