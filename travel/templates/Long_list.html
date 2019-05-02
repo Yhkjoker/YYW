@@ -98,7 +98,7 @@
         </div>
         <div class="List-title animated1">{{ location }}</div>
         <div class="List-Content">
-            {% for vo in theme_list %}
+            {% for vo in theme_list.object_list %}
             <div class="Content-Div clearFix animated1">
                 <a class="f-l" href="{% url 'list_details' %}{{ vo.id }}"><img class="tr-02" src="/media/{{ vo.img }}" alt="旅游图片"></a>
                 <div class="txt f-r">
@@ -137,13 +137,25 @@
 {#            页脚#}
             <div class="page">
                 <ul>
-                    <li class="page_num"><a href="#">上一页</a></li>
-                    <li class="page_num"><a class="active_page" href="#">1</a></li>
-                    <li class="page_num"><a href="#">2</a></li>
-                    <li>...</li>
-                    <li class="page_num"><a href="#">3</a></li>
-                    <li class="page_num"><a href="#">4</a></li>
-                    <li class="page_num"><a href="#">下一页</a></li>
+                    {% if theme_list.has_previous %}
+                                <li class="page_num"><a href="?{{ theme_list.previous_page_number.querystring }}"
+                                                    class="page">上一页</a></li>
+                    {% endif %}
+                    {% for page in theme_list.pages %}
+
+                                {% if page %}
+                                    {% ifequal page theme_list.number %}
+                                        <li style="font-size: x-large"><a href="?{{ page.querystring }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li><a href="?{{ page.querystring }}" class="page">{{ page }}</a></li>
+                                    {% endifequal %}
+                                {% else %}
+                                    <li class="none"><a href="">...</a></li>
+                                {% endif %}
+                    {% endfor %}
+                    {% if theme_list.has_next %}
+                        <li class="page_num"><a href="?{{ theme_list.next_page_number.querystring }}">下一页</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

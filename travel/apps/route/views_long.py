@@ -58,11 +58,19 @@ class GetList(View):
         context['target_url'] = CONSTANT.target_url[big_type]
         context['location'] = location
         context['type'] = big_type
-        context['theme_list'] = theme_list
         context['month'] = month
         context['area'] = area
         context['days'] = days
         context['price'] = price
+
+        try:
+            page = request.GET.get('page', 1)
+        except PageNotAnInteger:
+            page = 1
+        p = Paginator(theme_list, 1, request=request)
+        theme_list = p.page(page)
+
+        context['theme_list'] = theme_list
 
         return render(request, 'Long_list.html', context)
 
