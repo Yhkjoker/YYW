@@ -9,33 +9,55 @@ from django.db.models import Q
 
 
 from .models import TravelTheme, City,Utils
+from apps.utils.constant_service import CONSTANT
 
 # Create your views here.
 
-class LongListView(View):
-    def get(self, request):
+class GetList(View):
+    """
+    筛选基类
+    """
+    def get(self,request,big_type):
         context = {}
-        month = request.GET.get('month','0')
-        area = request.GET.get('area','1')
-        days = request.GET.get('days','0')
-        price = request.GET.get('price','6')
-        theme_list = TravelTheme.objects.filter(fit_month=month,area=area,days=days,price=price)
+        big_type = big_type
+        month = request.GET.get('month', '0')
+        area = int(request.GET.get('area', 1)) #int是为了方便在模版中与city.vo.id 作比较，为了actice效果
+        days = request.GET.get('days', '0')
+        price = request.GET.get('price', '0')
 
-        screen = Utils.objects.get(type='0')
+        theme_list = TravelTheme.objects.filter(big_type=big_type)
+        if month != '0':
+            theme_list = theme_list.filter(fit_month=int(month))
+
+        if area != 1:
+            theme_list = theme_list.filter(area_id=int(area))
+
+        if days != '0':
+            theme_list = theme_list.filter(days=int(days))
+
+        if price != '0':
+            theme_list = theme_list.filter(price=int(price))
+
+
+        # 筛选当前类型的城市
+        city = City.objects.filter(type__contains=big_type)
         # 获取当前旅游类型的月份
-        all_month = screen.month
-        context['all_month'] = ast.literal_eval(all_month)
+        context['all_month'] = CONSTANT.month
         # 获取当前旅游类型的所有城市或区域
-        all_area = screen.area
-        context['all_area'] = ast.literal_eval(all_area)
-        print(all_area)
+        context['all_area'] = city
         # 获取当前旅游类型的所有天数
-        all_days = screen.days
-        context['all_days'] = ast.literal_eval(all_days)
+        context['all_days'] = CONSTANT.days
         # 获取当前旅游类型所有价格
-        all_price = screen.price
-        context['all_price'] = ast.literal_eval(all_price)
+        context['all_price'] = CONSTANT.price
 
+        location = ''
+        for i in city:
+            if area == i.id:
+                location = i.area
+        print(CONSTANT.target_url[big_type])
+        context['target_url'] = CONSTANT.target_url[big_type]
+        context['location'] = location
+        context['type'] = big_type
         context['theme_list'] = theme_list
         context['month'] = month
         context['area'] = area
@@ -43,4 +65,29 @@ class LongListView(View):
         context['price'] = price
 
         return render(request, 'Long_list.html', context)
+
+
+class LongListView(GetList):
+    """
+    长途旅行
+    """
+    def get(self,request):
+        return super(LongListView,self).get(request,'ct')
+
+
+class ShortListView(GetList):
+    """
+    短途旅行
+    """
+    def get(self,request):
+        return super(ShortListView,self).get(request,'dt')
+
+
+class IdenticalListView(GetList):
+    """
+    同城旅行
+    """
+    def get(self,request):
+        return super(IdenticalListView,self).get(request,'tc')
+
 

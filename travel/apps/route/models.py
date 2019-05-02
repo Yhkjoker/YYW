@@ -11,6 +11,7 @@ class City(models.Model):
     城市
     """
     area = models.CharField(verbose_name=u'区域', max_length=10)
+    type = models.CharField(verbose_name='路线类型',choices=(('tc','同城'),('dt','短途'),('ct','长途'),('zt','主题旅行')),max_length=20,default='1')
 
     class Meta:
         verbose_name = '所属区域'
@@ -39,6 +40,7 @@ class TravelTheme(models.Model):
     img = models.ImageField(upload_to="imgae/%Y/%m", verbose_name='图片')
     click_num = models.IntegerField(verbose_name='点击数量',default=0)
     add_time = models.DateField(verbose_name=u'添加时间', default=datetime.now)
+    concrete_price = models.IntegerField(verbose_name='具体价格',default=1000)
 
     class Meta:
         verbose_name = '旅行主题'
