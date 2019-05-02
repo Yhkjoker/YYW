@@ -49,6 +49,12 @@ class TravelTheme(models.Model):
     def __str__(self):
         return self.title
 
+    def re_city(self):
+        """
+        :return: 城市名
+        """
+        return self.area.area
+
 
 class ThemeInfo(models.Model):
     """

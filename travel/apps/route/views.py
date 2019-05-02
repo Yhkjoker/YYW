@@ -1,4 +1,6 @@
 # _*_ encoding:utf-8 _*_
+import ast
+
 
 from django.shortcuts import render
 from django.views.generic.base import View
@@ -6,6 +8,7 @@ from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
 from .models import TravelTheme, City
+from apps.utils.redis_connect import REDIS
 # Create your views here.
 
 
@@ -17,7 +20,8 @@ class BaseView(View):
 # 主页
 class IndexView(View):
     def get(self, request):
-        return render(request, 'index.html', {})
+        hot_route = ast.literal_eval(REDIS.get('hot_route'))
+        return render(request, 'index.html', {'hot_route':hot_route})
 
 
 # 团队定制
