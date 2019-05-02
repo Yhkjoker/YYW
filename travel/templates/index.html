@@ -81,26 +81,27 @@
             </div>
         </div>
         <div class="Home-B clearFix">
+            {% for i in hot_route %}
             <div class="Nei-Div">
                      <div class="Hot">
-                         <span>同城精粹</span>
+                         <span>{{ i.area }}</span>
                      </div>
                 <a href="#" class="Photo">
-                    <img src="{% static 'images/photo0.jpg' %}" alt="">
+                    <img src="{{ MEDIA_URL }}{{ i.img }}" alt="">
                     <!-- <div class="border-1 tr-03"></div>
                     <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
                 </a>
                 <div class="Txt">
                     <div class="clearFix top">
-                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
+                        <p class="f-l">{{ i.describe }}</p>
                         <div class="price f-r">
                             <sup>￥</sup>
-                            <span>880</span>
+                            <span>{{ i.concrete_price }}</span>
                             <strong>起</strong>
                         </div>
                     </div>
                     <div class="clearFix bottom">
-                        <h3 class="f-l">游山玩水</h3>
+                        <h3 class="f-l">{{ i.title }}</h3>
                         <a class="f-r" href="#">
                                      <i class="tr-02">→</i>
                             <span class="tr-02">更多同城精粹</span>
@@ -108,144 +109,9 @@
                     </div>
                 </div>
             </div>
-             <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>纯玩路线</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{% static 'images/photo1.jpg' %}" alt="">
-                    <!-- <div class="border-1 tr-03"></div>
-                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
-                </a>
-                <div class="Txt">
-                    <div class="clearFix top">
-                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-                        <div class="price f-r">
-                            <sup>￥</sup>
-                            <span>998</span>
-                            <strong>起</strong>
-                        </div>
-                    </div>
-                    <div class="clearFix bottom">
-                        <h3 class="f-l">修行之旅</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
-                            <span class="tr-02">更多纯玩路线</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>短途旅行</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{% static 'images/photo2.jpg' %}" alt="">
-                    <!-- <div class="border-1 tr-03"></div>
-                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
-                </a>
-                <div class="Txt">
-                    <div class="clearFix top">
-                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-                        <div class="price f-r">
-                            <sup>￥</sup>
-                            <span>360</span>
-                            <strong>起</strong>
-                        </div>
-                    </div>
-                    <div class="clearFix bottom">
-                        <h3 class="f-l">放松休闲娱乐</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
-                            <span class="tr-02">更多短途旅行</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>长途旅行</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{% static 'images/photo3.jpg' %}" alt="">
-                    <!-- <div class="border-1 tr-03"></div>
-                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
-                </a>
-                <div class="Txt">
-                    <div class="clearFix top">
-                        <p class="f-l">从遗世古堡到碧水丹山的奇遇之旅</p>
-                        <div class="price f-r">
-                            <sup>￥</sup>
-                            <span>998</span>
-                            <strong>起</strong>
-                        </div>
-                    </div>
-                    <div class="clearFix bottom">
-                        <h3 class="f-l">户外运动探险</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
-                            <span class="tr-02">更多长途旅行</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>工业旅行</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{% static 'images/photo4.jpg' %}" alt="">
-                    <!-- <div class="border-1 tr-03"></div>
-                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
-                </a>
-                <div class="Txt">
-                    <div class="clearFix top">
-                        <p class="f-l">敬请期待</p>
-                    </div>
-                    <div class="clearFix bottom">
-                        <h3 class="f-l">工业旅行</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
-                            <span class="tr-02">更多工业旅行</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>主题旅行</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{% static 'images/photo5.jpg' %}" alt="">
-                    <!-- <div class="border-1 tr-03"></div>
-                    <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
-                </a>
-                <div class="Txt">
-                    <div class="clearFix top">
-                        <p class="f-l">敬请期待</p>
-                    </div>
-                    <div class="clearFix bottom">
-                        <h3 class="f-l">主题旅行</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
-                            <span class="tr-02">更多主题旅行</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         {#页脚#}
-        <div class="page">
-            <ul>
-                <li class="page_num"><a href="#">上一页</a></li>
-                <li class="page_num"><a class="active_page" href="#">1</a></li>
-                <li class="page_num"><a href="#">2</a></li>
-                <li>...</li>
-                <li class="page_num"><a href="#">3</a></li>
-                <li class="page_num"><a href="#">4</a></li>
-                <li class="page_num"><a href="#">下一页</a></li>
-            </ul>
-        </div>
     </div>
 <!-- /Contene -->
 {% endblock %}

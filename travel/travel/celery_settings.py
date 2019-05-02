@@ -21,13 +21,16 @@ CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 platforms.C_FORCE_ROOT = True
 
+from datetime import timedelta
 
 
-#定时任务，后续开发会进行补充
-# CELERYBEAT_SCHEDULE = {
-#     'celery_test': {
-#         "task": "appname.tasks.celery_test",
-#         "schedule": crontab(minute='*', hour=12),
-#         "args": (),
-#     },
-# }
+CELERYBEAT_SCHEDULE = {
+    """
+    根据点击量，每三十分钟更新一次主页的热门推荐
+    """
+    'hot_route': {
+        "task": "route.tasks.hot_route",
+        "schedule": timedelta(minutes=30),
+        "args": (),
+    },
+}
