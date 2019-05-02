@@ -78,7 +78,7 @@ class Tours(models.Model):
     go_off = models.CharField(verbose_name='出发时间',max_length=10, help_text=u'格式:月-日', default='')
     end_time = models.CharField(verbose_name='结束时间',max_length=10, help_text=u'格式:月-日', default='')
     team_num = models.IntegerField(verbose_name='队伍编号')
-    status = models.IntegerField(verbose_name='报名状态',choices=(('1','报名'),('0','已满')))
+    status = models.IntegerField(verbose_name='报名状态',choices=((1,'报名'),(0,'已满')))
     price = models.IntegerField(verbose_name='价格')
     max_num = models.IntegerField(verbose_name='最大人数')
     now_num = models.IntegerField(verbose_name='当前人数', default=0)

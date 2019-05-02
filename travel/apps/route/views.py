@@ -5,7 +5,9 @@ from django.views.generic.base import View
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
-from .models import TravelTheme, City
+from .models import *
+from utils.constant_service import CONSTANT
+
 # Create your views here.
 
 
@@ -20,16 +22,21 @@ class IndexView(View):
         return render(request, 'index.html', {})
 
 
-# 团队定制
-class CustomizedView(View):
-    def get(self, request):
-        return render(request, 'Customized.html', {})
-
-
 # 主题详情
 class ListDetailsView(View):
-    def get(self, request):
-        return render(request, 'List_details.html', {})
+    def get(self, request, id):
+        context={}
+        theme = TravelTheme.objects.get(id=id)
+        context['title'] = theme.title
+        type= theme.big_type
+        context['days'] = theme.days
+        context['type'] = CONSTANT.type(type)
+        tours = Tours.objects.filter(theme_id=int(id))
+        details = ThemeInfo.objects.get(theme_id=int(id))
+        context['tours'] = tours
+        context['details'] = details
+        context['baike'] = details.baidu_baike
+        return render(request, 'List_details.html', context)
 
 
 # 订单填写
