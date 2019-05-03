@@ -248,7 +248,21 @@ $(document).ready(function(){
   $("#id_captcha_1").addClass("txt f-l");
   $("#id_captcha_1").removeAttr('style');
   $("#Land .Land-Div .Land-Input span").css({"border":"0px","color":"#ee0000"})
-})
+});
+
+//保存为出行人的按钮
+var click = true
+$('.userman').click(function(){
+  if(click){
+    console.log(0)
+    $(this).attr("value","1");
+    click = false
+  }else{
+    console.log(1)
+    $(this).attr("value","0")
+    click = true
+  }
+});
 
 
 

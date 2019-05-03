@@ -49,7 +49,6 @@ urlpatterns = [
     # 订单提交
     url(r'^order/', include('orders.urls', namespace='order')),
 
-    url(r'^order_signup/$', OrderSignUpView.as_view(), name="order_signup"),
     # 底部
     url(r'^common_problem/$', CommonProblemView.as_view(), name="common_problem"),
     url(r'^contact_us/$', ContactUsView.as_view(), name="contact_us"),

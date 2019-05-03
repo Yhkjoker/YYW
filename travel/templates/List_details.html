@@ -57,7 +57,7 @@
                 </div>
                 <!-- 行程安排 -->
                 <div class="List-Details-Div">
-                             <div class="Photo"><img src="{% static 'images//photo6.jpg' %}" alt="详情图片"></div>
+                             <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
                             <strong>2</strong>
@@ -98,7 +98,7 @@
                 </div>
                 <!-- 注意事项 -->
                 <div class="List-Details-Div List-Details-BeCareful">
-                             <div class="Photo"><img src="{% static 'images//photo6.jpg' %}" alt="详情图片"></div>
+                             <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
                             <strong>2</strong>
@@ -173,7 +173,7 @@
                 </div>
                 <!-- 费用说明 -->
                 <div class="List-Details-Div List-Cost-Distance">
-                             <div class="Photo"><img src="{% static 'images//photo6.jpg' %}" alt="详情图片"></div>
+                             <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
                             <strong>2</strong>
@@ -267,7 +267,7 @@
                         <td><a href="JavaScript:;" class="btn btn-xs btn2">截止报名</a></td>
                         {% else %}
                         {% if request.user.is_authenticated %}
-                        <td><a href="Orders_signup.html" class="btn btn-xs">马上报名</a></td>
+                        <td><a href="{% url 'order:add_order' %}?theme={{ theme_id }}&tour={{ tour.id }}" class="btn btn-xs">马上报名</a></td>
                         {% else %}
                         <td><a href="{% url 'login' %}" class="btn btn-xs">马上报名</a></td>
                         {% endif %}

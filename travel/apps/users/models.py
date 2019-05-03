@@ -38,7 +38,7 @@ class UserMan(models.Model):
     mobile = models.CharField(max_length=11, verbose_name=u'手机号')
     email = models.EmailField(max_length=20, verbose_name=u'邮箱')
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True, blank=True, verbose_name=u'用户')
-    status = models.CharField(max_length=2, choices=(('0', '公开'), ('1', '默认')), default=0, verbose_name=u'设为默认联系人')
+    status = models.CharField(max_length=2, choices=(('0', '否'), ('1', '是')), default=1, verbose_name=u'添加为常用联系人')
 
     class Meta:
         verbose_name = u'常用出行人'

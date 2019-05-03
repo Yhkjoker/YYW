@@ -4,6 +4,7 @@ from django import forms
 import re
 
 from .models import TeamOrder
+from users.models import *
 
 
 class TeamOrderForm(forms.ModelForm):
@@ -24,4 +25,14 @@ class TeamOrderForm(forms.ModelForm):
             return mobile
         else:
             raise forms.ValidationError(u"手机号码非法", code="mobile_invalid")
+
+
+class AddUserManForm(forms.ModelForm):
+    model = UserMan
+    fields = ['name', 'card', 'mobile', 'email']
+
+    # name = forms.CharField(required=True)
+    # card = forms.CharField(required=True)
+    # mobile = forms.CharField(required=True)
+    # email = forms.EmailField(required=True)
 

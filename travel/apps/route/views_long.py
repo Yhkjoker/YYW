@@ -55,6 +55,7 @@ class GetList(View):
             if area == i.id:
                 location = i.area
         print(CONSTANT.target_url[big_type])
+        print(request.user.id)
         context['target_url'] = CONSTANT.target_url[big_type]
         context['location'] = location
         context['type'] = big_type

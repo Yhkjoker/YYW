@@ -24,8 +24,8 @@ class BaseView(View):
 # 主页
 class IndexView(View):
     def get(self, request):
-        hot_route = ast.literal_eval(REDIS.get('hot_route'))
-        return render(request, 'index.html', {'hot_route':hot_route})
+        # hot_route = ast.literal_eval(REDIS.get('hot_route'))
+        return render(request, 'index.html')
 
 
 # 主题详情
@@ -33,6 +33,7 @@ class ListDetailsView(View):
     def get(self, request, id):
         context={}
         theme = TravelTheme.objects.get(id=id)
+        context['theme_id'] = id
         context['title'] = theme.title
         type= theme.big_type
         context['days'] = theme.days
@@ -43,12 +44,6 @@ class ListDetailsView(View):
         context['details'] = details
         context['baike'] = details.baidu_baike
         return render(request, 'List_details.html', context)
-
-
-# 订单填写
-class OrderSignUpView(View):
-    def get(self, request):
-        return render(request, 'Orders_signup.html', {})
 
 
 # 常见问题

@@ -126,7 +126,7 @@
         <div class="List-Content">
             {% for theme in all_theme.object_list %}
                 <div class="Content-Div clearFix animated1">
-                    <a class="f-l" href="{% url 'list_details' %}"><img class="tr-02" src="{{ MEDIA_URL }}{{ theme.img }}" alt="旅游图片"></a>
+                    <a class="f-l" href="{% url 'list_details' theme.id  %}"><img class="tr-02" src="{{ MEDIA_URL }}{{ theme.img }}" alt="旅游图片"></a>
                     <div class="txt f-r">
                         <h2 class="clearFix">
                                   <strong class="f-l">{{ theme.title }}</strong>
@@ -156,7 +156,7 @@
                                 <sup>￥</sup>
                                 <span>{{ theme.min_price }}.00-{{ theme.max_price }}.00</span>
                             </div>
-                            <a class="f-r" href="{% url 'list_details' %}">
+                            <a class="f-r" href="{% url 'list_details' theme.id %}">
                                 <i class="tr-02">→</i>
                                 <span class="tr-02">查看详情</span>
                             </a>
