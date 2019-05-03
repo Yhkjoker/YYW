@@ -43,7 +43,7 @@ urlpatterns = [
     url(r'^identical_list/$', IdenticalListView.as_view(), name="identical_list"),
     url(r'^long_list/$', LongListView.as_view(), name="long_list"),
     url(r'^short_list/$', ShortListView.as_view(), name="short_list"),
-    url(r'^list_details/(?P<id>\d+)$', ListDetailsView.as_view(), name="list_details"),
+    url(r'^list_details/(?P<id>[0-9]+)$', ListDetailsView.as_view(), name="list_details"),
     # 处理静态文件的函数
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
     # 订单提交
