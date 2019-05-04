@@ -28,11 +28,18 @@ class TeamOrderForm(forms.ModelForm):
 
 
 class AddUserManForm(forms.ModelForm):
-    model = UserMan
-    fields = ['name', 'card', 'mobile', 'email']
+    class Meta:
+        model = UserMan
+        exclude = ('user',)
 
-    # name = forms.CharField(required=True)
-    # card = forms.CharField(required=True)
-    # mobile = forms.CharField(required=True)
-    # email = forms.EmailField(required=True)
-
+    # def clean_mobile(self):
+    #     """
+    #     用于匹配手机号是否合法
+    #     """
+    #     mobile = self.cleaned_data['mobile']
+    #     REGEX_MOBILE = "^1[358]\d{9}$|^147\d{8}$|^176\d{8}$"
+    #     p = re.compile(REGEX_MOBILE)
+    #     if p.match(mobile):
+    #         return mobile
+    #     else:
+    #         raise forms.ValidationError(u"手机号码非法", code="mobile_invalid")

@@ -8,4 +8,5 @@ from .views import TeamOrderView, AddOrderView
 urlpatterns = [
     url('^team/$', TeamOrderView.as_view(), name='team'),
     url('^add/$', AddOrderView.as_view(), name='add_order'),
+    url('^order/$', AddOrderView.as_view(), name='order'),
 ]

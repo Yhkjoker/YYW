@@ -27,7 +27,6 @@
 <!--动画插件-->
 <script src="{% static 'js/jquery.min.js' %}"></script><!-- jQuery文件 -->
 <script src="{% static 'js/bootstrap.min.js' %}"></script><!--  Bootstrap 核心 JavaScript 文件 -->
-{% block custom_js %}{% endblock %}
 </head>
 
 <body>
@@ -136,6 +135,8 @@
 	$(this).addClass('active').siblings().removeClass('active');
 	$('.List-Details-Div').eq(index).addClass('active').siblings().removeClass('active');
 });
+
 </script>
+{% block custom_js %}{% endblock %}
 </body>
 </html>

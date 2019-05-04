@@ -255,11 +255,13 @@ var click = true
 $('.userman').click(function(){
   if(click){
     console.log(0)
-    $(this).attr("value","1");
+    $(this).attr("checked","checked");
+    $(this).parents('.text-left').siblings('input').removeAttr("checked")
     click = false
   }else{
     console.log(1)
-    $(this).attr("value","0")
+    $(this).removeAttr("checked");
+    $(this).parents('.text-left').siblings('input').attr("checked",'checked')
     click = true
   }
 });

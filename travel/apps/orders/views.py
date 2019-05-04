@@ -1,7 +1,7 @@
 import logging
 import datetime
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.generic.base import View
 from django.db.models import Q
 
@@ -57,7 +57,7 @@ class AddOrderView(View):
         theme_id = request.GET.get('theme')
         tour_id = request.GET.get('tour')
         user_id = request.user.id
-        user_man = UserMan.objects.filter(user_id=int(user_id))
+        user_man = UserMan.objects.filter(Q(user_id=int(user_id))&Q(status='1'))
         tour = Tours.objects.get(Q(theme_id=int(theme_id))&Q(team_num=int(tour_id)))
         theme = TravelTheme.objects.get(id=int(theme_id))
         context['user_man'] = user_man
@@ -65,29 +65,25 @@ class AddOrderView(View):
         context['tour'] = tour
         return render(request, 'Orders_signup.html', context)
 
+    def post(self, request):
+        if request.is_ajax():
+            add_userman = AddUserManForm(request.POST)
+            if add_userman.is_valid():
+                context = {}
+                user_id = request.user.id
+                user_man = add_userman.save(commit=False)
+                user_man.user_id = user_id
+                user_man.save()
+                context["name"] = user_man.name
+                context["gender"] = user_man.gender
+                context["card_type"] = user_man.card_type
+                context["card"] = user_man.card
+                context["mobile"] = user_man.mobile
+                context["email"] = user_man.email
+                return JsonResponse({"status": "success", "info": context})
+            else:
+                return JsonResponse({"status": "fail"})
 
-class AddUserMan(View):
-    def post(self,request):
-        add_userman = AddUserManForm(request.POST)
-        if add_userman.is_valid():
-            user_id = request.user.id
-            user_man = UserMan()
-            name = request.POST.get('name')
-            gender = request.POST.get('gender')
-            mobile = request.POST.get('mobile')
-            email = request.POST.get('email')
-            card = request.POST.get('card')
-            card_type = request.POST.get('card_type')
-            status = request.POST.get('status')
-            user_man.name = name
-            user_man.gender = gender
-            user_man.mobile = mobile
-            user_man.email = email
-            user_man.card = card
-            user_man.card_type = card_type
-            user_man.status = status
-            user_man.user_id = user_id
-            user_man.save()
 
 
 
