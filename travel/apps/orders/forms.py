@@ -3,7 +3,7 @@
 from django import forms
 import re
 
-from .models import TeamOrder
+from .models import TeamOrder, OrderDetail
 from users.models import *
 
 
@@ -43,3 +43,9 @@ class AddUserManForm(forms.ModelForm):
     #         return mobile
     #     else:
     #         raise forms.ValidationError(u"手机号码非法", code="mobile_invalid")
+
+
+class AddOrderForm(forms.ModelForm):
+    class Meta:
+        model = OrderDetail
+        exclude = ('number', 'total', 'add_date', 'travel_buddy', 'status')

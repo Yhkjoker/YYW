@@ -214,11 +214,37 @@ function cart(){
 
 
 function append(){
+  var id =0
   $("input[type='checkbox']").click(function(){
+    var check = $(this).attr('check')
+    if(check == '0'){
+      $(this).attr('check','1')
+      check = '1'
+    }else{
+      $(this).attr('check','0')
+      check = '0'
+    }
+
     index = $(this).attr('value')
     parent = $(this).parents(".Common").siblings(".Information")
     parent.eq(index).toggle()
-  })
+    id = parent.eq(index).find('input').attr("value")
+    if(check == '1'){
+      userman = parent.eq(index).find('input').clone()
+      $(".order").append(userman)
+      insert = false
+    }else{
+      list_man = $('.order input.man_id')
+      list_man.each(function(){
+        var value = $(this).attr("value")
+        if(value == id){
+          console.log(value)
+          $(this).remove()
+        }
+      })
+    }
+
+  });
   var agree = true
   $(".poa").find('input').click(function(){
     if(agree){

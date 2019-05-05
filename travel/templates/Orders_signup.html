@@ -12,7 +12,6 @@
             </div>
             <div class="SignUpDiv clearFix">
                   <div class="f-l">
-                      <form action="">
                           <section>
                             <div class="section clearFix">
                                 <h4>填写出行人信息</h4>
@@ -20,12 +19,13 @@
                                     <strong class="f-l">常用出行人：</strong>
                                     <div class="f-l">
                                         {% for  man in user_man %}
-                                            <label><input type="checkbox" value="{{ forloop.counter|add:-1 }}" /><span>{{ man.name }}</span></label>
+                                            <label><input type="checkbox" check="0" value="{{ forloop.counter|add:-1 }}" /><span>{{ man.name }}</span></label>
                                         {% endfor %}
                                     </div>
                                 </div>
                                 {% for man in user_man %}
                                     <div class="Information" hidden="hidden">
+                                        <input type="checkbox" class="man_id" name="userman_id" value="{{ man.id }}" checked="checked" hidden="hidden">
                                         <div class="Top clearFix">
                                             <span class="f-l">{{ man.name }}</span>
                                             <div class="f-r">
@@ -33,41 +33,43 @@
                                                 <a class="tr-02 button_del" href="JavaScript:;">删除</a>
                                             </div>
                                         </div>
-                                    <div class="Txt">
-                                        <ul class="clearFix">
-                                            <li class="f-l">真实姓名：<span>{{ man.name }}</span></li>
-                                            {% ifequal man.gender '0' %}
-                                            <li class="f-l">性别：<span>男</span></li>
-                                            {% else %}
-                                            <li class="f-l">性别：<span>女</span></li>
-                                            {% endifequal %}
-                                            <li class="f-l">出生日期：<span>1980-04-17</span></li>
-                                            {% ifequal man.card_type '0' %}
-                                            <li class="f-l">证件类型：<span>身份证</span></li>
-                                            {% else %}
-                                            <li class="f-l">证件类型：<span>护照</span></li>
-                                            {% endifequal %}
-                                            <li class="f-l">证件号：<span>{{ man.card }}</span></li>
-                                            <!-- <li class="f-l">护照号码：<span>23213265</span></li> -->
-                                            <li class="f-l">手机号：<span>{{ man.mobile }}</span></li>
-                                            <li class="f-l">邮箱：<span>{{ man.email }}</span></li>
-                                            <!-- <li class="f-l">保险：<span>赠送  平安保险--神州畅游 A款 </span></li> -->
-                                        </ul>
+                                        <div class="Txt">
+                                            <ul class="clearFix">
+                                                <li class="f-l">真实姓名：<span>{{ man.name }}</span></li>
+                                                {% ifequal man.gender '0' %}
+                                                <li class="f-l">性别：<span>男</span></li>
+                                                {% else %}
+                                                <li class="f-l">性别：<span>女</span></li>
+                                                {% endifequal %}
+                                                <li class="f-l">出生日期：<span>1980-04-17</span></li>
+                                                {% ifequal man.card_type '0' %}
+                                                <li class="f-l">证件类型：<span>身份证</span></li>
+                                                {% else %}
+                                                <li class="f-l">证件类型：<span>护照</span></li>
+                                                {% endifequal %}
+                                                <li class="f-l">证件号：<span>{{ man.card }}</span></li>
+                                                <!-- <li class="f-l">护照号码：<span>23213265</span></li> -->
+                                                <li class="f-l">手机号：<span>{{ man.mobile }}</span></li>
+                                                <li class="f-l">邮箱：<span>{{ man.email }}</span></li>
+                                                <!-- <li class="f-l">保险：<span>赠送  平安保险--神州畅游 A款 </span></li> -->
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
                                 {% endfor %}
                                 <button class="btn f-r" data-toggle="modal" data-target="#edit">添加出行人</button>
                             </div>
                           </section>
+                      <form class="order" action="{% url 'order:add_order' %}" method="post">
+                          {% csrf_token %}
                           <section>
                                <div class="section2">
                                 <h4>紧急联系人</h4>
                                 <div class="text clearFix">
-                                    <label class="f-l"><span>紧急联系人姓名</span><input class="focus-input" type="text"></label>
-                                    <label class="f-r"><span>联系方式</span><input class="focus-input" type="tel" max="11"></label>
+                                    <label class="f-l"><span>紧急联系人姓名</span><input class="focus-input" name="contact" type="text"></label>
+                                    <label class="f-r"><span>联系方式</span><input class="focus-input" name="contact_way" type="tel" max="11"></label>
                                 </div>
                                </div>
-                        </section>
+                          </section>
                           <hr>
                           <section>
                                    <div class="section3">
@@ -75,8 +77,8 @@
                                     <div class="clearFix">
                                         <div class="f-l left-txt"><span>房间安排：</span></div>
                                         <div class="f-l right-radio">
-                                            <label class="label-Click"><input type="radio" name="Fruit"checked="checked" value="0" /><span>随机安排与同性队员拼房</span> </label>
-                                               <label class="label-Click"><input type="radio" name="Fruit" value="1" /><span>不！我有自己的睡友</span>  </label>
+                                            <label class="label-Click"><input type="radio" name="s_friend" checked="checked" value="0" /><span>随机安排与同性队员拼房</span> </label>
+                                               <label class="label-Click"><input type="radio" name="s_friend" value="1" /><span>不！我有自己的睡友</span>  </label>
                                                <p class="section3-P active">旅行中的住宿通常为标间，稻草人不收取单房差，也不提供住单间预订服务，一个人来的小伙伴我们将为您找一位同性队员或随团工作人员拼房，有时为了调整房差会安排3人间；</p>
                                                <!-- <div class="section3-P clearFix">
                                                    <div class="f-l">
@@ -97,7 +99,7 @@
                           <section>
                                    <div class="section4">
                                     <h4>过敏源&忌口</h4>
-                                    <textarea class="textarea focus-input" placeholder="如果你有过敏源或者忌口请写在这里哦，这样我们的随团工作人员就可以知晓啦！"></textarea>
+                                    <textarea class="textarea focus-input" name="remark" placeholder="如果你有过敏源或者忌口请写在这里哦，这样我们的随团工作人员就可以知晓啦！"></textarea>
                                    </div>
                         </section>
                           <hr>
@@ -115,8 +117,11 @@
                                     <a href="#" target="_Blank">报名须知</a>
                                     <a href="#" target="_Blank">安全告知书</a>
                                    </div>
-                                   <a href="Short_List_SignUp_B.html" class="btn tr-02 submit disabled">提交订单</a>
+                                    <input type="submit" class="btn tr-02 submit disabled" value="提交订单">
                         </section>
+                          <input type="text" hidden name="order_tours" value="{{ tour.team_num }}">
+                          <input type="text" hidden name="theme" value="{{ theme.id }}">
+                          <input type="text" hidden name="order_user" value="{{ user_id }}">
                       </form>
                       <!-- 添加出行人弹窗 -->
                       <div role="dialog" class="modal fade" id="edit">
@@ -212,6 +217,8 @@
                     if(data["status"]== 'success'){
                         $("div.section").children('div:last').after('<div class="Information" style="display:block"><div class="Top clearFix"><span class="f-l"></span><div class="f-r"><a class="tr-02 button_edit" href="JavaScript:;" data-toggle="modal" data-target="#edit">编辑</a><a class="tr-02 button_del" href="JavaScript:;">删除</a></div></div><div class="Txt"><ul class="clearFix"><li class="f-l">真实姓名：<span>李大根</span></li><li class="f-l">性别：<span>女</span></li><li class="f-l">证件类型：<span>身份证</span></li><li class="f-l">证件号：<span>362523199204170818 </span></li><!-- <li class="f-l">护照号码：<span>23213265</span></li> --><li class="f-l">手机号：<span>13302580258</span></li><li class="f-l">邮箱：<span>18507317473@163.com</span></li><!-- <li class="f-l">保险：<span>赠送  平安保险--神州畅游 A款 </span></li> --></ul></div></div>')
                         var man = data["info"]
+                        $(".order").append('<input type="checkbox" class="man_id" name="userman_id" value="{}" checked="checked" hidden="hidden">')
+                        $(".order").find("input.man_id:last").attr('value',man['id'])
                         var name= $("div.Information:last").children('.Top').find('span').text(man['name'])
                         var u_name= $("div.Information:last").children('.Txt').find('span').eq(0).text(man['name'])
                         var gender= $("div.Information:last").children('.Txt').find('span').eq(1).text(man['gender'])

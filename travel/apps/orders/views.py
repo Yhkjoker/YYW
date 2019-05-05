@@ -6,7 +6,7 @@ from django.views.generic.base import View
 from django.db.models import Q
 
 from .tasks import *
-from .forms import TeamOrderForm, AddUserManForm
+from .forms import TeamOrderForm, AddUserManForm, AddOrderForm
 from users.models import UserMan
 from route.models import *
 
@@ -63,6 +63,7 @@ class AddOrderView(View):
         context['user_man'] = user_man
         context['theme'] = theme
         context['tour'] = tour
+        context['user_id'] = user_id
         return render(request, 'Orders_signup.html', context)
 
     def post(self, request):
@@ -80,9 +81,16 @@ class AddOrderView(View):
                 context["card"] = user_man.card
                 context["mobile"] = user_man.mobile
                 context["email"] = user_man.email
+                context["id"] = user_man.id
                 return JsonResponse({"status": "success", "info": context})
             else:
                 return JsonResponse({"status": "fail"})
+        else:
+            add_order = AddOrderForm(request.POST)
+            if add_order.is_valid():
+                bubby = request.POST.get('userman_id')
+                return render(request, 'Orders_signup.html', {})
+
 
 
 
