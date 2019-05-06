@@ -26,6 +26,7 @@
                                 {% for man in user_man %}
                                     <div class="Information" hidden="hidden">
                                         <input type="checkbox" class="man_id" name="userman_id" value="{{ man.id }}" checked="checked" hidden="hidden">
+                                        <div class="clearFix man" value="{{ man.id }}" style="display: none"><span class="f-l">{{ man.name }}</span><span class="f-r">￥<b>{{ tour.price }}</b></span></div>
                                         <div class="Top clearFix">
                                             <span class="f-l">{{ man.name }}</span>
                                             <div class="f-r">
@@ -119,9 +120,12 @@
                                    </div>
                                     <input type="submit" class="btn tr-02 submit disabled" value="提交订单">
                         </section>
-                          <input type="text" hidden name="order_tours" value="{{ tour.team_num }}">
-                          <input type="text" hidden name="theme" value="{{ theme.id }}">
+                          <input type="text" hidden name="order_tours" value="{{ tour.id }}">
                           <input type="text" hidden name="order_user" value="{{ user_id }}">
+                          <input type="text" hidden name="img" value="{{ theme.img }}">
+                          <input type="text" hidden name="title" value="{{ theme.title }}">
+                          <input type="text" hidden name="go_off" value="{{ tour.go_off }}">
+                          <input type="text" hidden name="end_time" value="{{ tour.end_time }}">
                       </form>
                       <!-- 添加出行人弹窗 -->
                       <div role="dialog" class="modal fade" id="edit">
@@ -187,16 +191,14 @@
                       <!-- / 添加出行人弹窗 -->
                   </div>
                       <div class="f-r">
-                        <div class="photo"><img src="{% static 'images/photo1.jpg' %}" alt="图片"></div>
+                        <div class="photo"><img src="{{ MEDIA_URL }}{{ theme.img }}" alt="图片"></div>
                         <div class="txt clearFix">
-                            <h3>一岛情迷，美丽枸杞</h3>
-                            <p>2017-05-09 至 2017-05-10</p>
+                            <h3>{{ theme.title }}</h3>
+                            <p>{{ tour.go_off }} 至 {{ tour.end_time }}</p>
                             <div class="add">
-                                <div class="clearFix"><span class="f-l">李大根</span><span class="f-r">￥880</span></div>
-                                <div class="clearFix"><span class="f-l">李二根</span><span class="f-r">￥880</span></div>
                             </div>
                             <hr>
-                            <strong class="f-r">合计：<span>￥1760</span></strong>
+                            <strong class="f-r">合计：<span>￥<b>0</b></span></strong>
                         </div>
                     </div>
             </div>
@@ -213,12 +215,14 @@
             url: "{% url 'order:add_order' %}",
             data: $(".info").serialize(),
             success: function(data) {
-                    {#console.log(data)#}
                     if(data["status"]== 'success'){
                         $("div.section").children('div:last').after('<div class="Information" style="display:block"><div class="Top clearFix"><span class="f-l"></span><div class="f-r"><a class="tr-02 button_edit" href="JavaScript:;" data-toggle="modal" data-target="#edit">编辑</a><a class="tr-02 button_del" href="JavaScript:;">删除</a></div></div><div class="Txt"><ul class="clearFix"><li class="f-l">真实姓名：<span>李大根</span></li><li class="f-l">性别：<span>女</span></li><li class="f-l">证件类型：<span>身份证</span></li><li class="f-l">证件号：<span>362523199204170818 </span></li><!-- <li class="f-l">护照号码：<span>23213265</span></li> --><li class="f-l">手机号：<span>13302580258</span></li><li class="f-l">邮箱：<span>18507317473@163.com</span></li><!-- <li class="f-l">保险：<span>赠送  平安保险--神州畅游 A款 </span></li> --></ul></div></div>')
                         var man = data["info"]
                         $(".order").append('<input type="checkbox" class="man_id" name="userman_id" value="{}" checked="checked" hidden="hidden">')
                         $(".order").find("input.man_id:last").attr('value',man['id'])
+                        $(".add").append('<div class="clearFix man" value="1"><span class="f-l">李二根</span><span class="f-r">￥<b>880</b></span></div>')
+                        $(".add").find(".man:last").attr("value",man["id"])
+                        $(".add").find(".man:last").find('.f-l').text(man['name'])
                         var name= $("div.Information:last").children('.Top').find('span').text(man['name'])
                         var u_name= $("div.Information:last").children('.Txt').find('span').eq(0).text(man['name'])
                         var gender= $("div.Information:last").children('.Txt').find('span').eq(1).text(man['gender'])
@@ -233,6 +237,6 @@
                 },
             }
         );
-    })
+    });
 </script>
 {% endblock %}

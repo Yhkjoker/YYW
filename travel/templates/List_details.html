@@ -267,7 +267,7 @@
                         <td><a href="JavaScript:;" class="btn btn-xs btn2">截止报名</a></td>
                         {% else %}
                         {% if request.user.is_authenticated %}
-                        <td><a href="{% url 'order:add_order' %}?theme={{ theme_id }}&tour={{ tour.id }}" class="btn btn-xs">马上报名</a></td>
+                        <td><a href="{% url 'order:add_order' %}?theme={{ theme_id }}&tour={{ tour.team_num }}" class="btn btn-xs">马上报名</a></td>
                         {% else %}
                         <td><a href="{% url 'login' %}" class="btn btn-xs">马上报名</a></td>
                         {% endif %}

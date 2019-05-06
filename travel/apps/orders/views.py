@@ -75,9 +75,19 @@ class AddOrderView(View):
                 user_man = add_userman.save(commit=False)
                 user_man.user_id = user_id
                 user_man.save()
+                gender = user_man.gender
+                card_type = user_man.card_type
+                if gender == '1':
+                    gender = '男'
+                else:
+                    gender = '女'
+                if card_type == '0':
+                    card_type = '身份证'
+                else:
+                    card_type = '护照'
                 context["name"] = user_man.name
-                context["gender"] = user_man.gender
-                context["card_type"] = user_man.card_type
+                context["gender"] = gender
+                context["card_type"] = card_type
                 context["card"] = user_man.card
                 context["mobile"] = user_man.mobile
                 context["email"] = user_man.email
@@ -88,8 +98,42 @@ class AddOrderView(View):
         else:
             add_order = AddOrderForm(request.POST)
             if add_order.is_valid():
-                bubby = request.POST.get('userman_id')
-                return render(request, 'Orders_signup.html', {})
+                context = {}
+                travel_buddy = request.POST.getlist('userman_id')
+                img = request.POST.get('img')
+                title = request.POST.get('title')
+                go_off = request.POST.get('go_off')
+                end_time = request.POST.get('end_time')
+                order = add_order.save(commit=False)
+                tour_id = order.order_tours
+                tour = Tours.objects.get(id=tour_id)
+                price = tour.price
+                order_tours = tour.team_num
+                number = len(travel_buddy)
+                total = price * number
+                status = '0'
+                add_time = datetime.now()
+                order.order_tours = order_tours
+                order.travel_buddy = travel_buddy
+                order.number = number
+                order.total = total
+                order.add_time = add_time
+                order.status = status
+                order.save()
+                id_list = [int(id) for id in travel_buddy]
+                man_list = UserMan.objects.filter(id__in=id_list)
+                context['img'] = img
+                context['title'] = title
+                context['go_off'] = go_off
+                context['end_time'] = end_time
+                context['price'] = price
+                context['man_list'] = man_list
+                return render(request, 'Order_pay.html', context)
+
+
+class OrderPayView(View):
+    def get(self, request):
+        return render(request, 'Order_pay.html', {})
 
 
 

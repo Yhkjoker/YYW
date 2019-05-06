@@ -230,18 +230,29 @@ function append(){
     parent.eq(index).toggle()
     id = parent.eq(index).find('input').attr("value")
     if(check == '1'){
-      userman = parent.eq(index).find('input').clone()
-      $(".order").append(userman)
-      insert = false
+      man_info = parent.eq(index).find('input').clone()
+      man = parent.eq(index).find('.man').clone()
+        man.css('display','block')
+      $(".order").append(man_info)
+      $(".add").append(man)
+      order_total()
     }else{
-      list_man = $('.order input.man_id')
-      list_man.each(function(){
+      list_info = $('.order input.man_id');
+      list_man = $('.add .man');
+      list_info.each(function(){
         var value = $(this).attr("value")
         if(value == id){
           console.log(value)
           $(this).remove()
         }
-      })
+      });
+      list_man.each(function(){
+        var value = $(this).attr('value')
+        if(value == id){
+          $(this).remove()
+        }
+      });
+      order_total();
     }
 
   });
@@ -255,7 +266,20 @@ function append(){
       agree = true
     }
   })
+};
+
+//订单页计算总额
+function order_total(){
+  var lists_man = $('.add .man')
+  var total_amount = 0
+  lists_man.each(function(){
+  var price = $(this).find('b').text()
+  total_amount += parseFloat(price)
+  })
+  total = $('.add').siblings('.f-r')
+  total.find('b').text(total_amount)
 }
+order_total()
 //刷新验证码
 $(".captcha").hover(function(){
   $(this).css('cursor','pointer');

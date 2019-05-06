@@ -1,0 +1,59 @@
+{% extends 'details.html' %}
+{% block title %}<title>支付/悠悠蜗</title>{% endblock %}
+{% load staticfiles %}
+{% block content %}
+    <div id="Contene" class="w-1180">
+	<div class="Short-List-SignUp">
+		<div class="Top">
+			<a href="Short_List_SignUp.html" class="tr-02">1.填写信息</a>
+			<a href="Short_List_SignUp_B.html" class="active tr-02">2.支付</a>
+			<a href="#" class="tr-02">3.报名成功</a>
+		</div>
+		<div class="SignUpDiv clearFix SignUpDiv-B">
+		          <div class="f-l">
+			          	<section>
+					<div class="section7 clearFix">
+						<h4>支付</h4>
+						<h5>订单已提交，请继续完成支付或在120分钟内在“我的订单”中进行支付 。</h5>
+						<div class="Payment">
+							<div class="clearFix">
+								<img class="f-l" src={% static 'images/z1.jpg' %} alt="支付宝支付LOGO">
+								<a href="Order_My.html" class="f-r tr-02 btn">马上支付</a>
+							</div>
+							<div class="txt">
+								<p>扫一扫或登录帐号进行支付，快捷支付额度取决于银行卡自身额度以及各家银行对第三方支付平台的限制，信用卡快捷支付限额查询（仅供参考，具体以支付为准）。 </p>
+								<p>如果支付遇到限额问题，可向支付宝充值，再用支付宝余额进行支付，注意是支付宝余额不是余额宝哦！</p>
+							</div>
+						</div>
+						<div class="Payment">
+							<div class="clearFix">
+								<img class="f-l" src={% static 'images/z2.jpg' %} alt="微信支付LOGO">
+								<a href="payment_WeChat.html" class="f-r tr-02 btn">马上支付</a>
+							</div>
+							<div class="txt">
+								<p>扫一扫或登录帐号进行支付，快捷支付额度取决于银行卡自身额度以及各家银行对第三方支付平台的限制，信用卡快捷支付限额查询（仅供参考，具体以支付为准）。  </p>
+								<p>如果支付遇到限额问题，可向支付宝充值，再用支付宝余额进行支付，注意是支付宝余额不是余额宝哦！</p>
+							</div>
+						</div>
+					</div>
+				</section>
+		          </div>
+		          <div class="f-r">
+		          	    <div class="photo"><img src="{{ MEDIA_URL }}{{ img }}" alt="图片"></div>
+		          	    <div class="txt clearFix">
+		          	    	<h3>{{ title }}</h3>
+		          	    	<p>{{ go_off }} 至 {{ end_time }}</p>
+		          	    	<div class="add">
+                                {% for man in man_list %}
+			          	    	<div class="clearFix man"><span class="f-l">{{ man.name }}</span><span class="f-r">￥<b>{{ price }}</b></span></div>
+                                {% endfor %}
+		          	    	</div>
+		          	    	<hr>
+		          	    	<strong class="f-r">合计：<span>￥<b>0</b></span></strong>
+		          	    </div>
+		          </div>
+		</div>
+	</div>
+</div>
+<!-- /Contene -->
+{% endblock %}
