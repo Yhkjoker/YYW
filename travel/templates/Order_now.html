@@ -1,0 +1,187 @@
+{% extends 'details.html' %}
+{% block title %}
+    <title>当前订单/悠悠蜗</title>
+{% endblock %}
+{% block content %}
+    <div id="Contene">
+	<div class="Order">
+		<div class="TopWra">
+			<div class="Top w-1180 clearFix">
+				<div class="f-l">我的订单</div>
+				<div class="f-r">
+					<a href="{% url 'order:order_new' %}" class="btn tr-02 active">当前订单</a>
+					<a href="{% url 'order:order_his' %}" class="btn tr-02">历史订单</a>
+					<a href="{% url 'order:my_info' %}" class="btn tr-02">我的信息</a>
+				</div>
+			</div>
+		</div>
+		<div class="Bottom  w-1180">
+			<div class="Order-table">
+				<ul class="clearFix text-center">
+					<li class="f-l">路线</li>
+					<li class="f-l">时间</li>
+					<li class="f-l">人数</li>
+					<li class="f-l">总额</li>
+					<li class="f-l">操作</li>
+				</ul>
+			</div>
+			<div class="Order-Div-Wra">
+				<div class="Order-table">
+					<ul class="clearFix text-center">
+						<li class="f-l"><input type="checkbox"/>一岛情迷，美丽枸杞</li>
+						<li class="f-l">2017.05.09-2017.05.10</li>
+						<li class="f-l num">2</li>
+						<li class="f-l total">￥<b>880</b></li>
+						<li class="f-l">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 订单 -->
+				<div class="Order-Div">
+					<div class="head clearFix">
+						<div class="f-l">
+							<span>李大根</span>
+							<!-- <label><input type="checkbox" checked="checked" /><span>李大根</span> </label> -->
+						</div>
+						<!-- <div class="f-r">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</div> -->
+					</div>
+					<div class="Bod">
+						<ul class="clearFix">
+							<li class="f-l"><span>订单号: </span>D1757162313W0V8</li>
+							<li class="f-l"><span>姓名:</span> 李大根</li>
+							<li class="f-l"><span>性别:</span> 男</li>
+							<li class="f-l"><span>手机号: </span>13345614561</li>
+							<li class="f-l"><span>邮箱: </span>18507317473@163.com</li>
+							<li class="f-l"><span>证件号: </span>716198465161651511</li>
+							<li class="f-l"><span>证件类型: </span>身份证</li>
+							<li class="f-l"><span>紧急联系人: </span>李老根</li>
+							<li class="f-l"><span>紧急联系人手机号：</span>18320115894</li>
+							<li class="f-l"><span>金额:</span> <b>880</b></li>
+							<!-- <li class="f-l"><span>未支付：</span>￥880</li> -->
+						</ul>
+					</div>
+				</div>
+				<!-- / 订单 -->
+				<!-- 订单 -->
+				<div class="Order-Div">
+					<div class="head clearFix">
+						<div class="f-l">
+							<span>李二根</span>
+							<!-- <label><input type="checkbox" checked="checked"/><span>李二根</span> </label>  -->
+						</div>
+						<!-- <div class="f-r">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</div> -->
+					</div>
+					<div class="Bod">
+						<ul class="clearFix">
+							<li class="f-l"><span>订单号: </span>D1757162313W0V8</li>
+							<li class="f-l"><span>姓名:</span> 李大根</li>
+							<li class="f-l"><span>性别:</span> 男</li>
+							<li class="f-l"><span>手机号: </span>13345614561</li>
+							<li class="f-l"><span>邮箱: </span>18507317473@163.com</li>
+							<li class="f-l"><span>证件号: </span>716198465161651511</li>
+							<li class="f-l"><span>证件类型: </span>身份证</li>
+							<li class="f-l"><span>紧急联系人: </span>李老根</li>
+							<li class="f-l"><span>紧急联系人手机号：</span>18320115894</li>
+							<li class="f-l"><span>金额:</span> <b>880</b></li>
+							<!-- <li class="f-l"><span>未支付：</span>￥880</li> -->
+						</ul>
+					</div>
+				</div>
+				<!-- / 订单 -->
+
+			</div>
+			<div class="Order-Div-Wra">
+				<div class="Order-table">
+					<ul class="clearFix text-center">
+						<li class="f-l"><input type="checkbox"/>一岛情迷，美丽枸杞</li>
+						<li class="f-l">2017.05.09-2017.05.10</li>
+						<li class="f-l num">2</li>
+						<li class="f-l total">￥<b>880</b></li>
+						<li class="f-l">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 订单 -->
+				<div class="Order-Div">
+					<div class="head clearFix">
+						<div class="f-l">
+							<span>李大根</span>
+							<!-- <label><input type="checkbox" checked="checked" /><span>李大根</span> </label> -->
+						</div>
+						<!-- <div class="f-r">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</div> -->
+					</div>
+					<div class="Bod">
+						<ul class="clearFix">
+							<li class="f-l"><span>订单号: </span>D1757162313W0V8</li>
+							<li class="f-l"><span>姓名:</span> 李大根</li>
+							<li class="f-l"><span>性别:</span> 男</li>
+							<li class="f-l"><span>手机号: </span>13345614561</li>
+							<li class="f-l"><span>邮箱: </span>18507317473@163.com</li>
+							<li class="f-l"><span>证件号: </span>716198465161651511</li>
+							<li class="f-l"><span>证件类型: </span>身份证</li>
+							<li class="f-l"><span>紧急联系人: </span>李老根</li>
+							<li class="f-l"><span>紧急联系人手机号：</span>18320115894</li>
+							<li class="f-l"><span>金额:</span> <b>880</b></li>
+							<!-- <li class="f-l"><span>未支付：</span>￥880</li> -->
+						</ul>
+					</div>
+				</div>
+				<!-- / 订单 -->
+				<!-- 订单 -->
+				<div class="Order-Div">
+					<div class="head clearFix">
+						<div class="f-l">
+							<span>李二根</span>
+							<!-- <label><input type="checkbox" checked="checked"/><span>李二根</span> </label>  -->
+						</div>
+						<!-- <div class="f-r">
+							<a href="#" class="pay">支付</a>
+							<a href="#" class="cancel">退订</a>
+						</div> -->
+					</div>
+					<div class="Bod">
+						<ul class="clearFix">
+							<li class="f-l"><span>订单号: </span>D1757162313W0V8</li>
+							<li class="f-l"><span>姓名:</span> 李大根</li>
+							<li class="f-l"><span>性别:</span> 男</li>
+							<li class="f-l"><span>手机号: </span>13345614561</li>
+							<li class="f-l"><span>邮箱: </span>18507317473@163.com</li>
+							<li class="f-l"><span>证件号: </span>716198465161651511</li>
+							<li class="f-l"><span>证件类型: </span>身份证</li>
+							<li class="f-l"><span>紧急联系人: </span>李老根</li>
+							<li class="f-l"><span>紧急联系人手机号：</span>18320115894</li>
+							<li class="f-l"><span>金额:</span> <b>880</b></li>
+							<!-- <li class="f-l"><span>未支付：</span>￥880</li> -->
+						</ul>
+					</div>
+				</div>
+				<!-- / 订单 -->
+
+			</div>
+			<div class="Order-Footer clearFix">
+				<div class="f-l">
+					<span>总价：￥<b>0</b></span>
+					<span>已付：￥<b>0</b></span>
+					<span>待付：￥<b>0</b></span>
+				</div>
+				<button type="button" class="btn f-r tr-02" style="margin-left:5px">取消订单</button>
+				<button type="button" class="btn f-r tr-02">支付所选</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Contene -->
+{% endblock %}

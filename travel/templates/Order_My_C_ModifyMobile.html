@@ -1,0 +1,45 @@
+{% extends 'details.html' %}
+{% block title %}
+    <title>手机号修改/悠悠蜗</title>
+{% endblock %}
+{% block content %}
+<div id="Contene">
+	<div class="Order">
+		<div class="TopWra">
+			<div class="Top w-1180 clearFix">
+				<div class="f-l">我的订单</div>
+				<div class="f-r">
+					<a href="Order_My.html" class="btn tr-02">当前订单</a>
+					<a href="Order_My_B.html" class="btn tr-02">历史订单</a>
+					<a href="Order_My_C.html" class="btn tr-02 active">我的信息</a>
+				</div>
+			</div>
+		</div>
+		<div class="Bottom  w-1180">
+			<div class="Modify text-center">
+				<form class="form">
+					<ul class="text-right">
+						<li>
+							<strong>手机号码：</strong>
+							<span><input class="txt-input1 tr-02 focus-input" type="tel" autofocus="autofocus" /></span>
+						</li>
+						<li>
+							<strong>短信验证码：</strong>
+							<span>
+								<input class="txt-input2 pull-left tr-02 focus-input" type="tel"/>
+								<button type="button" class="btn btn1">获取动态验证码</button>
+							</span>
+						</li>
+						<li>
+							<span>
+								<button type="button" class="btn btn2 w-100">验证手机</button>
+							</span>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Contene -->
+{% endblock %}

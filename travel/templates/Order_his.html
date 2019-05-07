@@ -1,0 +1,130 @@
+{% extends 'details.html' %}
+
+{% block title %}
+    <title>历史订单/悠悠蜗</title>
+{% endblock %}
+{% block content %}
+    <div id="Contene">
+	<div class="Order">
+		<div class="TopWra">
+			<div class="Top w-1180 clearFix">
+				<div class="f-l">我的订单</div>
+				<div class="f-r">
+					<a href="{% url 'order:order_new' %}" class="btn tr-02">当前订单</a>
+					<a href="{% url 'order:order_his' %}" class="btn tr-02 active">历史订单</a>
+					<a href="{% url 'order:my_info' %}" class="btn tr-02">我的信息</a>
+				</div>
+			</div>
+		</div>
+		<div class="Bottom  w-1180">
+			<div class="History-Order">
+				<ul class="History-Order-T clearFix text-center">
+					<li class="f-l">路线</li>
+					<li class="f-l">时间</li>
+					<li class="f-l">状态</li>
+				</ul>
+				<div class="History-Order-F">
+					<ul class="clearFix text-center">
+						<li class="f-l">一岛情迷，美丽枸杞</li>
+						<li class="f-l">2017.05.09-2017.05.10</li>
+						<li class="f-l">已支付</li>
+						<li class="f-l"><i class="tr-02"></i></li>
+
+					</ul>
+				           <div class="table-Wra">
+					           <table>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="History-Order-F">
+					<ul class="clearFix text-center">
+						<li class="f-l">一岛情迷，美丽枸杞</li>
+						<li class="f-l">2017.05.09-2017.05.10</li>
+						<li class="f-l">已支付</li>
+						<li class="f-l"><i class="tr-02"></i></li>
+
+					</ul>
+					<div class="table-Wra">
+					           <table>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="History-Order-F">
+					<ul class="clearFix text-center">
+						<li class="f-l">一岛情迷，美丽枸杞</li>
+						<li class="f-l">2017.05.09-2017.05.10</li>
+						<li class="f-l">已取消</li>
+						<li class="f-l"><i class="tr-02"></i></li>
+
+					</ul>
+				           <div class="table-Wra">
+					           <table>
+							<tr class="text-center">
+								<td><span>订单号:</span> D1757162313W0V8</td>
+								<td><span>姓名: </span>李大根</td>
+								<td><span>人数：</span>1</td>
+								<td><span>金额：</span>880元</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Contene -->
+{% endblock %}
+{% block custom_js %}
+    <script>
+        /*历史订单 下拉显示*/
+    $('.Order .Bottom .History-Order-F').click(function(){
+        $(this).siblings().removeClass('active').find('.table-Wra').slideUp();
+        $(this).toggleClass('active').find('.table-Wra').slideToggle();
+    });
+    $('.Order .Bottom .History-Order-F .table-Wra').click(function(event){
+        event.stopPropagation();
+    });
+    </script>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'details.html' %}
+{% load staticfiles %}
+{% block title %}
+    <title>我的信息/悠悠蜗</title>
+{% endblock %}
+{% block content %}
+    <div id="Contene">
+	<div class="Order">
+		<div class="TopWra">
+			<div class="Top w-1180 clearFix">
+				<div class="f-l">我的订单</div>
+				<div class="f-r">
+					<a href="{% url 'order:order_new' %}" class="btn tr-02">当前订单</a>
+					<a href="{% url 'order:order_his' %}" class="btn tr-02">历史订单</a>
+					<a href="{% url 'order:my_info' %}" class="btn tr-02 active">我的信息</a>
+				</div>
+			</div>
+		</div>
+		<div class="Bottom  w-1180">
+			<div class="My-Message">
+				<ul>
+					<li class="clearFix">
+						<img class="f-l" src="{% static 'images/i-9.png' %}" alt="icon">
+						<div class="f-l">
+							<h3>李大根</h3>
+							<p>身份证 3625**********2546</p>
+						</div>
+						<a class="f-r" href="{% url 'order:update_info' %}"><span>个人信息</span></a>
+					</li>
+					<li class="clearFix">
+						<img class="f-l" src="{% static 'images/i-9.png' %}" alt="icon">
+						<div class="f-l">
+							<h3>常用出行人</h3>
+						</div>
+						<a class="f-r" href="{% url 'order:update_man' %}"><span>修改编辑</span></a>
+					</li>
+					<li class="clearFix">
+						<img class="f-l" src="{% static 'images/i-10.png' %}" alt="icon">
+						<div class="f-l">
+							<h3>邮箱验证</h3>
+							<p>绑定后，您可以使用邮箱登录及保证您的帐号管理</p>
+						</div>
+						<a class="f-r" href="{% url 'order:update_email' %}"><span>修改邮箱</span></a>
+					</li>
+					<li class="clearFix">
+						<img class="f-l" src="{% static 'images/i-11.png' %}" alt="icon">
+						<div class="f-l">
+							<h3>手机已验证 159****8563</h3>
+							<p>验证后，您可以通过手机号或动态验证码的方式登录或修改</p>
+						</div>
+						<a class="f-r" href="{% url 'order:update_mobile' %}"><span>修改手机</span></a>
+					</li>
+					<li class="clearFix">
+						<img class="f-l" src="{% static 'images/i-12.png' %}" alt="icon">
+						<div class="f-l">
+							<h3>修改密码</h3>
+							<p>修改密码请通过手机验证重置</p>
+						</div>
+						<a class="f-r" href="{% url 'forget' %}"><span>修改密码</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Contene -->
+{% endblock %}

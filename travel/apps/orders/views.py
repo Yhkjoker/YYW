@@ -9,6 +9,7 @@ from .tasks import *
 from .forms import TeamOrderForm, AddUserManForm, AddOrderForm
 from users.models import UserMan
 from route.models import *
+from .models import *
 
 
 def celery(request):
@@ -135,6 +136,52 @@ class OrderPayView(View):
     def get(self, request):
         return render(request, 'Order_pay.html', {})
 
+
+class OrderNewView(View):
+    def get(self, request):
+        context = {}
+        user_id = request.user.id
+        orders = OrderDetail.objects.filter(Q(order_user_id=user_id)&Q(status=0))
+        man_list = [man.travel_buddy for man in orders]
+        theme_id = [int(order.theme) for order in orders]
+        tour_id = [int(tour.order_tours) for tour in orders]
+        theme = TravelTheme.objects.filter(id__in=theme_id)
+        tours = []
+        for i in range(len(theme)):
+            tour = Tours.objects.get(Q(theme_id=theme[i])&Q(team_num=tour_id[i]))
+            tours.append(tour)
+        print()
+        return render(request, 'Order_now.html', {})
+
+
+class OrderHisView(View):
+    def get(self, request):
+        return render(request, 'Order_his.html', {})
+
+
+class MyInfoView(View):
+    def get(self, request):
+        return render(request, 'My_info.html', {})
+
+
+class UpdateInfoView(View):
+    def get(self, request):
+        return render(request, 'Order_My_C_ModifyInfo.html', {})
+
+
+class UpdateMobileView(View):
+    def get(self, request):
+        return render(request, 'Order_My_C_ModifyMobile.html', {})
+
+
+class UpdateEmailView(View):
+    def get(self, request):
+        return render(request, 'Order_My_C_ModifyEmail.html', {})
+
+
+class UpdateManView(View):
+    def get(self, request):
+        return render(request, 'Order_My_C_ModifyMan.html', {})
 
 
 

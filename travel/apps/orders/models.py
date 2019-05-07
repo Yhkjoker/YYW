@@ -13,7 +13,8 @@ class OrderDetail(models.Model):
     订单
     """
     order_user = models.ForeignKey(UserProfile,on_delete=models.CASCADE, null=True, blank=True, verbose_name=u'订单所属人')
-    order_tours = models.IntegerField(verbose_name='订单所属主题',help_text='关联旅行队伍',null=True)
+    theme = models.CharField(max_length=10, verbose_name='订单所属主题', default='')
+    order_tours = models.IntegerField(verbose_name='订单所属主题', help_text='关联旅行队伍',null=True)
     contact = models.CharField(max_length=8, verbose_name=u'紧急联系人')
     contact_way = models.CharField(max_length=11, verbose_name=u'联系方式')
     s_friend = models.CharField(max_length=2, choices=(('0', '有'), ('1', '无')), default='0', verbose_name=u'是否有睡友')
