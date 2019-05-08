@@ -167,7 +167,7 @@ function cart(){
   var total = 0 
   // 数量
   var num = 0 
-  lists = $(this).find(".Order-Div")
+  lists = $(this).find(".man")
   num = lists.length
   //数量标签
   quantity = $(this).find(".num")

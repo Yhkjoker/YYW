@@ -1,5 +1,6 @@
 import logging
 import datetime
+import json
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.generic.base import View
@@ -55,16 +56,20 @@ class TeamOrderView(View):
 class AddOrderView(View):
     def get(self, request):
         context={}
+
         theme_id = request.GET.get('theme')
         tour_id = request.GET.get('tour')
         user_id = request.user.id
+
         user_man = UserMan.objects.filter(Q(user_id=int(user_id))&Q(status='1'))
         tour = Tours.objects.get(Q(theme_id=int(theme_id))&Q(team_num=int(tour_id)))
         theme = TravelTheme.objects.get(id=int(theme_id))
+
         context['user_man'] = user_man
         context['theme'] = theme
         context['tour'] = tour
         context['user_id'] = user_id
+
         return render(request, 'Orders_signup.html', context)
 
     def post(self, request):
@@ -72,10 +77,12 @@ class AddOrderView(View):
             add_userman = AddUserManForm(request.POST)
             if add_userman.is_valid():
                 context = {}
+
                 user_id = request.user.id
                 user_man = add_userman.save(commit=False)
                 user_man.user_id = user_id
                 user_man.save()
+
                 gender = user_man.gender
                 card_type = user_man.card_type
                 if gender == '1':
@@ -93,6 +100,7 @@ class AddOrderView(View):
                 context["mobile"] = user_man.mobile
                 context["email"] = user_man.email
                 context["id"] = user_man.id
+
                 return JsonResponse({"status": "success", "info": context})
             else:
                 return JsonResponse({"status": "fail"})
@@ -100,21 +108,23 @@ class AddOrderView(View):
             add_order = AddOrderForm(request.POST)
             if add_order.is_valid():
                 context = {}
+
                 travel_buddy = request.POST.getlist('userman_id')
                 img = request.POST.get('img')
                 title = request.POST.get('title')
                 go_off = request.POST.get('go_off')
                 end_time = request.POST.get('end_time')
+
                 order = add_order.save(commit=False)
-                tour_id = order.order_tours
+
+                tour_id = order.tour
                 tour = Tours.objects.get(id=tour_id)
                 price = tour.price
-                order_tours = tour.team_num
                 number = len(travel_buddy)
                 total = price * number
                 status = '0'
                 add_time = datetime.now()
-                order.order_tours = order_tours
+
                 order.travel_buddy = travel_buddy
                 order.number = number
                 order.total = total
@@ -140,23 +150,56 @@ class OrderPayView(View):
 class OrderNewView(View):
     def get(self, request):
         context = {}
+        content = []
+        order_details = {}
         user_id = request.user.id
         orders = OrderDetail.objects.filter(Q(order_user_id=user_id)&Q(status=0))
         man_list = [man.travel_buddy for man in orders]
-        theme_id = [int(order.theme) for order in orders]
-        tour_id = [int(tour.order_tours) for tour in orders]
-        theme = TravelTheme.objects.filter(id__in=theme_id)
-        tours = []
-        for i in range(len(theme)):
-            tour = Tours.objects.get(Q(theme_id=theme[i])&Q(team_num=tour_id[i]))
-            tours.append(tour)
-        print()
-        return render(request, 'Order_now.html', {})
+        user_man = []
+        for lists in man_list:
+            lists = lists.replace('"', '"""')
+            lists = lists.replace("'", '"')
+            lists = json.loads(lists)
+            id_lists = [id for id in lists]
+            man = UserMan.objects.filter(id__in=id_lists)
+            user_man.append(man)
+        i = 0
+        for order in orders:
+            order_details['order'] = order
+            order_details['man'] = user_man[i]
+            i += 1
+            content.append(dict(order_details))
+
+        context['content'] = content
+        print(context)
+        return render(request, 'Order_now.html', context)
 
 
 class OrderHisView(View):
     def get(self, request):
-        return render(request, 'Order_his.html', {})
+        context = {}
+        content = []
+        user_id = request.user.id
+        orders = OrderDetail.objects.filter(order_user_id=user_id)
+        man_list = [man.travel_buddy for man in orders]
+        user_man = []
+        for lists in man_list:
+            lists = lists.replace('"', '"""')
+            lists = lists.replace("'", '"')
+            lists = json.loads(lists)
+            lists_id = [int(man_id) for man_id in lists]
+            man = UserMan.objects.filter(id__in=lists_id)
+            user_man.append(man)
+        order_details = {}
+        i = 0
+        for order in orders:
+            order_details['order'] = order
+            order_details['man'] = user_man[i]
+            i += 1
+            content.append(dict(order_details))
+        context['content'] = content
+
+        return render(request, 'Order_his.html', context)
 
 
 class MyInfoView(View):
@@ -166,7 +209,11 @@ class MyInfoView(View):
 
 class UpdateInfoView(View):
     def get(self, request):
-        return render(request, 'Order_My_C_ModifyInfo.html', {})
+        context = {}
+        user_id = request.user.id
+        user = UserProfile.objects.get(id=user_id)
+        context['user'] = user
+        return render(request, 'Order_My_C_ModifyInfo.html', context)
 
 
 class UpdateMobileView(View):
@@ -181,7 +228,11 @@ class UpdateEmailView(View):
 
 class UpdateManView(View):
     def get(self, request):
-        return render(request, 'Order_My_C_ModifyMan.html', {})
+        context = {}
+        user_id = request.user.id
+        user_man = UserMan.objects.filter(Q(user_id=user_id)&Q(status='1'))
+        context['user_man'] = user_man
+        return render(request, 'Order_My_C_ModifyMan.html', context)
 
 
 

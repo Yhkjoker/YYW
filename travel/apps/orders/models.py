@@ -14,7 +14,12 @@ class OrderDetail(models.Model):
     """
     order_user = models.ForeignKey(UserProfile,on_delete=models.CASCADE, null=True, blank=True, verbose_name=u'订单所属人')
     theme = models.CharField(max_length=10, verbose_name='订单所属主题', default='')
-    order_tours = models.IntegerField(verbose_name='订单所属主题', help_text='关联旅行队伍',null=True)
+    tour = models.CharField(max_length=10, verbose_name='队伍id', default='')
+    go_off = models.CharField(max_length=20, verbose_name=u'出发时间', default='')
+    end_time = models.CharField(max_length=20, verbose_name=u'结束时间', default='')
+    title = models.CharField(max_length=50, verbose_name='队伍主题', default='')
+    price = models.CharField(max_length=10, verbose_name='价格', default='')
+    order_tours = models.IntegerField(verbose_name='队伍编号', help_text='关联旅行队伍',null=True)
     contact = models.CharField(max_length=8, verbose_name=u'紧急联系人')
     contact_way = models.CharField(max_length=11, verbose_name=u'联系方式')
     s_friend = models.CharField(max_length=2, choices=(('0', '有'), ('1', '无')), default='0', verbose_name=u'是否有睡友')
@@ -22,7 +27,7 @@ class OrderDetail(models.Model):
     number = models.IntegerField(verbose_name=u'出行人数')
     total = models.IntegerField(verbose_name=u'总额')
     add_date = models.DateField(auto_now_add=True, verbose_name=u'下单时间')
-    status = models.IntegerField(verbose_name='订单状态',help_text='0:已提交，1：已付款，2：已退款',null=True)
+    status = models.IntegerField(verbose_name='订单状态', choices=((0, '待付款'), (1, '已支付'),(2, '已取消')) ,help_text='0:待付款，1：已支付，2：已取消',null=True)
     travel_buddy = models.CharField(verbose_name='出行人',max_length=50,help_text='列表形式[id1,id2.....],关联Userman',null=True)
 
     class Meta:

@@ -10,6 +10,7 @@ from datetime import datetime
 class UserProfile(AbstractUser):
     mobile = models.CharField(max_length=11, verbose_name=u'手机号')
     card = models.CharField(max_length=18,verbose_name=u'证件号')
+    gender = models.CharField(max_length=5, verbose_name=u'性别', choices=(('0', '男'), ('1', '女'), ('2', '隐藏')), default='2')
 
     class Meta:
         verbose_name = u'用户信息'

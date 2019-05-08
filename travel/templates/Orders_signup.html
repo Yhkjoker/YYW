@@ -120,11 +120,13 @@
                                    </div>
                                     <input type="submit" class="btn tr-02 submit disabled" value="提交订单">
                         </section>
-                          <input type="text" hidden name="order_tours" value="{{ tour.id }}">
+                          <input type="text" hidden name="order_tours" value="{{ tour.team_num }}">
+                          <input type="text" hidden name="tour" value="{{ tour.id }}">
                           <input type="text" hidden name="theme" value="{{ theme.id }}">
                           <input type="text" hidden name="order_user" value="{{ user_id }}">
                           <input type="text" hidden name="img" value="{{ theme.img }}">
                           <input type="text" hidden name="title" value="{{ theme.title }}">
+                          <input type="text" hidden name="price" value="{{ theme.price }}">
                           <input type="text" hidden name="go_off" value="{{ tour.go_off }}">
                           <input type="text" hidden name="end_time" value="{{ tour.end_time }}">
                       </form>

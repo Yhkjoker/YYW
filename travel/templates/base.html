@@ -75,7 +75,7 @@
                       </li>
                     <li class="f-l Bg1"><a href="#"></a></li>
                     {% if request.user.is_authenticated %}
-                        <li class="f-l L-R"><a href="Register.html">个人中心</a></li>
+                        <li class="f-l L-R"><a href="{% url 'order:my_info' %}">个人中心</a></li>
                         <li class="f-l L-R"><a href="Register.html">退出</a></li>
                     {% else %}
                         <li class="f-l L-R"><a href="{% url 'login' %}">登录</a></li>
