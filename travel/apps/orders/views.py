@@ -7,7 +7,8 @@ from django.views.generic.base import View
 from django.db.models import Q
 
 from .tasks import *
-from .forms import TeamOrderForm, AddUserManForm, AddOrderForm
+from .forms import *
+from utils.send_email import *
 from users.models import UserMan
 from route.models import *
 from .models import *
@@ -204,7 +205,26 @@ class OrderHisView(View):
 
 class MyInfoView(View):
     def get(self, request):
-        return render(request, 'My_info.html', {})
+        user_id = request.user.id
+        user = UserProfile.objects.get(id=user_id)
+        name = user.first_name
+        card = user.card
+        mobile = user.mobile
+        if not name:
+            name='0'
+        if card:
+            card_four = card[0:4]
+            card_last = card[len(card)-4:]
+            card = card_four+'**********'+card_last
+        if mobile:
+            mobile_first = mobile[0:3]
+            mobile_last = mobile[len(mobile)-4:]
+            print(mobile_last)
+            mobile = mobile_first+'****'+mobile_last
+        else:
+            mobile = '0'
+
+        return render(request, 'My_info.html', {'name': name, 'card': card, 'mobile': mobile})
 
 
 class UpdateInfoView(View):
@@ -215,6 +235,26 @@ class UpdateInfoView(View):
         context['user'] = user
         return render(request, 'Order_My_C_ModifyInfo.html', context)
 
+    def post(self, request):
+        info_form = ModifyInfoForm(request.POST)
+        if info_form.is_valid():
+            context = {}
+            user_id = request.user.id
+            username = request.POST.get('username')
+            name = request.POST.get('first_name')
+            card = request.POST.get('card')
+            gender = request.POST.get('gender')
+            user = UserProfile.objects.get(id=user_id)
+            user.username = username
+            user.first_name = name
+            user.card = card
+            user.gender = gender
+            user.save()
+            context['user'] = user
+            return render(request, 'Order_My_C_ModifyInfo.html', context)
+        else:
+            return render(request, 'Order_My_C_ModifyInfo.html', {})
+
 
 class UpdateMobileView(View):
     def get(self, request):
@@ -223,7 +263,17 @@ class UpdateMobileView(View):
 
 class UpdateEmailView(View):
     def get(self, request):
-        return render(request, 'Order_My_C_ModifyEmail.html', {})
+        return render(request, 'Order_My_C_ModifyEmail.html')
+
+    def post(self, request):
+        if request.is_ajax():
+            update_from = UpdateEmailForm(request.POST)
+            if update_from.is_valid():
+                email = request.POST.get('email')
+                send_register_email(email, send_type='update')
+                return JsonResponse({"status": "success"})
+            else:
+                return JsonResponse({"status": "fail"})
 
 
 class UpdateManView(View):
@@ -234,6 +284,8 @@ class UpdateManView(View):
         context['user_man'] = user_man
         return render(request, 'Order_My_C_ModifyMan.html', context)
 
+    def post(self, request):
+        pass
 
 
 

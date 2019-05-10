@@ -17,108 +17,138 @@
 		</div>
 	</div>
 </div>
-    <div id="Contene" class="w-1180" style="margin-top:-500px">
+<div id="Contene" class="w-1180" style="margin-top:-500px">
 	<div class="Short-List-SignUp">
 		<div class="SignUpDiv clearFix">
-		          <div class="f-l">
-			          	<section>
-					<div class="section clearFix">
-						<h4>出行人信息</h4>
-                        {% for man in user_man %}
-						<div class="Information">
-							<div class="Top clearFix">
-								<span class="f-l">{{ man.name }}</span>
-								<div class="f-r">
-									<a class="tr-02" href="JavaScript:;" data-toggle="modal" data-target="#edit">编辑</a>
-									<a class="tr-02" href="JavaScript:;">删除</a>
-								</div>
-							</div>
-							<div class="Txt">
-								<ul class="clearFix">
-									<li class="f-l">真实姓名：<span>{{ man.name }}</span></li>
-                                    {% if man.gender == '0' %}
-									<li class="f-l">性别：<span>男</span></li>
-                                    {% else %}
-									<li class="f-l">性别：<span>女</span></li>
-                                    {% endif %}
-                                    {% if man.card_type == '0' %}
-									<li class="f-l">证件类型：<span>身份证</span></li>
-                                    {% else %}
-									<li class="f-l">证件类型：<span>护照</span></li>
-                                    {% endif %}
-									<li class="f-l">证件号：<span>{{ man.card }} </span></li>
-									<li class="f-l">手机号：<span>{{ man.mobile }}</span></li>
-									<li class="f-l">邮箱：<span>{{ man.email }}</span></li>
-								</ul>
-							</div>
-						</div>
-                        {% endfor %}
-						<button class="btn f-r" data-toggle="modal" data-target="#edit">添加出行人</button>
-					</div>
-				</section>
-				<!-- 添加出行人弹窗 -->
-				<div role="dialog" class="modal fade" id="edit">
-				     	<div class="modal-dialog">
-				     		<div class="modal-content">
-				     			<div class="modal-header">
-				     			           <button type="button" class="close" data-dismiss="modal">
-				     			           	<span>&times;</span>
-				     			           </button>
-				     			           <h4>填写出行人信息<span>（<i>*</i>为必填选项）</span></h4>
-				     			</div>
-				     			<div class="modal-body text-right">
-				     				<form>
-					     				<ul>
-					     					<li>
-					     					    <strong><i>*</i>姓&nbsp;&nbsp;&nbsp;名：</strong>
-					     					    <span><input class="input-txt focus-input" type="text" autofocus="autofocus"></span>
-					     					</li>
-					     					<li>
-					     					    <strong><i>*</i>姓&nbsp;&nbsp;&nbsp;别：</strong>
-					     					    <span class="text-left">
-					     					           <label>
-					     					                  <input class="click" type="radio" name="Fruit" checked="checked"/>
-					     					                  <span>男</span>
-					     					           </label>
-					     					           <label>
-					     					                  <input class="click" type="radio" name="Fruit"/>
-					     					                  <span>女</span>
-					     					           </label>
-					     					     </span>
-					     					</li>
-					     					<li>
-					     					    <strong><i>*</i>手机号：</strong>
-					     					    <span><input class="input-txt focus-input" type="tel"></span>
-					     					</li>
-					     					<li>
-					     					    <strong><i>*</i>邮&nbsp;&nbsp;&nbsp;箱：</strong>
-					     					    <span><input class="input-txt focus-input" type="email"></span>
-					     					</li>
-					     					<li>
-					     					    <strong><i>*</i>
-						     					    <select class="select" name="">
-												    <option value="0">身份证</option>
-												    <option value="1">护照</option>
-											    </select>
-										    </strong>
-					     					    <span><input class="input-txt focus-input" type="text"></span>
-					     					</li>
-					     					<li >
-					     					     <span class="text-left"><label><input class="click" type="checkbox"/><span>同事保存为常用出行人</span> </label> </span>
-					     					</li>
-					     					<li>
-					     					     <span class="text-left"><button type="button" class="btn" data-dismiss="modal">添加</button></span>
-					     					</li>
-					     				</ul>
-				     				</form>
-				     			</div>
-				     		</div>
-				     	</div>
-				 </div>
-				<!-- / 添加出行人弹窗 -->
-		          </div>
-		</div>
-	</div>
+              <div class="f-l">
+                    <section>
+                        <div class="section clearFix">
+                            <h4>出行人信息</h4>
+                            {% for man in user_man %}
+                            <div class="Information">
+                                <div class="Top clearFix">
+                                    <span class="f-l">{{ man.name }}</span>
+                                    <div class="f-r">
+                                        <a class="tr-02" href="JavaScript:;" data-toggle="modal" data-target="#edit">编辑</a>
+                                        <a class="tr-02" href="JavaScript:;">删除</a>
+                                    </div>
+                                </div>
+                                <div class="Txt">
+                                    <ul class="clearFix">
+                                        <li class="f-l">真实姓名：<span>{{ man.name }}</span></li>
+                                        {% if man.gender == '0' %}
+                                        <li class="f-l">性别：<span>男</span></li>
+                                        {% else %}
+                                        <li class="f-l">性别：<span>女</span></li>
+                                        {% endif %}
+                                        {% if man.card_type == '0' %}
+                                        <li class="f-l">证件类型：<span>身份证</span></li>
+                                        {% else %}
+                                        <li class="f-l">证件类型：<span>护照</span></li>
+                                        {% endif %}
+                                        <li class="f-l">证件号：<span>{{ man.card }} </span></li>
+                                        <li class="f-l">手机号：<span>{{ man.mobile }}</span></li>
+                                        <li class="f-l">邮箱：<span>{{ man.email }}</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <button class="btn f-r" data-toggle="modal" data-target="#edit">添加出行人</button>
+                        </div>
+                    </section>
+                    <!-- 添加出行人弹窗 -->
+                    <div role="dialog" class="modal fade" id="edit">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                   <button type="button" class="close" data-dismiss="modal">
+                                    <span>&times;</span>
+                                   </button>
+                                   <h4>填写出行人信息<span>（<i>*</i>为必填选项）</span></h4>
+                                </div>
+                                <div class="modal-body text-right">
+                                    <form class="info">
+                                        {% csrf_token %}
+                                        <ul>
+                                            <li>
+                                                <strong><i>*</i>姓&nbsp;&nbsp;&nbsp;名：</strong>
+                                                <span><input class="input-txt focus-input" type="text" name="name" autofocus="autofocus"></span>
+                                            </li>
+                                            <li>
+                                                <strong><i>*</i>姓&nbsp;&nbsp;&nbsp;别：</strong>
+                                                <span class="text-left">
+                                                       <label>
+                                                              <input class="click" type="radio" value="0" name="gender" checked="checked"/>
+                                                              <span>男</span>
+                                                       </label>
+                                                       <label>
+                                                              <input class="click" type="radio" value="1" name="gender"/>
+                                                              <span>女</span>
+                                                       </label>
+                                                 </span>
+                                            </li>
+                                            <li>
+                                                <strong><i>*</i>手机号：</strong>
+                                                <span><input class="input-txt focus-input" type="text" name="mobile"></span>
+                                            </li>
+                                            <li>
+                                                <strong><i>*</i>邮&nbsp;&nbsp;&nbsp;箱：</strong>
+                                                <span><input class="input-txt focus-input" type="text" name="email"></span>
+                                            </li>
+                                            <li>
+                                                <strong><i>*</i>
+                                                    <select class="select" name="card_type">
+                                                    <option value="0">身份证</option>
+                                                    <option value="1">护照</option>
+                                                </select>
+                                            </strong>
+                                                <span><input class="input-txt focus-input" name="card" type="text"></span>
+                                            </li>
+                                            <li >
+                                                <input type="checkbox" name="status" value="1" checked="checked" hidden>
+                                            </li>
+                                            <li>
+                                                 <span class="text-left"><button type="button" class="btn add_userman " data-dismiss="modal">添加</button></span>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+                  <!-- / 添加出行人弹窗 -->
+              </div>
+        </div>
+    </div>
 </div>
 <!-- /Contene -->
+{% endblock %}
+{% block custom_js %}
+    <script>
+    $(".add_userman").click(function () {
+        console.log(1);
+        $.ajax({
+            type: "POST",
+            url: "{% url 'order:add_order' %}",
+            data: $(".info").serialize(),
+            success: function(data) {
+                    if(data["status"]== 'success'){
+                        $("div.section").children('div:last').after('<div class="Information" style="display:block"><div class="Top clearFix"><span class="f-l"></span><div class="f-r"><a class="tr-02 button_edit" href="JavaScript:;" data-toggle="modal" data-target="#edit">编辑</a><a class="tr-02 button_del" href="JavaScript:;">删除</a></div></div><div class="Txt"><ul class="clearFix"><li class="f-l">真实姓名：<span>李大根</span></li><li class="f-l">性别：<span>女</span></li><li class="f-l">证件类型：<span>身份证</span></li><li class="f-l">证件号：<span>362523199204170818 </span></li><!-- <li class="f-l">护照号码：<span>23213265</span></li> --><li class="f-l">手机号：<span>13302580258</span></li><li class="f-l">邮箱：<span>18507317473@163.com</span></li><!-- <li class="f-l">保险：<span>赠送  平安保险--神州畅游 A款 </span></li> --></ul></div></div>')
+                        var man = data["info"]
+                        var name= $("div.Information:last").children('.Top').find('span').text(man['name'])
+                        var u_name= $("div.Information:last").children('.Txt').find('span').eq(0).text(man['name'])
+                        var gender= $("div.Information:last").children('.Txt').find('span').eq(1).text(man['gender'])
+                        var card_type= $("div.Information:last").children('.Txt').find('span').eq(2).text(man['card_type'])
+                        var card= $("div.Information:last").children('.Txt').find('span').eq(3).text(man['card'])
+                        var mobile= $("div.Information:last").children('.Txt').find('span').eq(4).text(man['mobile'])
+                        var email= $("div.Information:last").children('.Txt').find('span').eq(5).text(man['email'])
+                    }else if(data["status"] == 'fail'){
+                        console.log(data["status"],data["info"])
+                        alert("出行人添加失败")
+                    }
+                },
+            }
+        );
+    });
+</script>
 {% endblock %}

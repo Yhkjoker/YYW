@@ -2,6 +2,7 @@
 
 from django import forms
 import re
+from captcha.fields import CaptchaField
 
 from .models import TeamOrder, OrderDetail
 from users.models import *
@@ -49,3 +50,18 @@ class AddOrderForm(forms.ModelForm):
     class Meta:
         model = OrderDetail
         exclude = ('number', 'total', 'add_date', 'travel_buddy', 'status')
+
+
+class ModifyInfoForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ['username', 'first_name', 'card', 'gender']
+
+
+class UpdateEmailForm(forms.Form):
+    email = forms.EmailField(required=True)
+
+
+class UpdateForm(forms.Form):
+    email = forms.EmailField(required=True)
+    captcha = forms.CharField(required=True)

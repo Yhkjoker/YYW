@@ -45,6 +45,13 @@ def send_register_email(email, send_type="register"):
         email_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
         if email_status:
             pass
+    elif send_type == 'update':
+        email_title = '悠悠蜗大学生旅游网密码更新'
+        email_body = '您的验证码为{}'.format(code)
+
+        email_status = send_mail(email_title, email_body, EMAIL_FROM, [email])
+        if email_status:
+            pass
 
 
 

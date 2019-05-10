@@ -1,4 +1,5 @@
 {% extends 'details.html' %}
+{% load staticfiles %}
 {% block title %}
     <title>邮箱修改/悠悠蜗</title>
 {% endblock %}
@@ -18,21 +19,22 @@
 		<div class="Bottom  w-1180">
 			<div class="Modify text-center">
 				<form class="form">
+                    {% csrf_token %}
 					<ul class="text-right">
 						<li>
 							<strong>新的账户邮箱：</strong>
-							<span><input class="txt-input1 tr-02 focus-input" type="tel" autofocus="autofocus" /></span>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="email" autofocus="autofocus" /></span>
 						</li>
 						<li>
 							<strong>邮箱验证码：</strong>
 							<span>
-								<input class="txt-input2 pull-left tr-02 focus-input" type="tel"/>
-								<button type="button" class="btn btn1">发送邮件</button>
+								<input class="txt-input2 pull-left tr-02 focus-input" name="captcha" type="tel"/>
+								<button type="button" class="btn btn1 send_email">发送邮件</button>
 							</span>
 						</li>
 						<li>
 							<span>
-								<button type="button" class="btn btn2 w-100">提 交</button>
+								<button type="submit" class="btn btn2 w-100">提 交</button>
 							</span>
 						</li>
 					</ul>
@@ -42,4 +44,23 @@
 	</div>
 </div>
     <!-- /Contene -->
+{% endblock %}
+{% block custom_js %}
+<script>
+    $('.send_email').click(function () {
+        console.log('点击');
+        $.ajax({
+            type: "POST",
+            url:"{% url 'order:update_email' %}",
+            data:$('.form').serialize(),
+            success:function (data) {
+                if(data['status'] == 'success'){
+                    $('.send_email').text('验证码已发送')
+                }else if(data['status'] == 'fail'){
+                    alert('请输入正确的邮箱')
+                }
+            },
+        });
+    })
+</script>
 {% endblock %}

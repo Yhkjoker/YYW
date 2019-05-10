@@ -1,6 +1,6 @@
 # _*_ encoding:utf-8 _*_
 
-from django.conf.urls import url
+from django.conf.urls import url,include
 
 from .views import *
 
@@ -16,5 +16,6 @@ urlpatterns = [
     url('^update_info/$', UpdateInfoView.as_view(), name='update_info'),
     url('^update_mobile/$', UpdateMobileView.as_view(), name='update_mobile'),
     url('^update_email/$', UpdateEmailView.as_view(), name='update_email'),
+    url(r'^captcha/', include('captcha.urls')),
     url('^update_man/$', UpdateManView.as_view(), name='update_man'),
 ]

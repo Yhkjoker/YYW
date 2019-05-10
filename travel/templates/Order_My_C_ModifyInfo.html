@@ -17,27 +17,38 @@
 		</div>
 		<div class="Bottom  w-1180">
 			<div class="Modify text-center">
-				<form class="form" action="">
+				<form class="form" action="{% url 'order:update_info' %}" method="post">
+                    {% csrf_token %}
 					<ul class="text-right">
 						<li>
-							<strong>用户名：</strong>
-							<span><input class="txt-input1 tr-02 focus-input" type="tel" name="username" value="{{ user.username }}" autofocus="autofocus" /></span>
+							<strong>用户名</strong>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="username" value="{{ user.username }}" autofocus="autofocus" /></span>
 						</li>
 						<li>
 							<strong>姓名</strong>
-							<span><input class="txt-input1 tr-02 focus-input" type="tel" name="first_name" value="{{ user.first_name }}" autofocus="autofocus" /></span>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="first_name" value="{{ user.first_name }}" autofocus="autofocus" /></span>
+						</li>
+                        <li>
+							<strong>身份证</strong>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="card" value="{{ user.card }}" autofocus="autofocus" /></span>
 						</li>
 						<li>
-							<strong>证件号</strong>
-							<span><input class="txt-input1 tr-02 focus-input" type="tel" name="card" value="{{ user.card }}" autofocus="autofocus" /></span>
-						</li>
-						<li>
-							<strong>性别</strong>
-							<span><input class="txt-input1 tr-02 focus-input" type="tel" name="gender" value="{{ user.gender }}" autofocus="autofocus" /></span>
-						</li>
+     					    <strong>姓&nbsp;&nbsp;&nbsp;别</strong>
+     					    <span>
+								<label class="radio-inline" style="float: left;margin-right: 30px">
+								  <input type="radio" style="width: 16px" name="gender" value="0" {% if user.gender == '0' %}checked{% endif %}> <b style="font-size: 16px;">男</b>
+								</label>
+								<label class="radio-inline" style="float: left;margin-right: 30px">
+								  <input type="radio" style="width: 16px" name="gender" value="1" {% if user.gender == '1' %}checked{% endif %}> <b style="font-size: 16px;">女</b>
+								</label>
+								<label class="radio-inline" style="float: left;margin-right: 30px">
+								  <input type="radio" style="width: 16px" name="gender" value="2" {% if user.gender == '2' %}checked{% endif %}> <b style="font-size: 16px;">不便透露</b>
+								</label>
+     					     </span>
+     					</li>
 						<li>
 							<span>
-								<button type="button" class="btn btn2 w-100">提 交</button>
+								<button type="submit" class="btn btn2 w-100">提 交</button>
 							</span>
 						</li>
 					</ul>
