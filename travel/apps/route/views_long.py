@@ -1,7 +1,6 @@
 # _*_ encoding:utf-8 _*_
 import ast
 
-
 from django.shortcuts import render
 from django.views.generic.base import View
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
@@ -13,19 +12,25 @@ from apps.utils.constant_service import CONSTANT
 
 # Create your views here.
 
+
 class GetList(View):
     """
     筛选基类
     """
-    def get(self,request,big_type):
+    def get(self,request, big_type):
         context = {}
         big_type = big_type
         month = request.GET.get('month', '0')
         area = int(request.GET.get('area', 1)) #int是为了方便在模版中与city.vo.id 作比较，为了actice效果
         days = request.GET.get('days', '0')
         price = request.GET.get('price', '0')
+        keywords = request.GET.get('keywords', '')
 
         theme_list = TravelTheme.objects.filter(big_type=big_type)
+
+        if keywords:
+            theme_list = theme_list.filter(Q(describe__contains=keywords)|Q(theme_type__icontains=keywords)|Q(theme_intro__icontains=keywords)|Q(route__icontains=keywords)|Q(title__icontains=keywords))
+
         if month != '0':
             theme_list = theme_list.filter(fit_month=int(month))
 
@@ -40,7 +45,7 @@ class GetList(View):
 
 
         # 筛选当前类型的城市
-        city = City.objects.filter(type__contains=big_type)
+        city = City.objects.filter(type__icontains=big_type)
         # 获取当前旅游类型的月份
         context['all_month'] = CONSTANT.month
         # 获取当前旅游类型的所有城市或区域
@@ -68,7 +73,7 @@ class GetList(View):
             page = request.GET.get('page', 1)
         except PageNotAnInteger:
             page = 1
-        p = Paginator(theme_list, 1, request=request)
+        p = Paginator(theme_list, 5, request=request)
         theme_list = p.page(page)
 
         context['theme_list'] = theme_list
@@ -80,23 +85,23 @@ class LongListView(GetList):
     """
     长途旅行
     """
-    def get(self,request):
-        return super(LongListView,self).get(request,'ct')
+    def get(self, request):
+        return super(LongListView,self).get(request, 'ct')
 
 
 class ShortListView(GetList):
     """
     短途旅行
     """
-    def get(self,request):
-        return super(ShortListView,self).get(request,'dt')
+    def get(self, request):
+        return super(ShortListView,self).get(request, 'dt')
 
 
 class IdenticalListView(GetList):
     """
     同城旅行
     """
-    def get(self,request):
-        return super(IdenticalListView,self).get(request,'tc')
+    def get(self, request):
+        return super(IdenticalListView, self).get(request, 'tc')
 
 

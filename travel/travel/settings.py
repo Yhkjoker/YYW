@@ -154,6 +154,8 @@ EMAIL_FROM = 'yuhaikun0325@sina.com'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 from .celery_settings import *
 
 # from .logging_settings import *

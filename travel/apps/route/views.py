@@ -33,6 +33,7 @@ class ListDetailsView(View):
     def get(self, request, id):
         context={}
         theme = TravelTheme.objects.get(id=id)
+        theme.click_num += 1
         context['theme_id'] = id
         context['title'] = theme.title
         type= theme.big_type
@@ -43,6 +44,7 @@ class ListDetailsView(View):
         context['tours'] = tours
         context['details'] = details
         context['baike'] = details.baidu_baike
+        theme.save()
         return render(request, 'List_details.html', context)
 
 

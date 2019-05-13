@@ -22,14 +22,14 @@ $(window).resize(function(){
 });
 
 /*头部搜索框*/
-$("*").click(function () {
- $('#header .Nav-Wra .Top2-Nav ul li').eq(0).removeClass('active'); 
-});
-$('#header .Nav-Wra .Top2-Nav ul li').eq(0).click(function(event){
-       $(this).addClass('active'); 
-       $(this).find("input[type='text']").focus();
-       event.stopPropagation(); 
-});
+// $("*").click(function () {
+//  $('#header .Nav-Wra .Top2-Nav ul li').eq(0).removeClass('active');
+// });
+// $('#header .Nav-Wra .Top2-Nav ul li').eq(0).click(function(event){
+//        $(this).addClass('active');
+//        $(this).find("input[type='text']").focus();
+//        event.stopPropagation();
+// });
 
 // 页脚点击事件
 $(function(){
@@ -314,6 +314,33 @@ $('.userman').click(function(){
     $(this).parents('.text-left').siblings('input').attr("checked",'checked')
     click = true
   }
+});
+
+
+//顶部搜索栏搜索方法
+function search_click(){
+    console.log(3)
+    var type = $('#jsSelectOption').text(),
+        keywords = $('#search_keywords').val(),
+        request_url = '';
+    if(keywords == ""){
+        return
+    }
+    if(type == "identical_list"){
+        console.log(1)
+        request_url = "/identical_list/?keywords="+keywords
+    }else if(type == "short_list"){
+        request_url = "/short_list/?keywords="+keywords
+    }else if(type == "long_list"){
+        request_url = "/long_list/?keywords="+keywords
+    }
+    window.location.href = request_url
+}
+
+
+$('.search_keywords').click(function () {
+    search_click();
+    console.log(2)
 });
 
 

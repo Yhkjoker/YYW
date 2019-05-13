@@ -44,10 +44,10 @@
                 <form action="{% url 'login' %}" method="post">
                    <!-- 默认登录 -->
                     <div class="TxtInput-Div active">
-                        <input class="txt" type="text" placeholder="用户名或密码" name="username" autofocus="autofocus"/>
+                        <input class="txt" type="text" placeholder="用户名或邮箱" name="username" autofocus="autofocus" {% if show == '1' %} value="{{ user_name }}"{% endif %}/>
                         <input class="txt" type="password" name="password" placeholder="密码"/>
                         <div class="txtp clearFix">
-                            <span class="txt f-l" {% if not login_form.errors %}style="display: none"{% endif %}>{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</span>
+                            <span class="txt f-l" {% if not show == '1' %}style="display: none"{% endif %}>{% for key,error in login_form.errors.items %}{{ error }}{% endfor %}{{ msg }}</span>
                             <a href="{% url 'register' %}" class="f-l">还没有账号？立即注册</a>
                             <a href="{% url 'forget' %}" class="f-r">忘记密码</a>
                         </div>

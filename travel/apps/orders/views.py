@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.generic.base import View
 from django.db.models import Q
+from django.contrib.auth.hashers import make_password
 
 from .tasks import *
 from .forms import *
@@ -41,8 +42,9 @@ class TeamOrderView(View):
     团队定制
     """
     def get(self, request):
-        date = datetime.date.today()
-        return render(request, 'Customized.html', {'date':str(date)})
+        import datetime
+        date_time = datetime.date.today()
+        return render(request, 'Customized.html', {'date': str(date_time)})
 
     def post(self, request):
         teamorder_form = TeamOrderForm(request.POST)
@@ -86,7 +88,7 @@ class AddOrderView(View):
 
                 gender = user_man.gender
                 card_type = user_man.card_type
-                if gender == '1':
+                if gender == '0':
                     gender = '男'
                 else:
                     gender = '女'
@@ -274,6 +276,22 @@ class UpdateEmailView(View):
                 return JsonResponse({"status": "success"})
             else:
                 return JsonResponse({"status": "fail"})
+        else:
+            email_form = UpdateForm(request.POST)
+            if email_form.is_valid():
+                email = request.POST.get('email')
+                captcha = request.POST.get('captcha')
+                email_verify = EmailVerifyRecord.objects.get(Q(email=email)&Q(send_type='update'))
+                code = email_verify.code
+                if code == captcha:
+                    user_id = request.user.id
+                    user = UserProfile.objects.get(id=user_id)
+                    user.email = email
+                    user.save()
+                    email_verify.delete()
+                    return render(request, 'My_info.html', {})
+                else:
+                    pass
 
 
 class UpdateManView(View):
@@ -286,6 +304,47 @@ class UpdateManView(View):
 
     def post(self, request):
         pass
+
+
+class ResetPwdView(View):
+    def get(self, request):
+        return render(request, 'ModifyPwd.html', {})
+
+    def post(self, request):
+        if request.is_ajax():
+            user_id = request.user.id
+            user = UserProfile.objects.get(id=user_id)
+            email_form = UpdateEmailForm(request.POST)
+            if email_form.is_valid():
+                email = request.POST.get('email')
+                user_email = user.email
+                if email == user_email:
+                    send_register_email(email, send_type='reset')
+                    return JsonResponse({"status": "success"})
+                else:
+                    return JsonResponse({"status": "none"})
+            else:
+                return JsonResponse({"status": "fail"})
+        else:
+            reset_form = ResetForm(request.POST)
+            if reset_form.is_valid():
+                user_id = request.user.id
+                email = request.POST.get('email')
+                captcha = request.POST.get('captcha')
+                password1 = request.POST.get('password1')
+                password2 = request.POST.get('password2')
+                reset_cap = EmailVerifyRecord.objects.get(Q(email=email)&Q(send_type='reset'))
+                if captcha == reset_cap.code:
+                    if password1 == password2:
+                        user = UserProfile.objects.get(id=user_id)
+                        user.password = make_password(password2)
+                        user.save()
+                        reset_cap.delete()
+                        return render(request, 'My_info.html')
+                    else:
+                        return render(request, 'My_info.html')
+                else:
+                    return render(request, 'My_info.html')
 
 
 

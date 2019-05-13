@@ -32,6 +32,7 @@ urlpatterns = [
     url(r'^yyw/$', IndexView.as_view(), name="index"),
     # 账号登录与注册
     url(r'^login/$', LoginView.as_view(), name="login"),
+    url(r'^logout/$', LogoutView.as_view(), name="logout"),
     url(r'^register/$', RegisterView.as_view(), name="register"),
     # 加载验证码
     url(r'^captcha/', include('captcha.urls')),
@@ -46,6 +47,8 @@ urlpatterns = [
     url(r'^list_details/(?P<id>[0-9]+)$', ListDetailsView.as_view(), name="list_details"),
     # 处理静态文件的函数
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
+
+    # url(r'^static/(?P<path>.*)$', serve, {"document_root": STATIC_ROOT}),
     # 订单提交
     url(r'^order/', include('orders.urls', namespace='order')),
 
@@ -58,4 +61,11 @@ urlpatterns = [
 
     url(r'^celery/',orderview.celery,name='celery'),
     url(r'^log/',orderview.log_test,name='log'),
+
+    url(r'^error/',ErrorView.as_view(),name='error'),
 ]
+
+#配置全局404页面
+handler404 = 'users.views.page_not_found'
+#配置全局500页面
+handler500 = 'users.views.page_error'

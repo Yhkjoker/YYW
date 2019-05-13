@@ -27,7 +27,7 @@
 				<div class="History-Order-F">
 					<ul class="clearFix text-center">
 						<li class="f-l">{{ order_man.order.title }}</li>
-						<li class="f-l">{{ order_man.order.go_off }}-2017.05.10</li>
+						<li class="f-l">{{ order_man.order.go_off }}-{{ order_man.order.end_time }}</li>
                         {% if order_man.order.status == 0 %}
 						<li class="f-l">待付款</li>
                         {% elif order_man.order.status == 1 %}

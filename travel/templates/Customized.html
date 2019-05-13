@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--移动设备优先-->
 <title>团体定制/悠悠蜗</title>
+<link href="{% static 'images/yyw.jpg' %}" rel="icon" type="image/x-icon">
 <meta name="keywords" content="关键字" />
 <meta name="description" content="描述" />
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -52,10 +53,10 @@
                 <div class="collapse navbar-collapse p-0 m-0" id="bs-example-navbar-collapse-1"><!-- 导航栏 -->
                     <ul class="nav navbar-nav">
                         <li><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>
-                        <li class="active"><a href="{% url 'identical_list' %}">同城精粹</a></li>
+                        <li><a href="{% url 'identical_list' %}">同城精粹</a></li>
                         <li><a href="{% url 'short_list' %}">短途旅行</a></li>
                         <li><a href="{% url 'long_list' %}">长途旅行</a></li>
-                        <li><a href="{% url 'order:team' %}">团体定制</a></li>
+                        <li  class="active"><a href="{% url 'order:team' %}">团体定制</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -71,7 +72,7 @@
                       </li>
                     <li class="f-l Bg1"><a href="#"></a></li>
                     {% if request.user.is_authenticated %}
-                        <li class="f-l L-R"><a href="Register.html">个人中心</a></li>
+                        <li class="f-l L-R"><a href="{% url 'order:my_info' %}">个人中心</a></li>
                         <li class="f-l L-R"><a href="Register.html">退出</a></li>
                     {% else %}
                         <li class="f-l L-R"><a href="{% url 'login' %}">登录</a></li>

@@ -1,6 +1,6 @@
 # _*_ encoding:utf-8 _*_
-from django.shortcuts import render
-from django.contrib.auth import authenticate, login
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
 from django.views.generic.base import View
@@ -112,6 +112,13 @@ class ResetpwdView(View):
             return render(request, "Reset_pwd.html", {'reset_form': reset_form})
 
 
+class LogoutView(View):
+    def get(self, request):
+        logout(request)
+        from django.core.urlresolvers import reverse
+        return HttpResponseRedirect(reverse('index'))
+
+
 class LoginView(View):
     def get(self, request):
         return render(request, "Land.html", {})
@@ -127,8 +134,29 @@ class LoginView(View):
                     login(request, user)
                     return render(request, "index.html", {})
                 else:
-                    return render(request, 'Land.html', {'msg': '用户未激活'})
+                    return render(request, 'Land.html', {'msg': '用户未激活', 'show': '1', 'user_name': user_name})
             else:
-                return render(request, "Land.html", {'msg': '用户名或密码错误'})
+                return render(request, "Land.html", {'show': '1', 'msg': '用户名或密码错误', 'user_name': user_name})
         else:
             return render(request, 'Land.html', {'login_form': login_form})
+
+
+class ErrorView(View):
+    def get(self, request):
+        return render(request, '500.html')
+
+
+def page_not_found(request):
+    from django.shortcuts import render_to_response
+    response = render_to_response('404.html', {})
+    response.status_code = 404
+    return response
+
+
+def page_error(request):
+    from django.shortcuts import render_to_response
+    response = render_to_response('500.html', {})
+    response.status_code = 500
+    return response
+
+

@@ -65,3 +65,10 @@ class UpdateEmailForm(forms.Form):
 class UpdateForm(forms.Form):
     email = forms.EmailField(required=True)
     captcha = forms.CharField(required=True)
+
+
+class ResetForm(forms.Form):
+    email = forms.EmailField(required=True)
+    captcha = forms.CharField(required=True)
+    password1 = forms.CharField(required=True)
+    password2 = forms.CharField(required=True)

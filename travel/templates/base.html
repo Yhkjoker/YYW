@@ -55,7 +55,7 @@
                 </div>
                 <div class="collapse navbar-collapse p-0 m-0" id="bs-example-navbar-collapse-1"><!-- 导航栏 -->
                     <ul class="nav navbar-nav">
-                        <li><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>
+                        <li {% if request.path|slice:'4' == '/yyw' %}class="active"{% endif %}><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>
                         <li {% if type == 'tc' %}class="active"{% endif %}><a href="{% url 'identical_list' %}">同城精粹</a></li>
                         <li {% if type == 'dt' %}class="active"{% endif %}><a href="{% url 'short_list' %}">短途旅行</a></li>
                         <li {% if type == 'ct' %}class="active"{% endif %}><a href="{% url 'long_list' %}">长途旅行</a></li>
@@ -67,16 +67,17 @@
             <!-- /.container-fluid -->
             <div class="Top2-Nav">
                 <ul class="clearFix">
-                    <li class="f-l">
-                            <form class="form tr-02">
-                              <input class="text" type="text" />
-                              <button class="submit Bg1 tr-02" type="button" name="" value=""></button>
+                    <li class="f-l active">
+                        <span id="jsSelectOption" style="display: none;">identical_list</span>
+                            <form class="form tr-02" method="get">
+                              <input class="text" id="search_keywords" type="text" />
+                              <button class="submit Bg1 tr-02 search_keywords" type="button" name="" value=""></button>
                             </form>
                       </li>
                     <li class="f-l Bg1"><a href="#"></a></li>
                     {% if request.user.is_authenticated %}
                         <li class="f-l L-R"><a href="{% url 'order:my_info' %}">个人中心</a></li>
-                        <li class="f-l L-R"><a href="Register.html">退出</a></li>
+                        <li class="f-l L-R"><a href="{% url 'logout' %}">退出</a></li>
                     {% else %}
                         <li class="f-l L-R"><a href="{% url 'login' %}">登录</a></li>
                         <li class="f-l L-R"><a href="{% url 'register' %}">注册</a></li>
@@ -134,6 +135,16 @@
     	</div>
     </div>	
 </footer>
-<!-- /footer -->
+<script src="{% static 'js/style.js' %}"></script><!-- jQuery whole Put in the bottom -->
+<script src="{% static 'js/swiper.jquery.min.js' %}"></script><!-- Slide Put in the bottom -->
+<script>
+    append();
+    $('.List-Details-Content > .f-l .Click-Btn li').click(function(){
+	var index  = $(this).index()-1;
+	$(this).addClass('active').siblings().removeClass('active');
+	$('.List-Details-Div').eq(index).addClass('active').siblings().removeClass('active');
+});
+    cart();
+</script>
 </body>
 </html>

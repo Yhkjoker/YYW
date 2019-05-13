@@ -1,7 +1,7 @@
 {% extends 'details.html' %}
 {% load staticfiles %}
 {% block title %}
-    <title>邮箱修改/悠悠蜗</title>
+    <title>修改密码/悠悠蜗</title>
 {% endblock %}
 {% block content %}
     <div id="Contene">
@@ -18,11 +18,11 @@
 		</div>
 		<div class="Bottom  w-1180">
 			<div class="Modify text-center">
-				<form class="form" action="{% url 'order:update_email' %}" method="post">
+				<form class="form" action="{% url 'order:reset_pwd' %}" method="post">
                     {% csrf_token %}
 					<ul class="text-right">
 						<li>
-							<strong>新的账户邮箱：</strong>
+							<strong>用户邮箱：</strong>
 							<span><input class="txt-input1 tr-02 focus-input" type="text" name="email" autofocus="autofocus" /></span>
 						</li>
 						<li>
@@ -31,6 +31,14 @@
 								<input class="txt-input2 pull-left tr-02 focus-input" name="captcha" type="tel"/>
 								<button type="button" class="btn btn1 send_email">发送邮件</button>
 							</span>
+						</li>
+                        <li>
+							<strong>新密码：</strong>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="password1" autofocus="autofocus" /></span>
+						</li>
+                        <li>
+							<strong>确认密码：</strong>
+							<span><input class="txt-input1 tr-02 focus-input" type="text" name="password2" autofocus="autofocus" /></span>
 						</li>
 						<li>
 							<span>
@@ -51,13 +59,15 @@
         console.log('点击');
         $.ajax({
             type: "POST",
-            url:"{% url 'order:update_email' %}",
+            url:"{% url 'order:reset_pwd' %}",
             data:$('.form').serialize(),
             success:function (data) {
                 if(data['status'] == 'success'){
                     $('.send_email').text('验证码已发送')
                 }else if(data['status'] == 'fail'){
                     alert('请输入正确的邮箱')
+                }else if(data['status'] == 'none'){
+                    alert('用户邮箱错误')
                 }
             },
         });
