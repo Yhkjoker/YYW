@@ -56,10 +56,10 @@
                 <div class="collapse navbar-collapse p-0 m-0" id="bs-example-navbar-collapse-1"><!-- 导航栏 -->
                     <ul class="nav navbar-nav">
                         <li {% if request.path|slice:'4' == '/yyw' %}class="active"{% endif %}><a href="{% url 'index' %}">首页 <span class="sr-only">(current)</span></a></li>
-                        <li {% if type == 'tc' %}class="active"{% endif %}><a href="{% url 'identical_list' %}">同城精粹</a></li>
-                        <li {% if type == 'dt' %}class="active"{% endif %}><a href="{% url 'short_list' %}">短途旅行</a></li>
-                        <li {% if type == 'ct' %}class="active"{% endif %}><a href="{% url 'long_list' %}">长途旅行</a></li>
-                        <li ><a href="{% url 'order:team' %}">团体定制</a></li>
+                        <li {% if request.path|slice:'15' == '/identical_list' %}class="active"{% endif %}><a href="{% url 'identical_list' %}">同城精粹</a></li>
+                        <li {% if request.path|slice:'11' == '/short_list' %}class="active"{% endif %}><a href="{% url 'short_list' %}">短途旅行</a></li>
+                        <li {% if request.path|slice:'10' == '/long_list' %}class="active"{% endif %}><a href="{% url 'long_list' %}">长途旅行</a></li>
+                        <li {% if request.path|slice:'11' == '/order/team' %}class="active"{% endif %}><a href="{% url 'order:team' %}">团体定制</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -67,8 +67,15 @@
             <!-- /.container-fluid -->
             <div class="Top2-Nav">
                 <ul class="clearFix">
-                    <li class="f-l active">
+                    <li class="f-l {% if request.path|slice:'4' != '/yyw' %}active{% endif %}">
+{#                        #用于判断当前路径#}
+                        {% if request.path|slice:'15' == '/identical_list' %}
                         <span id="jsSelectOption" style="display: none;">identical_list</span>
+                        {% elif request.path|slice:'11' == '/short_list' %}
+                        <span id="jsSelectOption" style="display: none;">short_list</span>
+                        {% elif request.path|slice:'10' == '/long_list' %}
+                        <span id="jsSelectOption" style="display: none;">long_list</span>
+                        {% endif %}
                             <form class="form tr-02" method="get">
                               <input class="text" id="search_keywords" type="text" />
                               <button class="submit Bg1 tr-02 search_keywords" type="button" name="" value=""></button>

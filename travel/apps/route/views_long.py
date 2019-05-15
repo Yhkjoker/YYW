@@ -21,12 +21,16 @@ class GetList(View):
         context = {}
         big_type = big_type
         month = request.GET.get('month', '0')
-        area = int(request.GET.get('area', 1)) #int是为了方便在模版中与city.vo.id 作比较，为了actice效果
+        area = request.GET.get('area', '0')
         days = request.GET.get('days', '0')
         price = request.GET.get('price', '0')
         keywords = request.GET.get('keywords', '')
-
+        print(area)
         theme_list = TravelTheme.objects.filter(big_type=big_type)
+
+        area_id = [city.area_id for city in theme_list]
+        area_id = list(set(area_id))
+        print(area_id)
 
         if keywords:
             theme_list = theme_list.filter(Q(describe__contains=keywords)|Q(theme_type__icontains=keywords)|Q(theme_intro__icontains=keywords)|Q(route__icontains=keywords)|Q(title__icontains=keywords))
@@ -34,38 +38,34 @@ class GetList(View):
         if month != '0':
             theme_list = theme_list.filter(fit_month=int(month))
 
-        if area != 1:
+        if area != '0':
             theme_list = theme_list.filter(area_id=int(area))
 
         if days != '0':
             theme_list = theme_list.filter(days=int(days))
 
         if price != '0':
-            theme_list = theme_list.filter(price=int(price))
+            theme_list = theme_list.filter(price_range=price)
 
 
         # 筛选当前类型的城市
-        city = City.objects.filter(type__icontains=big_type)
+        cities = City.objects.filter(id__in=area_id)
+        print(cities)
         # 获取当前旅游类型的月份
         context['all_month'] = CONSTANT.month
         # 获取当前旅游类型的所有城市或区域
-        context['all_area'] = city
+        context['all_area'] = cities
         # 获取当前旅游类型的所有天数
         context['all_days'] = CONSTANT.days
         # 获取当前旅游类型所有价格
         context['all_price'] = CONSTANT.price
 
-        location = ''
-        for i in city:
-            if area == i.id:
-                location = i.area
         print(CONSTANT.target_url[big_type])
         print(request.user.id)
         context['target_url'] = CONSTANT.target_url[big_type]
-        context['location'] = location
+        context['location'] = int(area)
         context['type'] = big_type
         context['month'] = month
-        context['area'] = area
         context['days'] = days
         context['price'] = price
 

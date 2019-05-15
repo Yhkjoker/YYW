@@ -28,18 +28,19 @@ class Constant(object):
         ]
         self.price = [
             {'key': '0', 'value': '全部'},
-            {'key':'1','value':'1000以下'},
+            {'key': '1', 'value': '1000以下'},
             {'key': '2', 'value': '1000-2000'},
             {'key': '3', 'value': '2000-3000'},
             {'key': '4', 'value': '3000-4000'},
             {'key': '5', 'value': '4000以上'}
         ]
         self.target_url = {
-            'tc':'/identical_list',
-            'dt':'/short_list',
-            'ct':'/long_list'
+            'tc': '/identical_list',
+            'dt': '/short_list',
+            'ct': '/long_list'
         }
-    def type(self,type):
+
+    def type(self, type):
         if type == 'tc':
             type = '同城旅行'
         if type == 'dt':

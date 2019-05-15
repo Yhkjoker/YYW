@@ -4,8 +4,21 @@ import xadmin
 from .models import *
 
 
+class ThemeInfoInline(object):
+    model = ThemeInfo
+    extra = 0
+
+
+class ToursInline(object):
+    model = Tours
+    extra = 0
+
+
 class TravelThemeAdmin(object):
     list_display = ['big_type', 'area', 'fit_month', 'days', 'title', 'price', 'img', 'click_num']
+    readonly_fields = ['click_num']
+    ordering = ['-click_num']
+    inlines = [ThemeInfoInline, ToursInline]
 
 
 class ThemeInfoAdmin(object):

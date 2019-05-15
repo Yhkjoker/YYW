@@ -9,9 +9,9 @@
 			<div class="Top w-1180 clearFix">
 				<div class="f-l">我的订单</div>
 				<div class="f-r">
-					<a href="Order_My.html" class="btn tr-02">当前订单</a>
-					<a href="Order_My_B.html" class="btn tr-02">历史订单</a>
-					<a href="Order_My_C.html" class="btn tr-02 active">我的信息</a>
+					<a href="{% url 'order:order_new' %}" class="btn tr-02">当前订单</a>
+					<a href="{% url 'order:order_his' %}" class="btn tr-02">历史订单</a>
+					<a href="{% url 'order:my_info' %}" class="btn tr-02 active">我的信息</a>
 				</div>
 			</div>
 		</div>

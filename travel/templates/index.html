@@ -28,47 +28,30 @@
             <!-- Swiper -->
             <div class="swiper-container Home-A-swiper">
                 <div class="swiper-wrapper">
+                    {% for route in hot_route %}
                     <div class="swiper-slide">
-                        <a href="#">
+                        <a href="{% url 'list_details' route.id %}">
                              <div class="Hot">
                                 <span>热门推荐</span>
                              </div>
-                             <img src="{% static 'images/h-banner1.jpg' %}">
+                             <img style="height: 482px" src="{{ MEDIA_URL }}{{ route.img }}">
                              <div class="Txt">
                                  <div class="Top clearFix">
-                                <h2 class="f-l">【年度佳选】山珍海味呷好茶，大海沙滩的五星假期</h2>
+                                <h2 class="f-l">【年度佳选】{{ route.title }}</h2>
                                 <div class="f-r">
                                     <sup>￥</sup>
-                                    <span>1399</span>
+                                    <span>{{ route.price }}</span>
                                     <strong>起</strong>
                                 </div>
                                  </div>
-                                 <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
+                                 <p>{{ route.theme_intro }}</p>
                              </div>
                          </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a href="#">
-                             <div class="Hot">
-                                <span>热门推荐</span>
-                             </div>
-                             <img src="{% static 'images/h-banner2.jpg' %}">
-                             <div class="Txt">
-                                 <div class="Top clearFix">
-                                <h2 class="f-l">【年度佳选】22222222222222222222222</h2>
-                                <div class="f-r">
-                                    <sup>￥</sup>
-                                    <span>1399</span>
-                                    <strong>起</strong>
-                                </div>
-                                 </div>
-                                 <p>那时，洱海的风吹在你的脸上，泸沽湖的阳光洒在你的身上，新鲜的野菜嚼在你的嘴里，丽江的人潮挤在你的身边，每个善良的云南人的笑容，在你的眼前。那一个个耳熟能详的名字，会鲜亮地跳跃在你的回忆间...</p>
-                             </div>
-                         </a>
-                    </div>
+                    {% endfor %}
                 </div>
                 <!-- Add Pagination -->
-                         <div class="swiper-pagination"></div>
+                <div class="swiper-pagination"></div>
                 <!-- Add Arrows -->
                 <div class="swiper-button-next">
                     <img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
@@ -81,35 +64,122 @@
             </div>
         </div>
         <div class="Home-B clearFix">
-            {% for i in hot_route %}
+            {% for route in lists %}
             <div class="Nei-Div">
-                     <div class="Hot">
-                         <span>{{ i.area }}</span>
-                     </div>
-                <a href="#" class="Photo">
-                    <img src="{{ MEDIA_URL }}{{ i.img }}" alt="">
+                 <div class="Hot">
+                     {% if route.big_type == 'tc' %}
+                     <span>同城精粹</span>
+                     {% elif route.big_type == 'dt' %}
+                     <span>短途旅行</span>
+                     {% elif route.big_type == 'ct' %}
+                     <span>长途旅行</span>
+                     {% endif %}
+                 </div>
+                <a href="{% url 'list_details' route.id %}" class="Photo">
+                    <img style="height: 315px" src="{{ MEDIA_URL }}{{ route.img }}" alt="">
                     <!-- <div class="border-1 tr-03"></div>
                     <a class="href-1 tr-02" href="#"><img class="tr-02" src="{% static 'images/i-1.png' %}" alt=""></a> -->
                 </a>
                 <div class="Txt">
                     <div class="clearFix top">
-                        <p class="f-l">{{ i.describe }}</p>
+                        <p class="f-l">{{ route.theme_intro }}</p>
                         <div class="price f-r">
                             <sup>￥</sup>
-                            <span>{{ i.concrete_price }}</span>
+                            <span>{{ route.price }}</span>
                             <strong>起</strong>
                         </div>
                     </div>
                     <div class="clearFix bottom">
-                        <h3 class="f-l">{{ i.title }}</h3>
-                        <a class="f-r" href="#">
-                                     <i class="tr-02">→</i>
+                        <h3 class="f-l">{{ route.theme_type }}</h3>
+                        {% if route.big_type == 'tc' %}
+                        <a class="f-r" href="{% url 'identical_list' %}">
+                            <i class="tr-02">→</i>
                             <span class="tr-02">更多同城精粹</span>
                         </a>
+                        {% elif route.big_type == 'dt'%}
+                            <a class="f-r" href="{% url 'short_list' %}">
+                            <i class="tr-02">→</i>
+                            <span class="tr-02">更多短途旅行</span>
+                        </a>
+                        {% elif route.big_type == 'ct' %}
+                            <a class="f-r" href="{% url 'long_list' %}">
+                            <i class="tr-02">→</i>
+                            <span class="tr-02">更多长途旅行</span>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
             {% endfor %}
+            <div class="Nei-Div">
+            <div class="Hot">
+                 <span>纯玩路线</span>
+            </div>
+	    	<a href="#" class="Photo">
+	    		<img src="{% static 'images/photo1.jpg' %}" alt="">
+	    	</a>
+	    	<div class="Txt">
+	    		<div class="clearFix top">
+	    			<p class="f-l">敬请期待</p>
+	    			<div class="price f-r">
+{#	    				<sup>￥</sup>#}
+{#	    				<span>998</span>#}
+{#	    				<strong>起</strong>#}
+	    			</div>
+	    		</div>
+	    		<div class="clearFix bottom">
+	    			<h3 class="f-l">修行之旅</h3>
+	    			<a class="f-r" href="#">
+	    			             <i class="tr-02">→</i>
+	    				<span class="tr-02">更多纯玩路线</span>
+	    			</a>
+	    		</div>
+	    	</div>
+	    </div>
+            <div class="Nei-Div">
+            <div class="Hot">
+                 <span>工业旅行</span>
+            </div>
+	    	<a href="#" class="Photo">
+	    		<img src="{% static 'images/photo4.jpg' %}" alt="">
+	    		<!-- <div class="border-1 tr-03"></div>
+	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="images/i-1.png" alt=""></a> -->
+	    	</a>
+	    	<div class="Txt">
+	    		<div class="clearFix top">
+	    			<p class="f-l">敬请期待</p>
+	    		</div>
+	    		<div class="clearFix bottom">
+	    			<h3 class="f-l">工业旅行</h3>
+	    			<a class="f-r" href="#">
+	    			             <i class="tr-02">→</i>
+	    				<span class="tr-02">更多工业旅行</span>
+	    			</a>
+	    		</div>
+	    	</div>
+	    </div>
+	        <div class="Nei-Div">
+            <div class="Hot">
+                 <span>主题旅行</span>
+            </div>
+	    	<a href="#" class="Photo">
+	    		<img src="{% static 'images/photo5.jpg' %}" alt="">
+	    		<!-- <div class="border-1 tr-03"></div>
+	    		<a class="href-1 tr-02" href="#"><img class="tr-02" src="images/i-1.png" alt=""></a> -->
+	    	</a>
+	    	<div class="Txt">
+	    		<div class="clearFix top">
+	    			<p class="f-l">敬请期待</p>
+	    		</div>
+	    		<div class="clearFix bottom">
+	    			<h3 class="f-l">主题旅行</h3>
+	    			<a class="f-r" href="#">
+	    			             <i class="tr-02">→</i>
+	    				<span class="tr-02">更多主题旅行</span>
+	    			</a>
+	    		</div>
+	    	</div>
+	    </div>
         </div>
         {#页脚#}
     </div>

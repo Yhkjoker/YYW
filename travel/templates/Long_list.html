@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title %}<title>长途旅行/悠悠蜗</title>{% endblock %}
+{% block title %}
+{% if request.path|slice:'15' == '/identical_list' %}
+    <title>同城精粹/悠悠蜗</title>
+{% elif request.path|slice:'11' == '/short_list' %}
+    <title>短途旅行/悠悠蜗</title>
+{% elif request.path|slice:'10' == '/long_list' %}
+    <title>长途旅行/悠悠蜗</title>
+{% endif %}
+{% endblock %}
 {% block banner %}
     <!-- Swiper -->
     <div class="swiper-container header-swiper">
@@ -30,25 +38,26 @@
                 <li>
                     <span>时间：</span>
                     {% for i in all_month %}
-                        <a class="{% if month == i.key %}active{% endif %}" href="?month={{ i.key }}&area={{ area }}&days={{ days }}&price={{ price }}">{{ i.value }}</a>
+                        <a class="{% if month == i.key %}active{% endif %}" href="?month={{ i.key }}&area={{ location }}&days={{ days }}&price={{ price }}">{{ i.value }}</a>
                     {% endfor %}
                 </li>
                 <li>
                     <span>地区：</span>
-                    {% for i in all_area %}
-                        <a class="{% if area == i.id %}active{% endif %}" href="?area={{ i.id }}&month={{ month }}&days={{ days }}&price={{ price }}">{{ i.area }}</a>
+                    <a class="{% if location == 0 %}active{% endif %}" href="?month={{ month }}&days={{ days }}&price={{ price }}">全部</a>
+                    {% for area in all_area %}
+                        <a class="{% if location == area.id %}active{% endif %}" href="?area={{ area.id }}&month={{ month }}&days={{ days }}&price={{ price }}">{{ area.area }}</a>
                     {% endfor %}
                 </li>
                 <li>
                     <span>天数：</span>
                     {% for i in all_days %}
-                        <a class="{% if days == i.key %}active{% endif %}" href="{{ target_url }}/?days={{ i.key }}&month={{ month }}&area={{ area }}&price={{ price }}">{{ i.value }}</a>
+                        <a class="{% if days == i.key %}active{% endif %}" href="{{ target_url }}/?days={{ i.key }}&month={{ month }}&area={{ location }}&price={{ price }}">{{ i.value }}</a>
                     {% endfor %}
                 </li>
                 <li>
                     <span>价格：</span>
                     {% for i in all_price %}
-                        <a class="{% if price == i.key %}active{% endif %}" href="?price={{ i.key }}&area={{ area }}&days={{ days }}&month={{ month }}">{{ i.value }}</a>
+                        <a class="{% if price == i.key %}active{% endif %}" href="?price={{ i.key }}&area={{ location }}&days={{ days }}&month={{ month }}">{{ i.value }}</a>
                     {% endfor %}
                 </li>
             </ul>
@@ -124,7 +133,7 @@
                     <div class="Price clearFix">
                         <div class="f-l">
                             <sup>￥</sup>
-                            <span>{{ vo.concrete_price}}</span>
+                            <span>{{ vo.price}}</span>
                         </div>
                         <a class="f-r" href="{% url 'list_details' vo.id %}">
                             <i class="tr-02">→</i>

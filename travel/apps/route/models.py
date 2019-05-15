@@ -11,7 +11,6 @@ class City(models.Model):
     城市
     """
     area = models.CharField(verbose_name=u'区域', max_length=10)
-    type = models.CharField(verbose_name='路线类型',choices=(('tc','同城'),('dt','短途'),('ct','长途'),('zt','主题旅行')),max_length=20,default='1')
 
     class Meta:
         verbose_name = '所属区域'
@@ -26,10 +25,12 @@ class TravelTheme(models.Model):
     旅游主题
     """
     month = (('0', '全部'), ('1', '一月'), ('2', '二月'), ('3', '三月'), ('4', '四月'), ('5', '五月'), ('6', '六月'), ('7', '七月'), ('8', '八月'), ('9', '九月'), ('10', '十月'), ('11', '十一月'), ('12', '十二月'))
-    big_type = models.CharField(verbose_name='旅行分类',choices=(('tc','同城旅行'),('dt','短途旅行'),('ct','长途旅行'),('zt','主题旅行')),max_length=4)
+    price_list = (('1', '1000以下'), ('2', '1000-2000'), ('3', '2000-3000'), ('4', '3000-4000'), ('5', '4000以上'))
+    big_type = models.CharField(verbose_name='旅行分类',choices=(('tc', '同城旅行'), ('dt', '短途旅行'), ('ct', '长途旅行'), ('zt', '主题旅行')), max_length=4)
     area = models.ForeignKey(City, verbose_name=u'所在区域')
     fit_month = models.CharField(max_length=4, verbose_name=u'适宜月份', default='0', choices=month)
-    price = models.CharField(max_length=50, verbose_name=u'价格区间', default='0')
+    price_range = models.CharField(max_length=50, verbose_name=u'价格区间', default='1', choices=price_list)
+    price = models.IntegerField(verbose_name='具体价格', default=1000)
     days = models.IntegerField(verbose_name='旅游天数')
     title = models.CharField(verbose_name='主题名称', max_length=50)
     route = models.CharField(verbose_name='路线',help_text='字段之间请以逗号相隔',max_length=255)
@@ -38,9 +39,8 @@ class TravelTheme(models.Model):
     theme_intro = models.CharField(max_length=100, verbose_name=u'主题简介', help_text=u'最大长度为100', default='')
     theme_type = models.CharField(max_length=20, verbose_name=u'主题类别', default='')
     img = models.ImageField(upload_to="imgae/%Y/%m", verbose_name='图片')
-    click_num = models.IntegerField(verbose_name='点击数量',default=0)
+    click_num = models.IntegerField(verbose_name='点击数量', default=0)
     add_time = models.DateField(verbose_name=u'添加时间', default=datetime.now)
-    concrete_price = models.IntegerField(verbose_name='具体价格',default=1000)
 
     class Meta:
         verbose_name = '旅行主题'
