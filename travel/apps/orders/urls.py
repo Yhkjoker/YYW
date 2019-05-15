@@ -18,5 +18,6 @@ urlpatterns = [
     url('^update_email/$', UpdateEmailView.as_view(), name='update_email'),
     url(r'^captcha/', include('captcha.urls')),
     url('^update_man/$', UpdateManView.as_view(), name='update_man'),
+    url('^delete_man/$', DeleteManView.as_view(), name='delete_man'),
     url('^reset_pwd/$', ResetPwdView.as_view(), name='reset_pwd'),
 ]

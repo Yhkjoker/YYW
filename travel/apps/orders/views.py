@@ -303,7 +303,36 @@ class UpdateManView(View):
         return render(request, 'Order_My_C_ModifyMan.html', context)
 
     def post(self, request):
-        pass
+        if request.is_ajax():
+            update_man = AddUserManForm(request.POST)
+            if update_man.is_valid():
+                man_id = request.POST.get('man_id')
+                name = request.POST.get('name')
+                gender = request.POST.get('gender')
+                mobile = request.POST.get('mobile')
+                email = request.POST.get('email')
+                card_type = request.POST.get('card_type')
+                card = request.POST.get('card')
+                man = UserMan.objects.get(id=man_id)
+                man.name = name
+                man.gender = gender
+                man.mobile = mobile
+                man.email = email
+                man.card_type = card_type
+                man.card = card
+                man.save()
+                return render(request, 'Order_My_C_ModifyMan.html')
+            else:
+                pass
+
+
+class DeleteManView(View):
+    def post(self, request):
+        if request.is_ajax():
+            man_id = request.POST.get('man_id')
+            man = UserMan.objects.get(id=man_id)
+            man.delete()
+            return render(request, 'Order_My_C_ModifyMan.html', {})
 
 
 class ResetPwdView(View):
