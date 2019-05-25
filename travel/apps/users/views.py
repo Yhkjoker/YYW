@@ -10,6 +10,7 @@ from django.contrib.auth.hashers import make_password
 from .models import UserProfile, EmailVerifyRecord
 from .forms import LoginForm, RegisterForm, ForgetForm, ResetpwdForm
 from utils.send_email import send_register_email
+from .tasks import send_register_email
 
 
 # Create your views here.
@@ -45,7 +46,9 @@ class RegisterView(View):
             user_profile.password = make_password(password)
             user_profile.save()
 
-            send_register_email(email)
+            # send_register_email(email)
+            # 使用celery异步任务发送邮件，提高web响应速度
+            send_register_email.delay(email)
 
             return render(request, 'Land.html')
         else:
