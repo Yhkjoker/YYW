@@ -30,7 +30,7 @@ CELERYBEAT_SCHEDULE = {
     """
     'hot_route': {
         "task": "route.tasks.hot_route",
-        "schedule": timedelta(minutes=30),
+        "schedule": timedelta(seconds=10),
         "args": (),
     },
 }

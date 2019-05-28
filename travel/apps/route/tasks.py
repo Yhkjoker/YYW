@@ -9,7 +9,7 @@ def hot_route():
     hot_route = []
     for i in ob:
         # 此处需将i.area str化,不然存入redis的值不对劲 0.0
-        args = {'area':str(i.area),'img':str(i.img),'title':i.title,'describe':i.describe,'concrete_price':i.concrete_price}
+        args = {'uid':i.id,'area':str(i.area),'img':str(i.img),'title':i.title,'describe':i.describe,'concrete_price':i.price}
         hot_route.append(args)
     REDIS.set('hot_route',hot_route)
     return True

@@ -25,18 +25,14 @@ class BaseView(View):
 class IndexView(View):
     def get(self, request):
         context = {}
-        lists = []
         all_theme = TravelTheme.objects.all()
         hot_route = all_theme.order_by('-click_num')[:2]
         hot_tc = all_theme.filter(big_type='tc').order_by('-click_num')[0]
         hot_dt = all_theme.filter(big_type='dt').order_by('-click_num')[0]
         hot_ct = all_theme.filter(big_type='ct').order_by('-click_num')[0]
-        # hot_route = ast.literal_eval(REDIS.get('hot_route'))
-        lists.append(hot_ct)
-        lists.append(hot_dt)
-        lists.append(hot_tc)
-        context['hot_route'] = hot_route
-        context['lists'] = lists
+        hot_routes = ast.literal_eval(REDIS.get('hot_route'))
+        context['lunbotu'] = hot_route
+        context['hot_route'] = hot_routes
         return render(request, 'index.html', context)
 
 
