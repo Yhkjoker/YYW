@@ -30,7 +30,10 @@ class IndexView(View):
         hot_tc = all_theme.filter(big_type='tc').order_by('-click_num')[0]
         hot_dt = all_theme.filter(big_type='dt').order_by('-click_num')[0]
         hot_ct = all_theme.filter(big_type='ct').order_by('-click_num')[0]
-        hot_routes = ast.literal_eval(REDIS.get('hot_route'))
+        try:
+            hot_routes = ast.literal_eval(REDIS.get('hot_route'))
+        except:
+            hot_routes = []
         context['lunbotu'] = hot_route
         context['hot_route'] = hot_routes
         return render(request, 'index.html', context)
