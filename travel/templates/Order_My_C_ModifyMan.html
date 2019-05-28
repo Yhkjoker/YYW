@@ -29,8 +29,8 @@
                                 <div class="Top clearFix">
                                     <span class="f-l">{{ man.name }}</span>
                                     <div class="f-r">
-                                        <a class="tr-02 edit" href="#" data-toggle="modal" data-target="#edit">编辑</a>
-                                        <a class="tr-02 delete" href="#">删除</a>
+                                        <a class="tr-02 edit" href="" data-toggle="modal" data-target="#edit">编辑</a>
+                                        <a class="tr-02 delete" href="">删除</a>
                                     </div>
                                 </div>
                                 <div class="Txt">
@@ -83,7 +83,7 @@
                                                 <strong><i>*</i>姓&nbsp;&nbsp;&nbsp;别：</strong>
                                                 <span class="text-left">
                                                        <label>
-                                                              <input class="click" type="radio" value="0" name="gender" checked="checked"/>
+                                                              <input class="click" type="radio" value="0" name="gender"/>
                                                               <span>男</span>
                                                        </label>
                                                        <label>
@@ -187,7 +187,10 @@
 	var info_id = info.eq(5).find('input').val(man_id)
         console.log(info_id.val())
 	var info_gender = info.eq(1).find('input');
-	if(gender == '女'){
+	if(gender == '男'){
+		info_gender.eq(1).removeAttr('checked');
+		info_gender.eq(0).attr('checked','checked')
+	}else if(gender == '女'){
 		info_gender.eq(0).removeAttr('checked');
 		info_gender.eq(1).attr('checked','checked')
 	};
