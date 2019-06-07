@@ -3,9 +3,11 @@ import ast
 
 
 from django.shortcuts import render
+from django.shortcuts import redirect,reverse
 from django.views.generic.base import View
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+
 
 
 from .models import *
@@ -19,6 +21,11 @@ from apps.utils.redis_connect import REDIS
 class BaseView(View):
     def get(self, request):
         return render(request, "details.html")
+
+
+class IndexView_Redict(View):
+    def get(selfself,request):
+        return redirect(reverse('index'))
 
 
 # 主页
