@@ -1,5 +1,5 @@
 # _*_ encoding:utf-8 _*_
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect,redirect,reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.backends import ModelBackend
 from django.db.models import Q
@@ -156,7 +156,7 @@ class LoginView(View):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return render(request, "index.html", {})
+                    return redirect(reverse('index'))
                 else:
                     return render(request, 'Land.html', {'msg': '用户未激活', 'show': '1', 'user_name': user_name})
             else:

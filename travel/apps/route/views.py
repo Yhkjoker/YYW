@@ -3,9 +3,11 @@ import ast
 
 
 from django.shortcuts import render
+from django.shortcuts import redirect,reverse
 from django.views.generic.base import View
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+
 
 
 from .models import *
@@ -21,6 +23,11 @@ class BaseView(View):
         return render(request, "details.html")
 
 
+class IndexView_Redict(View):
+    def get(selfself,request):
+        return redirect(reverse('index'))
+
+
 # 主页
 class IndexView(View):
     """
@@ -33,7 +40,10 @@ class IndexView(View):
         hot_tc = all_theme.filter(big_type='tc').order_by('-click_num')[0]
         hot_dt = all_theme.filter(big_type='dt').order_by('-click_num')[0]
         hot_ct = all_theme.filter(big_type='ct').order_by('-click_num')[0]
-        hot_routes = ast.literal_eval(REDIS.get('hot_route'))
+        try:
+            hot_routes = ast.literal_eval(REDIS.get('hot_route'))
+        except:
+            hot_routes = []
         context['lunbotu'] = hot_route
         context['hot_route'] = hot_routes
         return render(request, 'index.html', context)

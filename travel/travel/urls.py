@@ -28,8 +28,9 @@ from orders import views as orderview
 
 
 urlpatterns = [
+    url(r'^$',IndexView_Redict.as_view()),
     url(r'^xadmin/', xadmin.site.urls),
-    url(r'^yyw/$', IndexView.as_view(), name="index"),
+    url(r'^index/$', IndexView.as_view(), name="index"),
     # 账号登录与注册
     url(r'^login/$', LoginView.as_view(), name="login"),
     url(r'^logout/$', LogoutView.as_view(), name="logout"),
