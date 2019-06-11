@@ -23,6 +23,9 @@ class BaseView(View):
 
 # 主页
 class IndexView(View):
+    """
+    主页显示
+    """
     def get(self, request):
         context = {}
         all_theme = TravelTheme.objects.all()
@@ -38,6 +41,9 @@ class IndexView(View):
 
 # 主题详情
 class ListDetailsView(View):
+    """
+    主题详情显示
+    """
     def get(self, request, id):
         context={}
         theme = TravelTheme.objects.get(id=id)
@@ -47,6 +53,7 @@ class ListDetailsView(View):
         type= theme.big_type
         context['days'] = theme.days
         context['type'] = CONSTANT.type(type)
+        print('theme',id)
         tours = Tours.objects.filter(theme_id=int(id))
         details = ThemeInfo.objects.get(theme_id=int(id))
         context['tours'] = tours
@@ -58,24 +65,36 @@ class ListDetailsView(View):
 
 # 常见问题
 class CommonProblemView(View):
+    """
+    常见问题显示
+    """
     def get(self, request):
         return render(request, 'Common_Problem.html', {})
 
 
 # 联系我们
 class ContactUsView(View):
+    """
+    联系我们显示
+    """
     def get(self, request):
         return render(request, 'Contact_Us.html', {})
 
 
 # 免责说明
 class DisclaimerView(View):
+    """
+    免责说明显示
+    """
     def get(self, request):
         return render(request, 'Disclaimer.html', {})
 
 
 # 加入我们
 class JoinUs(View):
+    """
+    加入我们显示
+    """
     def get(self, request):
         return render(request, 'Join_Us.html', {})
 

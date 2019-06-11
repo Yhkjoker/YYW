@@ -57,6 +57,9 @@ class TeamOrderView(View):
 
 
 class AddOrderView(View):
+    """
+    订单添加
+    """
     def get(self, request):
         context={}
 
@@ -77,6 +80,9 @@ class AddOrderView(View):
 
     def post(self, request):
         if request.is_ajax():
+            """
+            添加出行人
+            """
             add_userman = AddUserManForm(request.POST)
             if add_userman.is_valid():
                 context = {}
@@ -108,6 +114,9 @@ class AddOrderView(View):
             else:
                 return JsonResponse({"status": "fail"})
         else:
+            """
+            订单提交
+            """
             add_order = AddOrderForm(request.POST)
             if add_order.is_valid():
                 context = {}
@@ -146,11 +155,17 @@ class AddOrderView(View):
 
 
 class OrderPayView(View):
+    """
+    订单支付
+    """
     def get(self, request):
         return render(request, 'Order_pay.html', {})
 
 
 class OrderNewView(View):
+    """
+    查看当前订单
+    """
     def get(self, request):
         context = {}
         content = []
@@ -179,6 +194,9 @@ class OrderNewView(View):
 
 
 class OrderHisView(View):
+    """
+    查看历史订单
+    """
     def get(self, request):
         context = {}
         content = []
@@ -206,6 +224,9 @@ class OrderHisView(View):
 
 
 class MyInfoView(View):
+    """
+    查看个人信息
+    """
     def get(self, request):
         user_id = request.user.id
         user = UserProfile.objects.get(id=user_id)
@@ -230,6 +251,9 @@ class MyInfoView(View):
 
 
 class UpdateInfoView(View):
+    """
+    修改个人信息
+    """
     def get(self, request):
         context = {}
         user_id = request.user.id
@@ -259,11 +283,17 @@ class UpdateInfoView(View):
 
 
 class UpdateMobileView(View):
+    """
+    修改手机号
+    """
     def get(self, request):
         return render(request, 'Order_My_C_ModifyMobile.html', {})
 
 
 class UpdateEmailView(View):
+    """
+    修改邮箱
+    """
     def get(self, request):
         return render(request, 'Order_My_C_ModifyEmail.html')
 
@@ -295,6 +325,9 @@ class UpdateEmailView(View):
 
 
 class UpdateManView(View):
+    """
+    修改出行人信息
+    """
     def get(self, request):
         context = {}
         user_id = request.user.id
@@ -327,6 +360,9 @@ class UpdateManView(View):
 
 
 class DeleteManView(View):
+    """
+    删除出行人
+    """
     def post(self, request):
         if request.is_ajax():
             man_id = request.POST.get('man_id')
@@ -336,6 +372,9 @@ class DeleteManView(View):
 
 
 class ResetPwdView(View):
+    """
+    修改密码
+    """
     def get(self, request):
         return render(request, 'ModifyPwd.html', {})
 

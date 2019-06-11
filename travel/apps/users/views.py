@@ -27,6 +27,9 @@ class CustomBackend(ModelBackend):
 
 
 class RegisterView(View):
+    """
+    用户注册
+    """
     def get(self, request):
         register_form = RegisterForm()
         return render(request, 'Register.html', {'register_form': register_form})
@@ -56,6 +59,9 @@ class RegisterView(View):
 
 
 class ActiveUserView(View):
+    """
+    用户激活
+    """
     def get(self, request, active_code):
         all_code = EmailVerifyRecord.objects.filter(code=active_code)
         if all_code:
@@ -70,6 +76,9 @@ class ActiveUserView(View):
 
 
 class ForgetView(View):
+    """
+    密码找回
+    """
     def get(self, request):
         forget_form = ForgetForm()
         return render(request, "Back.html", {'forget_form': forget_form})
@@ -87,6 +96,9 @@ class ForgetView(View):
 
 
 class RetrievePwdView(View):
+    """
+    密码重置
+    """
     def get(self, request, active_code):
         try:
             user_code = EmailVerifyRecord.objects.get(code=active_code, send_type='forget')
@@ -97,6 +109,9 @@ class RetrievePwdView(View):
 
 
 class ResetpwdView(View):
+    """
+    提交重置密码
+    """
     def post(self, request):
         reset_form = ResetpwdForm(request.POST)
         if reset_form.is_valid():
@@ -116,6 +131,9 @@ class ResetpwdView(View):
 
 
 class LogoutView(View):
+    """
+    用户退出
+    """
     def get(self, request):
         logout(request)
         from django.core.urlresolvers import reverse
@@ -123,6 +141,9 @@ class LogoutView(View):
 
 
 class LoginView(View):
+    """
+    用户登录
+    """
     def get(self, request):
         return render(request, "Land.html", {})
 
@@ -150,6 +171,9 @@ class ErrorView(View):
 
 
 def page_not_found(request):
+    """
+    全局404错误页面
+    """
     from django.shortcuts import render_to_response
     response = render_to_response('404.html', {})
     response.status_code = 404
@@ -157,6 +181,9 @@ def page_not_found(request):
 
 
 def page_error(request):
+    """
+    全局500错误页面
+    """
     from django.shortcuts import render_to_response
     response = render_to_response('500.html', {})
     response.status_code = 500
