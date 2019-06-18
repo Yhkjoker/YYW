@@ -10,12 +10,13 @@
 {% endif %}
 {% endblock %}
 {% block banner %}
-    <!-- Swiper -->
-    <div class="swiper-container header-swiper">
+    {% if request.path|slice:'15' == '/identical_list' %}
+        <!-- Swiper -->
+        <div class="swiper-container header-swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"> <img src="{% static 'images/banner1.jpg' %}"> </div>
-            <div class="swiper-slide"> <img src="{% static 'images/banner2.jpg' %}"> </div>
-            <div class="swiper-slide"> <img src="{% static 'images/banner2.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/identical1.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/identical2.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/identical3.jpg' %}"> </div>
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -29,6 +30,47 @@
         	<img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
         </div>
     </div>
+    {% elif request.path|slice:'11' == '/short_list' %}
+        <!-- Swiper -->
+        <div class="swiper-container header-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/short1.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/short2.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/short3.jpg' %}"> </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+        	<img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_right_1.png' %}" alt="">
+        </div>
+        <div class="swiper-button-prev">
+        	<img class="img1 tr-02" src="{% static 'images/banner_left.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
+        </div>
+    </div>
+    {% elif request.path|slice:'10' == '/long_list' %}
+        <!-- Swiper -->
+        <div class="swiper-container header-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/long1.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/long2.jpg' %}"> </div>
+            <div class="swiper-slide"> <img style="width: 1216px;height: 506px" src="{% static 'images/long3.jpg' %}"> </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next">
+        	<img class="img1 tr-02" src="{% static 'images/banner_right.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_right_1.png' %}" alt="">
+        </div>
+        <div class="swiper-button-prev">
+        	<img class="img1 tr-02" src="{% static 'images/banner_left.png' %}" alt="">
+        	<img class="img2 tr-02" src="{% static 'images/banner_left_1.png' %}" alt="">
+        </div>
+    </div>
+    {% endif %}
 {% endblock %}
 {% block content %}
     <div id="Contene" class="w-1180">

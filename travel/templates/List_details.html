@@ -50,50 +50,40 @@
                     <section>
                         <div class="Txt">
                             <h3>旅游景点</h3>
-                            <p>{{ details.attraction_port }}</p>
+                            {% for i in attraction_port %}
+                            <p>{{ i }}</p>
+                            {% endfor %}
                         </div>
                     </section>
 
                 </div>
                 <!-- 行程安排 -->
                 <div class="List-Details-Div">
-                             <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
+                    <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
-                            <strong>2</strong>
+                            <strong>{{ days }}</strong>
                             <span>DAYS</span>
                         </div>
-                        <h2 class="f-l">一岛情迷，美丽枸杞</h2>
+                        <h2 class="f-l">{{ title }}</h2>
                     </div>
                     <div class=" List-Details-Distance">
+                        {% for i in schedule %}
                         <section>
+                            {% for key,value in i.items %}
                             <div class="Distance clearFix">
                                 <div class="f-l">
-                                    <span>Day 1</span>
-                                    <strong>上海-安吉</strong>
+                                    <span>{{ key }}</span>
                                 </div>
                                 <div class="f-r">
-                                    {{ details.schedule }}
+                                    {% for area in value %}
+                                        <p>{{ area }}</p>
+                                    {% endfor %}
                                 </div>
                             </div>
+                            {% endfor %}
                         </section>
-                        <section>
-                            <div class="Distance clearFix">
-                                <div class="f-l">
-                                    <span>Day 1</span>
-                                    <strong>上海-安吉</strong>
-                                </div>
-                                <div class="f-r">
-                                    <p>07：15 上海指定地点集合。注意：节假日或遇特殊情况，我们可能会对集合时间做微调，具体请以出发前2天的集合邮件为准。 </p>
-                                    <p>07：30 我们准时发车。</p>
-                                    <p>13：30 沿着山谷里的溪流，我们到达今天【徽开古道】徒步的起点——【泰厦村】。</p>
-                                    <p>14：00 稍作休整和热身，我们便开始上路。这一程非常安静，踩着满地的落叶，踏着徽开古道的青石板路而上，我们会穿过一个始建于明代的【古洞门】，这便是【安徽】与【浙江】的交界处； </p>
-                                    <p>16：00 走过山间的树林，我们来到了两条溪流的交汇处——【大溪口】。在铺满鹅卵石的溪流边，咱们不妨找个地方坐下来，听听流水的声音，让自己安静下来。  </p>
-                                    <p>18：00 终于到达白际。这是大山深入一个世外桃源。 </p>
-                                    <p>19：00 在老乡家里，我们为大家安排了一桌丰盛的晚餐【含餐】  </p>
-                                </div>
-                            </div>
-                        </section>
+                        {% endfor %}
                     </div>
                 </div>
                 <!-- 注意事项 -->
@@ -101,147 +91,46 @@
                              <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
-                            <strong>2</strong>
+                            <strong>{{ days }}</strong>
                             <span>DAYS</span>
                         </div>
-                        <h2 class="f-l">一岛情迷，美丽枸杞</h2>
+                        <h2 class="f-l">{{ title }}</h2>
                     </div>
-                    <section>
-                        <div class="Top">
-                            {{ details.attraction }}
-                        </div>
-                    </section>
                     <hr>
                     <section>
                         <div class="Center">
                                 <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
+                                    {% for i in attraction %}
+                                        <p>{{ i }}</p>
+                                    {% endfor %}
                                 </section>
-                                <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
-                                </section>
-                                <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
-                                </section>
-                                <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
-                                </section>
-                                <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
-                                </section>
-                                <section>
-                                        <h4>【吃点啥】</h4>
-                                        <p>本次旅行我们包含D1的晚餐（当地农家菜）。</p>
-                                        <p>D1午餐我们将在下高速之后的小镇找餐馆快速解决。</p>
-                                        <p>D2早餐为旅馆的早餐，以稀饭、馒头、鸡蛋为主。D2午餐我们在紫阳老街自由用餐，探索临海的小吃美食。</p>
-                                </section>
-                        </div>
-                    </section>
-                    <section>
-                               <div class="Bottom">
-                            <h3>关于安全告知：</h3>
-                            <section>
-                                <h4>【观光游览安全注意事项】</h4>
-                                <p>{{ details.cost_state }}</p>
-                                  </section>
-                                  <section>
-                                <h4>【观光游览安全注意事项】</h4>
-                                <p>1.听取随团工作人员有关安全的提示。</p>
-                                <p>2.参与活动时请结合自身身体的健康状况，避免过度透支体力，注意适当休息。</p>
-                                <p>3.在游览时请注意看脚下的路，经过危险地段时（如陡峭/狭窄/湿滑的道路），请务必谨慎慢行。</p>
-                                <p>4.尽量结伴游览，如果游览过程中迷路或与队伍走散，请保持冷静，尽量在原地或有显著标志的地方等候，打电话给随团工作人员寻求帮助。</p>
-                                <p>5.拍照：请不要随意停下来拍照，切忌边走边拍，以避免脚滑受伤、财物损失等。</p>
-                                <p>6.蛇虫危险：在行走过程中请尽量穿长袖长裤，避免蚊虫叮咬。如遇蛇虫，请勿惊慌，小心行走，避免与蛇虫正面冲突。</p>
-                                  </section>
                         </div>
                     </section>
                 </div>
                 <!-- 费用说明 -->
                 <div class="List-Details-Div List-Cost-Distance">
-                             <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
+                    <div class="Photo"><img src="{{ MEDIA_URL }}{{ details.img }}" alt="详情图片"></div>
                     <div class="Title clearFix">
                         <div class="Time f-l">
-                            <strong>2</strong>
+                            <strong>{{ days }}</strong>
                             <span>DAYS</span>
                         </div>
-                        <h2 class="f-l">一岛情迷，美丽枸杞</h2>
+                        <h2 class="f-l">{{ title }}</h2>
                     </div>
                     <section>
-                             <div class="Top">
-                            <p>活动费用 以具体报名日期前的价格为准！！报名后2小时内支付费用全款后以收到短信提示为正式确认 ！！！</p>
-                             </div>
+                         <div class="Top">
+                         <p>活动费用 以具体报名日期前的价格为准！！报名后2小时内支付费用全款后以收到短信提示为正式确认 ！！！</p>
+                         </div>
                     </section>
                     <section>
-                             <div class="Center">
-                                         <section>
-                                 <h3>活动费用包含的内容为：</h3>
-                                 <p>【交通】全程正规手续旅行用车的包车费用，同时包含每个座位的保险，全程路桥费，油费，司机食宿补贴；</p>
-                                 <p>【用餐】D2早餐和晚餐，其他用餐为AA；</p>
-                                 <p>【住宿】旅行全程住宿费用 （2天的住宿。）<br/>注：在廿八都古镇，古镇内条件有限，我们已经选择了古镇内较好的特色客栈，古香古色，而内部设施是较为现代化的条件。但客栈实行全年浮动价，尤其是长假时期，会大幅上涨，所以我们也实行浮动价格，请大家谅解。</p>
-                                 <p>【门票】旅行中景区第一门票。（江郎山景区门票/包含上下山的景区车或大巴通行费）；</p>
-                                 <p>【活动】和睦彩陶村参观制陶工艺和体验做陶器的费用；</p>
-                                 <p>【领队】领队交通，工资，食宿补贴。至少一名悠悠蜗专业领队全程陪同，并保证一团一证。（持证不代表他们像传统导游一样无趣，是为了保障团队的资质和安全。他们靠谱专业，文艺2B，负责行程安排和组织分享与交流的平台，只为了让你的旅行满满真实和快乐的回忆）；</p>
-                                 <p>【惊喜】视每个领队的风格而定，零食，水果神马的，说了是惊喜了，就让它继续保持神秘吧；</p>
-                                 <p>【保险】旅游意外保险（请务必点击查看保险条款及相关保额，也可根据自身需求自行购买其他更适合自己的保险）；</p>
-                                 <p>【物资】公共物资，急救包（人丹、十滴水、季德胜蛇药、息斯敏、云南白药喷雾剂、云南白药粉末、双氧水、京万红软膏、降温贴、龙虎清凉油、体温计、消毒纱布、胶带、邦迪创可贴、酒精棉球、棉签）特殊药物请根据自身情况提前自备。</p>
-                                  </section>
-                                  <section>
-                                 <h3>活动费用不包含的内容为：</h3>
-                                 <p>旅行中的个人用餐费用（早饭、正餐、小吃、饮料等）</p>
-                                 <br/>
-                                 <p>购物和回扣神马的，悠悠蜗深恶痛绝，如发生此事团费全额退还外，领队裸奔致歉。</p>
-                            </section>
-                            <hr>
+                        <div class="Center">
                             <section>
-                                 <h3>取消活动 & 退款政策</h3>
-                                 <section>
-                                     <h4>【队员退订活动】</h4>
-                                     <ul>
-                                        <li>1. 行程前 <span>4天前</span> 退订活动， 全额返还已支付的 活动费用。</li>
-                                        <li>2. 行程前 <span>4-3天</span> 退订活动，活动费用的 20% 将无法退还。</li>
-                                        <li>3. 行程前 <span>2-1天</span> 退订活动，活动费用的 50% 将无法退还。</li>
-                                        <li>4. 行程开始 <span>当日</span> 退订活动，只能退还未发生的景区门票费用。</li>
-                                     </ul>
-                                   </section>
-                                   <section>
-                                     <h4>【如何退订】</h4>
-                                     <p>登录后在我的订单中进行退订。系统会根据退款政策自动计算并返回您相应的活动费用。活动费用会在 3-15个工作日 原路返还至您当时支付的账户。</p>
-                                   </section>
-                                    <section>
-                                     <h4>【悠悠蜗取消活动】</h4>
-                                     <ul>
-                                        <li>如因未达到最低成团人数或稻草人的原因导致团队无法成行，</li>
-                                        <li>1. 行程前 4天前 取消活动，退还全额团费；</li>
-                                        <li>2. 行程前 4-3天 取消活动，退还全额团费，并补偿团费的 20% 的旅行基金；</li>
-                                        <li>3. 行程前 2-1天 取消活动，退还全额团费，并补偿团费的 50% 的旅行基金；</li>
-                                        <li>旅行基金可以用于购买除稻草人微旅行外的任意旅行路线时抵减相应团费。</li>
-                                        <li>我们不承担因此产生的其它个人损失。</li>
-                                     </ul>
-                                   </section>
-                                    <section>
-                                     <h4>【外部因素】</h4>
-                                     <p>因不可抗力导致全部行程或部分行程取消，悠悠蜗将退还未发生的实际费用，但不再承担除此之外的其它损失，还请谅解；若导致行程变更，变更后增加的费用由队员承担，减少的费用退还队员。</p>
-                                     <p>报名过程中如有问题欢迎随时拨打稻草人热线: 400-054-8066 ( 周一至周日09:30-18:00 )</p>
-                                   </section>
+                                {% for i in cost_state %}
+                                    <p>{{ i }}</p>
+                                {% endfor %}
                             </section>
-                             </div>
+                        </div>
                     </section>
-
                 </div>
             </div>
             <div class="f-r">

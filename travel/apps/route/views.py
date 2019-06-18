@@ -1,5 +1,6 @@
 # _*_ encoding:utf-8 _*_
 import ast
+import json
 
 
 from django.shortcuts import render
@@ -63,12 +64,17 @@ class ListDetailsView(View):
         type= theme.big_type
         context['days'] = theme.days
         context['type'] = CONSTANT.type(type)
-        print('theme',id)
+
         tours = Tours.objects.filter(theme_id=int(id))
         details = ThemeInfo.objects.get(theme_id=int(id))
         context['tours'] = tours
         context['details'] = details
         context['baike'] = details.baidu_baike
+        context['attraction_port'] = json.loads(details.attraction_port)
+        context['schedule'] = json.loads(details.schedule)
+        print('schedule',json.loads(details.schedule))
+        context['attraction'] = json.loads(details.attraction)
+        context['cost_state'] = json.loads(details.cost_state)
         theme.save()
         return render(request, 'List_details.html', context)
 
