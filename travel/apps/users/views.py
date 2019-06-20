@@ -9,7 +9,6 @@ from django.contrib.auth.hashers import make_password
 
 from .models import UserProfile, EmailVerifyRecord
 from .forms import LoginForm, RegisterForm, ForgetForm, ResetpwdForm
-from utils.send_email import send_register_email
 from .tasks import send_register_email
 
 
@@ -42,7 +41,7 @@ class RegisterView(View):
             email = request.POST.get('email', '')
             password = request.POST.get('password', '')
             if UserProfile.objects.filter(email=email):
-                return render(request, 'Register.html', {'msg': '邮箱已被注册'})
+                return render(request, 'Register.html', {'msg': '邮箱已被注册', "register": 1, 'register_form': register_form})
             user_profile.username = username
             user_profile.email = email
             user_profile.is_active = 0
@@ -51,7 +50,7 @@ class RegisterView(View):
 
             # send_register_email(email)
             # 使用celery异步任务发送邮件，提高web响应速度
-            send_register_email.delay(email)
+            send_register_email(email)
 
             return render(request, 'Land.html')
         else:

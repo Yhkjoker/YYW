@@ -144,12 +144,12 @@ STATICFILES_DIRS =[
     os.path.join(BASE_DIR, 'static')
 ]
 
-EMAIL_HOST = 'smtp.sina.com'
+EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'yuhaikun0325@sina.com'
-EMAIL_HOST_PASSWORD = 'Y8464382654u'
-EMAIL_USE_TLS = False
-EMAIL_FROM = 'yuhaikun0325@sina.com'
+EMAIL_HOST_USER = '2295987338@qq.com'
+EMAIL_HOST_PASSWORD = 'ijyjdhiqxjbmechc'
+EMAIL_USE_TLS = True
+EMAIL_FROM = '2295987338@qq.com'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

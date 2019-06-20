@@ -51,7 +51,10 @@
                     <span class="txt f-l" {% if not register_form.errors %}style="display: none"{% endif %}>
                         {% for key,error in register_form.errors.items %}
                             {{ error }}
-                        {% endfor %}{{ msg }}
+                        {% endfor %}
+                    </span>
+                    <span class="txt f-l" {% if not register == 1 %}style="display: none"{% endif %}>
+                        {{ msg }}
                     </span>
 	    		    <input class="button" type="submit" value="注&nbsp;&nbsp;册"/>
                 </form>
