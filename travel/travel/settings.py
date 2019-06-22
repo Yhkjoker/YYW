@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': 'travel',
         'USER': 'root',
         'PASSWORD': '123456',
-        'HOST': '47.107.238.126',
+        'HOST': 'localhost',
     }
 }
 
@@ -145,11 +145,11 @@ STATICFILES_DIRS =[
 ]
 
 EMAIL_HOST = 'smtp.qq.com'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = '2295987338@qq.com'
-EMAIL_HOST_PASSWORD = 'ijyjdhiqxjbmechc'
+EMAIL_PORT = 25 #端口号
+EMAIL_HOST_USER = 'qq@qq.com' #用户邮箱
+EMAIL_HOST_PASSWORD = 'ijyjdhiqxjbmechc'#授权码
 EMAIL_USE_TLS = True
-EMAIL_FROM = '2295987338@qq.com'
+EMAIL_FROM = 'qq@qq.com' #发送者
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
